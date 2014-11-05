@@ -1,0 +1,24 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container-fluid {
+	padding: 5px;
+}
+
+.row_buffer {
+	margin-top: 30px;
+	margin-left: 10px;
+
+}
+
+#table {
+	padding-top: 50px;
+}
+

@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>D3 Tutorial</title>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+	</head>	
+	<body>
+
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-12 canvas'>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12 chart'>
+					Hello there!
+				</div>
+			</div>
+		</div>
+	  	<script>
+	  		 var svg = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", "490px").style("stroke-width", 0).style("background-color", "#404040").style("border-radius", 4);
+
+	  		 svg.append("defs")
+				   .append("pattern")
+				   .attr("id", "iss")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 300)
+				   .attr("height", 300)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/ISS.png")
+				   .attr('x', 0)
+                   .attr('y', 150);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "arm")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 400)
+				   .attr("height", 400)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/ARM.png")
+				   .attr('x', 180)
+                   .attr('y', 3);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "asteroid")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 600)
+				   .attr("height", 600)
+				   .append("image")
+				   .attr("width", 90)
+				   .attr("height", 90)
+				   .attr("xlink:href", "public/images/asteroid.png")
+				   .attr('x', 380)
+                   .attr('y', 3);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "l2")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 500)
+				   .attr("height", 500)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/L2.png")
+				   .attr('x', 180)
+                   .attr('y', 150);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "moon")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 500)
+				   .attr("height", 500)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/moon.png")
+				   .attr('x', 180)
+                   .attr('y', 300);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "moonmars")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 600)
+				   .attr("height", 600)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/moonmars.png")
+				   .attr('x', 380)
+                   .attr('y', 150);
+
+             svg.append("defs")
+             	   .append("pattern")
+				   .attr("id", "marsurface")
+				   .attr('patternUnits', 'userSpaceOnUse')
+				   .attr("width", 600)
+				   .attr("height", 600)
+				   .append("image")
+				   .attr("width", 100)
+				   .attr("height", 100)
+				   .attr("xlink:href", "public/images/marsurface.png")
+				   .attr('x', 380)
+                   .attr('y', 300);
+
+			 svg.append("circle")
+		         .attr("cx", 60)
+		         .attr("cy", 200)
+		         .attr("r", 40)
+		         .style("fill", "url(#iss)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+
+
+		    svg.append("circle")
+		         .attr("cx", 230)
+		         .attr("cy", 53)
+		         .attr("r", 40)
+		         .style("fill", "url(#arm)")       
+		         .style("stroke", "orange")     
+		         .style("stroke-width", 5);
+
+		     svg.append("circle")
+		         .attr("cx", 430)
+		         .attr("cy", 53)
+		         .attr("r", 40)
+		         .style("fill", "url(#asteroid)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+
+		     svg.append("circle")
+		         .attr("cx", 230)
+		         .attr("cy", 200)
+		         .attr("r", 40)
+		         .style("fill", "url(#l2)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+		         
+		     svg.append("circle")
+		         .attr("cx", 230)
+		         .attr("cy", 350)
+		         .attr("r", 40)
+		         .style("fill", "url(#moon)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+
+		     svg.append("circle")
+		         .attr("cx", 430)
+		         .attr("cy", 200)
+		         .attr("r", 40)
+		         .style("fill", "url(#moonmars)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+
+		     svg.append("circle")
+		         .attr("cx", 430)
+		         .attr("cy", 350)
+		         .attr("r", 40)
+		         .style("fill", "url(#marsurface)")       
+		         .style("stroke", "purple")     
+		         .style("stroke-width", 5);
+	  	</script>
+	  	<script>
+
+	  	var svgData = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", "600px")
+
+
+	  	var groupOne = svgData.append("g").attr("transform", "translate(100, 100)");
+	  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
+	  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
+
+
+	  	var rowOne = [{lineOne: "Asteriod", lineTwo: "Redirect", lineThree: "Mission"}, {lineOne: "Martian", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
+
+	  	var rowTwo = [{lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Mars", lineTwo: "Surface"}];
+
+	  	var rowThree = [{lineOne: "Earth", lineTwo: "Moon", lineThree: "L2"}, {lineOne: "Asteriod in", lineTwo: "Native", lineThree: "Orbit"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Martians", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
+
+	  	var descripOne = groupOne.append("text").attr("font-size", "14px")
+
+		var desOneOne = descripOne.append("tspan");
+		var desOneTwo = descripOne.append("tspan");
+		var desOneThree = descripOne.append("tspan");
+
+		desOneOne.attr("x", -50).attr("y", 25).text("ARM");
+		desOneTwo.attr("x", -50).attr("y", 40).text("TO");
+		desOneThree.attr("x", -50).attr("y", 55).text("MARS");
+
+		var descripTwo = groupTwo.append("text").attr("font-size", "14px")
+
+		var desTwoOne = descripTwo.append("tspan");
+		var desTwoTwo = descripTwo.append("tspan");
+		var desTwoThree = descripTwo.append("tspan");
+
+		desTwoOne.attr("x", -50).attr("y", 125).text("MOON");
+		desTwoTwo.attr("x", -50).attr("y", 140).text("TO");
+		desTwoThree.attr("x", -50).attr("y", 155).text("MARS");
+
+		var descripThree = groupThree.append("text").attr("font-size", "14px")
+
+		var desThreeOne = descripThree.append("tspan");
+		var desThreeTwo = descripThree.append("tspan");
+		var pathwayLabel = descripThree.append("tspan");
+		var drmLabel = descripThree.append("tspan");
+
+
+		desThreeOne.attr("x", -80).attr("y", 225).text("ENHANCED");
+		desThreeTwo.attr("x", -85).attr("y", 240).text("EXPLORATION");
+		pathwayLabel.attr("x", -80).attr("y", 300).text("PATHWAY");
+		drmLabel.attr("x", 150).attr("y", 300).text("DESIGN REFERENCE MISSION (DRM)");
+
+
+		var linePathway = groupThree.append("line")
+									.attr("x1", -85)
+									.attr("y1", 280)
+									.attr("x2", 10)
+									.attr("y2", 280)
+									.attr("stroke", "grey")
+									.attr("stroke-width", 6);
+
+		var drmLine = groupThree.append("line")
+									.attr("x1", 20)
+									.attr("y1", 280)
+									.attr("x2", 492)
+									.attr("y2", 280)
+									.attr("stroke", "grey")
+									.attr("stroke-width", 6);
+
+
+	  	var rectOne = groupOne.selectAll("rect")
+	  						.data(rowOne)
+					  		.enter()
+				  		 	.append("rect")
+				  		 	.attr("width", 70)
+							.attr("height", 70)
+							.attr("x", function(d, i){return 20 + i*80})
+							.style("fill", function(d,i){
+								if (i == 2){
+									return "#900000"
+								} 
+
+								return "transparent";
+							})
+							.style("stroke", "black")
+				 			.style("stroke-width", 3);
+
+		var textLineOne = groupOne.selectAll(".one")
+					  		.data(rowOne)
+					  		.enter()
+					  			.append("text")
+					  			.attr("x", function(d, i){return 25 + i*80})
+					  			.attr("y", 15)
+					  			.attr("font-size", "11px")
+					  			.text(function(d){return d.lineOne})
+
+		var textLineTwo = groupOne.selectAll(".one")
+					  		.data(rowOne)
+					  		.enter()
+					  			.append("text")
+					  			.attr("x", function(d, i){return 25 + i*80})
+					  			.attr("y", 30)
+					  			.attr("font-size", "11px")
+					  			.text(function(d){
+					  				if (d.lineTwo){
+					  					return d.lineTwo
+					  				} else {
+					  					return "";
+					  				}
+					  			});
+
+		var rectTwo = groupTwo.selectAll("rect")
+	  						.data(rowOne)
+					  		.enter()
+				  		 	.append("rect")
+				  		 	.attr("width", 70)
+							.attr("height", 70)
+							.attr("x", function(d, i){return 20 + i*80})
+							.attr("y", 100)
+							.style("fill", function(d,i){
+								if (i == 2){
+									return "#900000"
+								} 
+
+								return "transparent";
+							})
+							.style("stroke", "black")
+				 			.style("stroke-width", 3);
+
+		var textLineTwoOne = groupTwo.selectAll(".two")
+					  		.data(rowTwo)
+					  		.enter()
+					  			.append("text")
+					  			.attr("x", function(d, i){return 25 + i*80})
+					  			.attr("y", 120)
+					  			.attr("font-size", "11px")
+					  			.text(function(d){return d.lineOne});
+
+		var textLineTwoTwo = groupTwo.selectAll(".two")
+					  		.data(rowTwo)
+					  		.enter()
+					  			.append("text")
+					  			.attr("x", function(d, i){return 25 + i*80})
+					  			.attr("y", 135)
+					  			.attr("font-size", "11px")
+					  			.text(function(d){
+					  				if (d.lineTwo){
+					  					return d.lineTwo
+					  				} else {
+					  					return "";
+					  				}
+					  			});
+
+		var textLineTwoThree = groupTwo.selectAll(".two")
+								  		.data(rowTwo)
+								  		.enter()
+								  			.append("text")
+								  			.attr("x", function(d, i){return 25 + i*80})
+								  			.attr("y", 150)
+								  			.attr("font-size", "11px")
+								  			.text(function(d){
+								  				if (d.lineThree){
+								  					return d.lineThree
+								  				} else {
+								  					return "";
+								  				}
+								  			});
+
+		var rectThree = groupThree.selectAll("rect")
+	  						.data(rowThree)
+					  		.enter()
+				  		 	.append("rect")
+				  		 	.attr("width", 70)
+							.attr("height", 70)
+							.attr("x", function(d, i){return 20 + i*80})
+							.attr("y", 200)
+							.style("fill", function(d,i){
+								if (i == 5){
+									return "#900000"
+								} 
+
+								return "transparent";
+							})
+							.style("stroke", "black")
+				 			.style("stroke-width", 3);	
+
+		var textLineThreeOne = groupThree.selectAll(".three")
+					  		.data(rowThree)
+					  		.enter()
+					  			.append("text")
+					  			.attr("x", function(d, i){return 25 + i*80})
+					  			.attr("y", 220)
+					  			.attr("font-size", "11px")
+					  			.text(function(d){return d.lineOne});
+
+		var textLineThreeTwo = groupThree.selectAll(".three")
+								  		.data(rowThree)
+								  		.enter()
+								  			.append("text")
+								  			.attr("x", function(d, i){return 25 + i*80})
+								  			.attr("y", 235)
+								  			.attr("font-size", "11px")
+								  			.text(function(d){
+								  				if (d.lineTwo){
+								  					return d.lineTwo
+								  				} else {
+								  					return "";
+								  				}
+								  			});
+
+		var textLineThreeThree = groupThree.selectAll(".three")
+								  		.data(rowThree)
+								  		.enter()
+								  			.append("text")
+								  			.attr("x", function(d, i){return 25 + i*80})
+								  			.attr("y", 250)
+								  			.attr("font-size", "11px")
+								  			.text(function(d){
+								  				if (d.lineThree){
+								  					return d.lineThree
+								  				} else {
+								  					return "";
+								  				}
+								  			});
+
+	  	</script>
+	</body>
+</html>
