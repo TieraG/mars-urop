@@ -21,7 +21,7 @@
 	  		
 	  		 var svg = d3.select(".canvas").append("svg")
 	  		 								.attr("height", "400px")
-	  		 								.attr("width", "490px")
+	  		 								.attr("width", "530px")
 	  		 								.style("stroke-width", 0)
 	  		 								.style("background-color", "#404040")
 	  		 								.style("border-radius", 4);
@@ -92,18 +92,19 @@
 	  		 				];
 
 	  		 patternInfo.forEach(function(pattern){
-	  		 	svg.append("defs")
-				   .append("pattern")
-				   .attr("id", pattern.id)
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", pattern.width)
-				   .attr("height", pattern.height)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", pattern.link)
-				   .attr('x', pattern.x)
-                   .attr('y', pattern.y);
+
+		  		 svg.append("defs")
+					   .append("pattern")
+					   .attr("id", pattern.id)
+					   .attr('patternUnits', 'userSpaceOnUse')
+					   .attr("width", pattern.width)
+					   .attr("height", pattern.height)
+					   .append("image")
+					   .attr("width", 100)
+					   .attr("height", 100)
+					   .attr("xlink:href", pattern.link)
+					   .attr('x', pattern.x)
+	                   .attr('y', pattern.y);
 
 	  		 });
 
