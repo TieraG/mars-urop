@@ -26,7 +26,7 @@
 	  		 								.style("background-color", "#404040")
 	  		 								.style("border-radius", 4);
 	  		 // Path info
-	  		 
+
 	  		 var patternInfo = [
 	  		 						{
 	  		 							id: "iss", 
@@ -318,8 +318,8 @@
 									.attr("stroke-width", 6)
 									.attr("marker-end", "url(#arrowBlue)");
 
-			var moonToMarmoon = svg.append("line")
-									.attr("x1", 275)
+			var moonToMasrmoon = svg.append("line")
+									.attr("x1", 270)
 									.attr("y1", 350)
 									.attr("x2", 380)
 									.attr("y2", 210)
@@ -330,14 +330,94 @@
 			var asteriodToMoon = svg.append("line")
 									.attr("x1", 395)
 									.attr("y1", 70)
-									.attr("x2", 270)
-									.attr("y2", 320)
+									.attr("x2", 220)
+									.attr("y2", 300)
 									.attr("stroke", "purple")
 									.attr("stroke-width", 6)
 									.attr("marker-end", "url(#arrowPurple)");
+			// Labels
 
+			var issText = svg.append("text")
+							 .attr("font-size", "13px")
+							 .attr("x", 30)
+							 .attr("y", 280)
+							 .text("LEO/ISS");
 
+			var marsText = svg.append("text")
+							 .attr("font-size", "13px")
+							 .attr("x", 150)
+							 .attr("y", 53)
+							 .text("ARM");
 
+			var ltwoText = svg.append("text")
+							 .attr("font-size", "13px")
+							 .attr("x", 150)
+							 .attr("y", 170)
+							 .text("E-M L2");
+
+			var moonText = svg.append("text")
+							 .attr("font-size", "13px")
+			
+			var moonTextOne = moonText.append("tspan");
+			var moonTextTwo = moonText.append("tspan");
+			var moonTextThree = moonText.append("tspan");
+
+			moonTextOne.attr("x", 70)
+					   .attr("y", 370)
+					   .text("LUNAR SORTIE");
+
+			moonTextTwo.attr("x", 70)
+					   .attr("y", 385)
+					   .text("&");
+
+			moonTextThree.attr("x", 70)
+					   .attr("y", 400)
+					   .text("LUNAR OUTPOST");
+
+			var marsText = svg.append("text")
+							 .attr("font-size", "13px")
+		
+			marsText.append("tspan")
+					   .attr("x", 320)
+					   .attr("y", 370)
+					   .text("MARS");
+
+			marsText.append("tspan")
+					   .attr("x", 320)
+					   .attr("y", 390)
+					   .text("SURFACE");
+
+			var marsmoonText = svg.append("text")
+							 .attr("font-size", "13px")
+		
+			marsmoonText.append("tspan")
+					   .attr("x", 300)
+					   .attr("y", 220)
+					   .text("MARTIAN");
+
+			marsmoonText.append("tspan")
+					   .attr("x", 300)
+					   .attr("y", 235)
+					   .text("MOONS");
+
+			var asteriodText = svg.append("text")
+							 .attr("font-size", "13px")
+		
+			asteriodText.append("tspan")
+					   .attr("x", 320)
+					   .attr("y", 20)
+					   .text("ASTERIOD");
+
+			asteriodText.append("tspan")
+					   .attr("x", 320)
+					   .attr("y", 35)
+					   .text("INITIATIVE");
+
+			asteriodText.append("tspan")
+					   .attr("x", 320)
+					   .attr("y", 50)
+					   .text("ORBIT");
+			 
 
 	  	</script>
 
