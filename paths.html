@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>D3 Tutorial</title>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</head>	
 	<body>
@@ -13,11 +14,11 @@
 			</div>
 			<div class='row'>
 				<div class='col-md-12 chart'>
-					Hello there!
 				</div>
 			</div>
 		</div>
 	  	<script>
+	  		
 	  		 var svg = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", "490px").style("stroke-width", 0).style("background-color", "#404040").style("border-radius", 4);
 
 	  		 svg.append("defs")
