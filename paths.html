@@ -19,156 +19,168 @@
 		</div>
 	  	<script>
 	  		
-	  		 var svg = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", "490px").style("stroke-width", 0).style("background-color", "#404040").style("border-radius", 4);
+	  		 var svg = d3.select(".canvas").append("svg")
+	  		 								.attr("height", "400px")
+	  		 								.attr("width", "490px")
+	  		 								.style("stroke-width", 0)
+	  		 								.style("background-color", "#404040")
+	  		 								.style("border-radius", 4);
 
-	  		 svg.append("defs")
+	  		 var patternInfo = [
+	  		 						{
+	  		 							id: "iss", 
+	  		 							width: 300, 
+	  		 							height: 300, 
+	  		 							link: "public/images/ISS.png", 
+	  		 							x: 0, 
+	  		 							y: 150
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "arm", 
+	  		 							width: 400, 
+	  		 							height: 400, 
+	  		 							link: "public/images/ARM.png", 
+	  		 							x: 180, 
+	  		 							y: 3
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "asteroid", 
+	  		 							width: 600, 
+	  		 							height: 600, 
+	  		 							link: "public/images/asteroid.png", 
+	  		 							x: 380, 
+	  		 							y: 3
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "l2", 
+	  		 							width: 500, 
+	  		 							height: 500, 
+	  		 							link: "public/images/L2.png", 
+	  		 							x: 180, 
+	  		 							y: 150
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "moon", 
+	  		 							width: 500, 
+	  		 							height: 500, 
+	  		 							link: "public/images/moon.png", 
+	  		 							x: 180, 
+	  		 							y: 300
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "moonmars", 
+	  		 							width: 600, 
+	  		 							height: 600, 
+	  		 							link: "public/images/moonmars.png", 
+	  		 							x: 380, 
+	  		 							y: 150
+	  		 						}, 
+
+	  		 						{
+	  		 							id: "marsurface", 
+	  		 							width: 600, 
+	  		 							height: 600, 
+	  		 							link: "public/images/marsurface.png", 
+	  		 							x: 380, 
+	  		 							y: 300
+	  		 						}
+	  		 				];
+
+	  		 patternInfo.forEach(function(pattern){
+	  		 	svg.append("defs")
 				   .append("pattern")
-				   .attr("id", "iss")
+				   .attr("id", pattern.id)
 				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 300)
-				   .attr("height", 300)
+				   .attr("width", pattern.width)
+				   .attr("height", pattern.height)
 				   .append("image")
 				   .attr("width", 100)
 				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/ISS.png")
-				   .attr('x', 0)
-                   .attr('y', 150);
+				   .attr("xlink:href", pattern.link)
+				   .attr('x', pattern.x)
+                   .attr('y', pattern.y);
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "arm")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 400)
-				   .attr("height", 400)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/ARM.png")
-				   .attr('x', 180)
-                   .attr('y', 3);
+	  		 });
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "asteroid")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 600)
-				   .attr("height", 600)
-				   .append("image")
-				   .attr("width", 90)
-				   .attr("height", 90)
-				   .attr("xlink:href", "public/images/asteroid.png")
-				   .attr('x', 380)
-                   .attr('y', 3);
+	  		 var cirleInfo = [
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "l2")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 500)
-				   .attr("height", 500)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/L2.png")
-				   .attr('x', 180)
-                   .attr('y', 150);
+				  		 {
+				  		 	cx: 60,
+				  		 	cy: 200,
+				  		 	r: 40,
+				  		 	fill: "url(#iss)",
+				  		 	inner: "purple"
+				  		 },
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "moon")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 500)
-				   .attr("height", 500)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/moon.png")
-				   .attr('x', 180)
-                   .attr('y', 300);
+				  		 {
+				  		 	cx: 230,
+				  		 	cy: 53,
+				  		 	r: 40,
+				  		 	fill: "url(#arm)",
+				  		 	inner: "orange"
+				  		 },
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "moonmars")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 600)
-				   .attr("height", 600)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/moonmars.png")
-				   .attr('x', 380)
-                   .attr('y', 150);
+				  		 {
+				  		 	cx: 430,
+				  		 	cy: 53,
+				  		 	r: 40,
+				  		 	fill: "url(#asteroid)",
+				  		 	inner: "purple"
+				  		 },
 
-             svg.append("defs")
-             	   .append("pattern")
-				   .attr("id", "marsurface")
-				   .attr('patternUnits', 'userSpaceOnUse')
-				   .attr("width", 600)
-				   .attr("height", 600)
-				   .append("image")
-				   .attr("width", 100)
-				   .attr("height", 100)
-				   .attr("xlink:href", "public/images/marsurface.png")
-				   .attr('x', 380)
-                   .attr('y', 300);
+				  		{
+				  		 	cx: 230,
+				  		 	cy: 200,
+				  		 	r: 40,
+				  		 	fill: "url(#l2)",
+				  		 	inner: "purple"
+				  		 },
 
-			 svg.append("circle")
-		         .attr("cx", 60)
-		         .attr("cy", 200)
-		         .attr("r", 40)
-		         .style("fill", "url(#iss)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
+				  		 {
+				  		 	cx: 230,
+				  		 	cy: 350,
+				  		 	r: 40,
+				  		 	fill: "url(#moon)",
+				  		 	inner: "purple"
+				  		 },
+
+				  		 {
+				  		 	cx: 430,
+				  		 	cy: 200,
+				  		 	r: 40,
+				  		 	fill: "url(#moonmars)",
+				  		 	inner: "purple"
+				  		 },
+
+				  		 {
+				  		 	cx: 430,
+				  		 	cy: 350,
+				  		 	r: 40,
+				  		 	fill: "url(#marsurface)",
+				  		 	inner: "purple"
+				  		 }
+
+	  		 ]
+
+	  		 cirleInfo.forEach(function(circle){
+		  		 svg.append("circle")
+			         .attr("cx", circle.cx)
+			         .attr("cy", circle.cy)
+			         .attr("r", 40)
+			         .style("fill", circle.fill)       
+			         .style("stroke", circle.inner)     
+			         .style("stroke-width", 5);
+		  });
 
 
-		    svg.append("circle")
-		         .attr("cx", 230)
-		         .attr("cy", 53)
-		         .attr("r", 40)
-		         .style("fill", "url(#arm)")       
-		         .style("stroke", "orange")     
-		         .style("stroke-width", 5);
 
-		     svg.append("circle")
-		         .attr("cx", 430)
-		         .attr("cy", 53)
-		         .attr("r", 40)
-		         .style("fill", "url(#asteroid)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
-
-		     svg.append("circle")
-		         .attr("cx", 230)
-		         .attr("cy", 200)
-		         .attr("r", 40)
-		         .style("fill", "url(#l2)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
-		         
-		     svg.append("circle")
-		         .attr("cx", 230)
-		         .attr("cy", 350)
-		         .attr("r", 40)
-		         .style("fill", "url(#moon)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
-
-		     svg.append("circle")
-		         .attr("cx", 430)
-		         .attr("cy", 200)
-		         .attr("r", 40)
-		         .style("fill", "url(#moonmars)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
-
-		     svg.append("circle")
-		         .attr("cx", 430)
-		         .attr("cy", 350)
-		         .attr("r", 40)
-		         .style("fill", "url(#marsurface)")       
-		         .style("stroke", "purple")     
-		         .style("stroke-width", 5);
 	  	</script>
+
 	  	<script>
 
 	  	var svgData = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", "600px")
@@ -390,6 +402,19 @@
 								  					return "";
 								  				}
 								  			});
+
+	  	</script>
+
+	  	<script>
+	  		var svgData = d3.select(".chart")
+	  						.append("svg")
+	  						.attr("height", "400px")
+	  						.attr("width", "600px");
+
+	  		var groupOne = svgData.append("g")
+	  							  .attr("transform", "translate(100, 100)");
+
+	  		
 
 	  	</script>
 	</body>
