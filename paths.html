@@ -20,12 +20,13 @@
 	  	<script>
 	  		
 	  		 var svg = d3.select(".canvas").append("svg")
-	  		 								.attr("height", "400px")
-	  		 								.attr("width", "530px")
+	  		 								.attr("height", "430px")
+	  		 								.attr("width", "500px")
 	  		 								.style("stroke-width", 0)
 	  		 								.style("background-color", "#404040")
 	  		 								.style("border-radius", 4);
-
+	  		 // Path info
+	  		 
 	  		 var patternInfo = [
 	  		 						{
 	  		 							id: "iss", 
@@ -115,7 +116,9 @@
 				  		 	cy: 200,
 				  		 	r: 40,
 				  		 	fill: "url(#iss)",
-				  		 	inner: "purple"
+				  		 	inner: "purple",
+				  		 	middle: "#0099FF",
+				  		 	outer: "#E65C00"
 				  		 },
 
 				  		 {
@@ -123,7 +126,7 @@
 				  		 	cy: 53,
 				  		 	r: 40,
 				  		 	fill: "url(#arm)",
-				  		 	inner: "orange"
+				  		 	inner: "#E65C00"
 				  		 },
 
 				  		 {
@@ -147,7 +150,8 @@
 				  		 	cy: 350,
 				  		 	r: 40,
 				  		 	fill: "url(#moon)",
-				  		 	inner: "purple"
+				  		 	inner: "purple",
+				  		 	middle: "#0099FF"
 				  		 },
 
 				  		 {
@@ -155,7 +159,8 @@
 				  		 	cy: 200,
 				  		 	r: 40,
 				  		 	fill: "url(#moonmars)",
-				  		 	inner: "purple"
+				  		 	inner: "purple",
+				  		 	middle: "#E65C00"
 				  		 },
 
 				  		 {
@@ -163,10 +168,14 @@
 				  		 	cy: 350,
 				  		 	r: 40,
 				  		 	fill: "url(#marsurface)",
-				  		 	inner: "purple"
+				  		 	inner: "purple",
+				  		 	middle: "#0099FF",
+				  		 	outer: "#E65C00"
 				  		 }
 
 	  		 ]
+
+	  		 // Circles
 
 	  		 cirleInfo.forEach(function(circle){
 		  		 svg.append("circle")
@@ -176,7 +185,157 @@
 			         .style("fill", circle.fill)       
 			         .style("stroke", circle.inner)     
 			         .style("stroke-width", 5);
-		  });
+
+			    if (circle.middle){
+			    	 svg.append("circle")
+				         .attr("cx", circle.cx)
+				         .attr("cy", circle.cy)
+				         .attr("r", 45)
+				         .style("fill", "transparent")       
+				         .style("stroke", circle.middle)     
+				         .style("stroke-width", 5);
+			    }
+
+			    if (circle.outer){
+			    	 svg.append("circle")
+				         .attr("cx", circle.cx)
+				         .attr("cy", circle.cy)
+				         .attr("r", 50)
+				         .style("fill", "transparent")       
+				         .style("stroke", circle.outer)     
+				         .style("stroke-width", 5);
+			    }
+				   
+			  });
+
+	  		 // Paths
+
+	  		svg.append("defs")
+	  		 	.append("marker")
+	  		 	.attr("fill", "#E65C00")
+	  		 	.attr("id", "arrowOrange")
+	  		 	.attr("viewBox", "0 0 10 10")
+	  		 	.attr("refX", "1")
+	  		 	.attr("refY", "5")
+	  		 	.attr("markerWidth", "3")
+	  		 	.attr("markerHeight", "3")
+	  		 	.attr("orient", "auto")
+	  		 	.append("path")
+	  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
+
+	  		svg.append("marker")
+	  		 	.attr("fill", "purple")
+	  		 	.attr("id", "arrowPurple")
+	  		 	.attr("viewBox", "0 0 10 10")
+	  		 	.attr("refX", "1")
+	  		 	.attr("refY", "5")
+	  		 	.attr("markerWidth", "3")
+	  		 	.attr("markerHeight", "3")
+	  		 	.attr("orient", "auto")
+	  		 	.append("path")
+	  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
+
+	  		svg.append("marker")
+	  		 	.attr("fill", "#0099FF")
+	  		 	.attr("id", "arrowBlue")
+	  		 	.attr("viewBox", "0 0 10 10")
+	  		 	.attr("refX", "1")
+	  		 	.attr("refY", "5")
+	  		 	.attr("markerWidth", "3")
+	  		 	.attr("markerHeight", "3")
+	  		 	.attr("orient", "auto")
+	  		 	.append("path")
+	  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
+
+	  		 var issToArm = svg.append("line")
+									.attr("x1", 110)
+									.attr("y1", 200)
+									.attr("x2", 180)
+									.attr("y2", 70)
+									.attr("stroke", "#E65C00")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowOrange)");
+
+			var issToLtwo = svg.append("line")
+									.attr("x1", 100)
+									.attr("y1", 200)
+									.attr("x2", 172)
+									.attr("y2", 200)
+									.attr("stroke", "purple")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowPurple)");
+
+			var issToMoon = svg.append("line")
+									.attr("x1", 105)
+									.attr("y1", 205)
+									.attr("x2", 177)
+									.attr("y2", 340)
+									.attr("stroke", "#0099FF")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowBlue)");
+
+			var armToMarsmoon = svg.append("line")
+									.attr("x1", 270)
+									.attr("y1", 53)
+									.attr("x2", 375)
+									.attr("y2", 180)
+									.attr("stroke", "#E65C00")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowOrange)");
+
+			var marsmoonToMarsOne = svg.append("line")
+									.attr("x1", 420)
+									.attr("y1", 245)
+									.attr("x2", 420)
+									.attr("y2", 284)
+									.attr("stroke", "#E65C00")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowOrange)");
+			var marsmoonToMarsTwo = svg.append("line")
+									.attr("x1", 440)
+									.attr("y1", 240)
+									.attr("x2", 440)
+									.attr("y2", 284)
+									.attr("stroke", "purple")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowPurple)");
+
+			var ltwoToAsteriod = svg.append("line")
+									.attr("x1", 270)
+									.attr("y1", 200)
+									.attr("x2", 380)
+									.attr("y2", 60)
+									.attr("stroke", "purple")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowPurple)");
+
+			var moonToMarsurface = svg.append("line")
+									.attr("x1", 275)
+									.attr("y1", 350)
+									.attr("x2", 370)
+									.attr("y2", 350)
+									.attr("stroke", "#0099FF")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowBlue)");
+
+			var moonToMarmoon = svg.append("line")
+									.attr("x1", 275)
+									.attr("y1", 350)
+									.attr("x2", 380)
+									.attr("y2", 210)
+									.attr("stroke", "purple")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowPurple)");
+
+			var asteriodToMoon = svg.append("line")
+									.attr("x1", 395)
+									.attr("y1", 70)
+									.attr("x2", 270)
+									.attr("y2", 320)
+									.attr("stroke", "purple")
+									.attr("stroke-width", 6)
+									.attr("marker-end", "url(#arrowPurple)");
+
 
 
 
