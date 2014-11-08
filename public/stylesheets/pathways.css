@@ -1,24 +1,29 @@
-body {
-  padding: 0px;
-  margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 
-a {
-  color: #00B7FF;
+body	{ 
+	width: 100%; 
+	height: 100%; 
+	background-image: url("../images/mars_image.jpg");
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	-webkit-animation: animatedBackground 40s linear infinite;
+	animation: animatedBackground 40s linear infinite;
 }
 
-.container-fluid {
-	padding: 5px;
+.canvas {
+	opacity: 0.8;
 }
 
-.row_buffer {
-	margin-top: 30px;
-	margin-left: 10px;
-
+#pathways {
+	background-color: #663300;
 }
 
-#table {
-	padding-top: 50px;
+
+#drm {
+	background-color: #996633;
 }
 

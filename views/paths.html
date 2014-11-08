@@ -4,17 +4,17 @@
 		<title>D3 Tutorial</title>
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
-		<link rel="stylesheet" href="../Mars//public/stylesheets/pathways.css" />
+		<link rel="stylesheet" href="/public/stylesheets/pathways.css" />
 	</head>	
 	<body>
 
-		<div id='animate-area' class='container'>
+		<div class='container'>
 			<div class='row'>
 				<div class='col-md-12 canvas'>
 				</div>
 			</div>
 			<div class='row'>
-				<div  class='col-md-12 chart'>
+				<div class='col-md-12 chart'>
 				</div>
 			</div>
 		</div>
@@ -23,8 +23,9 @@
 	  		 var svg = d3.select(".canvas").append("svg")
 	  		 								.attr("height", "430px")
 	  		 								.attr("width", ($(window).width() / 2) - 40)
-	  		 								.attr("id", "pathways");
-
+	  		 								.style("stroke-width", 0)
+	  		 								.style("background-color", "#404040")
+	  		 								.style("border-radius", 4);
 	  		 // Path info
 
 	  		 var patternInfo = [
@@ -423,12 +424,7 @@
 
 	  	<script>
 
-	  	var svgData = d3.select(".canvas")
-	  					.append("svg")
-	  					.attr("id", "drm")
-	  					.attr("height", "430px")
-	  					.attr("width", ($(window).width() / 2) + 20);
-	  									 
+	  	var svgData = d3.select(".canvas").append("svg").attr("height", "400px").attr("width", ($(window).width() / 2) + 20);
 
 
 	  	var groupOne = svgData.append("g").attr("transform", "translate(100, 100)");
