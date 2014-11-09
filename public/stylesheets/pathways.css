@@ -16,22 +16,36 @@ body	{
 
 .canvas {
 	opacity: 0.85;
+	pa
 }
 
 #pathways {
-	background-color: #663300;
+/*	background-color: #663300;
+*/	background-color: #996633;
+	margin-right: 1px;
+
 }
 
 
 #drm {
 	background-color: #996633;
+	margin-left: 1px;
+
+}
+
+#chart {
+	background-color: #996633;
+	opacity: 0.8;
 }
 
 .d3_tip {
   line-height: 1;
-  font-weight: bold;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  font-size: 12px;
+  background: #996633;
   border-radius: 2px;
 }
+
+/*.chart {
+	text-align: center;
+}*/
