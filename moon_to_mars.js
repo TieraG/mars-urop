@@ -400,7 +400,7 @@ var loadMoonToMars = function(){
 
 			  
 
-				var rectTwo = groupTwo.selectAll("rect")
+				var rectTwo = groupTwo.selectAll(".rect2")
 			  						.data(rowTwo)
 							  		.enter()
 						  		 	.append("rect")

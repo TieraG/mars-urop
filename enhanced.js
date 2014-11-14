@@ -504,7 +504,7 @@ var loadEnhanced = function(){
 
 			  
 
-				var rectThree = groupThree.selectAll("rect")
+				var rectThree = groupThree.selectAll(".rect")
 			  						.data(rowThree)
 							  		.enter()
 						  		 	.append("rect")
@@ -800,7 +800,7 @@ var loadEnhanced = function(){
 
 			  		
 
-					groupThreeOne.selectAll("rect")
+					groupThreeOne.selectAll(".rect1")
 			  				   .data(armDataThreeOne)
 			  				   .enter()
 			  				   		.append("rect")
@@ -820,7 +820,7 @@ var loadEnhanced = function(){
 									});
 
 
-					groupThreeTwo.selectAll("rect")
+					groupThreeTwo.selectAll(".rect2")
 			  				   .data(armDataThreeTwo)
 			  				   .enter()
 			  				   		.append("rect")
@@ -839,7 +839,7 @@ var loadEnhanced = function(){
 										}
 									});
 
-					groupThreeThree.selectAll("rect")
+					groupThreeThree.selectAll(".rect3")
 			  				   .data(armDataThreeThree)
 			  				   .enter()
 			  				   		.append("rect")
@@ -858,7 +858,7 @@ var loadEnhanced = function(){
 										}
 									});
 
-					groupThreeFour.selectAll("rect")
+					groupThreeFour.selectAll(".rect4")
 			  				   .data(armDataThreeFour)
 			  				   .enter()
 			  				   		.append("rect")
@@ -877,7 +877,7 @@ var loadEnhanced = function(){
 										}
 									});
 
-					groupThreeFive.selectAll("rect")
+					groupThreeFive.selectAll(".rect5")
 			  				   .data(armDataThreeFive)
 			  				   .enter()
 			  				   		.append("rect")
@@ -896,7 +896,7 @@ var loadEnhanced = function(){
 										}
 									});
 
-					groupThreeSix.selectAll("rect")
+					groupThreeSix.selectAll(".rect6")
 			  				   .data(armDataThreeSix)
 			  				   .enter()
 			  				   		.append("rect")
