@@ -5,7 +5,7 @@ var loadARM = function(){
 
 		 var svg = d3.select(".canvas").append("svg")
 			  		 								.attr("height", "430px")
-			  		 								.attr("width", ($(window).width() / 2) - 30)
+			  		 								.attr("width", 550)
 			  		 								.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
@@ -275,7 +275,7 @@ var loadARM = function(){
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
-		  					.attr("width", ($(window).width() / 2) + 20);
+		  					.attr("width", 600);
 
 			  									 
 
@@ -482,7 +482,7 @@ var loadARM = function(){
 			  						.append("svg")
 			  						.attr('id', "chart")
 			  						.attr("height", "500px")
-			  						.attr("width", $(window).width() - 10 );
+			  						.attr("width", 1150 );
 
 			  		var groupOneOne = svgChart.append("g")
 			  							  .attr("transform", "translate(100, 100)");
