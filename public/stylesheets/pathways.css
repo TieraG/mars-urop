@@ -48,6 +48,7 @@ body	{
   font-size: 12px;
   background: #996633;
   border-radius: 2px;
+  width: 150px;
 }
 
 .d3_tip:after {

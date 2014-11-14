@@ -284,7 +284,7 @@ var loadARM = function(){
 			  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
 
-			  //// TOP SECTION
+			//// TOP SECTION
 
 				groupOne.append("line")
 						.attr("x1", -70)
@@ -302,6 +302,8 @@ var loadARM = function(){
 						.attr("stroke", "grey")
 						.attr("stroke-width", 3);
 
+				var clickCount = 0;
+
 				var armBox = groupOne.append("rect")
 						.attr("width", 40)
 						.attr("height", 40)
@@ -313,15 +315,14 @@ var loadARM = function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadARM();
-							console.log("MOUSE ENTER");
-						})
+							clickCount = 1;
+													})
 						.on("mouseleave", function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadMainPage();
-							console.log("MOUSE OUT");
-						})
-						;
+							clickCount = 0
+						});
 
 
 				groupOne.append("text")
@@ -340,16 +341,15 @@ var loadARM = function(){
 						.on("mouseenter", function(){
 							$(".canvas").html("");
 							$(".chart").html("");
-							loadMoonToMars();
-							console.log("MOUSE ENTER");
+							loadARM();
+							clickCount = 1;
 						})
 						.on("mouseleave", function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadMainPage();
-							console.log("MOUSE OUT");
+							clickCount = 0;
 						});
-
 				groupTwo.append("text")
 						.attr("x", "110")
 						.attr("y", "-50")
@@ -381,7 +381,6 @@ var loadARM = function(){
 						  .attr("y", -50)
 						  .attr("font-size", "14px")
 						  .text("ENHANCED EXPLORATION");
-
 
 			  	var rowOne = [{lineOne: "Asteriod", lineTwo: "Redirect", lineThree: "Mission"}, {lineOne: "Martian", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
 

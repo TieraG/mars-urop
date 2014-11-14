@@ -12,8 +12,12 @@ var loadMainPage = function(){
 
 			  		 var tip = d3.tip()
 			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([5, 5])
-			  		 			 .html("<p> ISS do you copy <p>");
+			  		 			 .offset([50, 5])
+			  		 			 .direction("e")
+			  		 			 .html(function(d){
+			  		 			 	console.log(d.info);
+			  		 			 	return "<p>" + d.info + "<p>";
+			  		 			 });
 
 			  		 svg.call(tip);
 
@@ -110,7 +114,8 @@ var loadMainPage = function(){
 						  		 	fill: "url(#iss)",
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	outer: "#E65C00",
+						  		 	info: "ISS"
 						  		 },
 
 						  		 {
@@ -118,7 +123,8 @@ var loadMainPage = function(){
 						  		 	cy: 53,
 						  		 	r: 40,
 						  		 	fill: "url(#arm)",
-						  		 	inner: "#E65C00"
+						  		 	inner: "#E65C00",
+						  		 	info: "The Asteroid Redirect Mission (ARM) envisions a crew of two briefly interacting with a 7- to 10-meter asteroid while avoiding the longer travel times and environment required to reach an asteroid in its native orbit."
 						  		 },
 
 						  		 {
@@ -126,7 +132,8 @@ var loadMainPage = function(){
 						  		 	cy: 53,
 						  		 	r: 40,
 						  		 	fill: "url(#asteroid)",
-						  		 	inner: "purple"
+						  		 	inner: "purple",
+						  		 	info: "The Asteroid mission is a deep space mission beyond cislunar space for a crew of four to a near-Earth asteroid. The asteroid for the mission is selected based on scientific interest (or relevance to planetary defense) and Earth-asteroid alignment to allow the crew to transfer to and from the asteroid within a 270-day total mission duration."
 						  		 },
 
 						  		{
@@ -134,7 +141,8 @@ var loadMainPage = function(){
 						  		 	cy: 200,
 						  		 	r: 40,
 						  		 	fill: "url(#l2)",
-						  		 	inner: "purple"
+						  		 	inner: "purple",
+						  		 	info: "The Earth-Moon L2 reference mission would demonstrate long-term human habitation and operations in deep space. The spacecraft would transit to either an Earth-Moon Lagrange point or, alternatively, a stable lunar orbit."
 						  		 },
 
 						  		 {
@@ -143,7 +151,8 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#moon)",
 						  		 	inner: "purple",
-						  		 	middle: "#0099FF"
+						  		 	middle: "#0099FF",
+						  		 	info: "The Lunar Surface Sortie reference mission would leverage substantial pre-positioned assets in lunar orbit. It would be a 28-day mission on the lunar surface for a crew of four. Predeployed pressurized lunar surface mobility units would be positioned using SLS launch vehicles and reusable lunar ascent/descent vehicles."
 						  		 },
 
 						  		 {
@@ -152,7 +161,8 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#moonmars)",
 						  		 	inner: "purple",
-						  		 	middle: "#E65C00"
+						  		 	middle: "#E65C00",
+						  		 	info: "The Mars Moons mission is similar to the Asteroid mission in that it is an exploration of a lowgravity body in deep space using space exploration vehicles and EVAs for crewed exploration. The major distinguishing factor is the location of the low-gravity body. A crewed mission to both Phobos and Deimos in Mars orbit would include many elements of a crewed mission to Mars, but without the challenge of the entry, descent, and landing (EDL) and ascent from Mars."
 						  		 },
 
 						  		 {
@@ -162,7 +172,8 @@ var loadMainPage = function(){
 						  		 	fill: "url(#marsurface)",
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	outer: "#E65C00",
+						  		 	info: "The horizon goal for human spaceflight is the human exploration of the Mars surface. Multiple SLS launches will be required to place both the cargo and crewed portion of the mission in LEO. The cargo portion of the mission would use two vehicles to carry support equipment and travel to Mars during a planetary alignment prior to the crew transit."
 						  		 }
 
 			  		 ]
@@ -176,8 +187,10 @@ var loadMainPage = function(){
 					         .style("fill", circle.fill)       
 					         .style("stroke", circle.inner)     
 					         .style("stroke-width", 5)
-					         .on("mouseover", tip.show)
-					         .on("mouseout", tip.hide);
+					         .on("mouseenter", function(){
+					         	tip.show(circle);
+					         })
+					         .on("mouseleave", tip.hide);
 
 					    if (circle.middle){
 					    	 svg.append("circle")
@@ -187,8 +200,10 @@ var loadMainPage = function(){
 						         .style("fill", "transparent")       
 						         .style("stroke", circle.middle)     
 						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					         	 .on("mouseout", tip.hide);
+						         .on("mouseenter", function(){
+						         	tip.show(circle)
+						         })
+					         	 .on("mouseleave", tip.hide);
 					    }
 
 					    if (circle.outer){
@@ -199,8 +214,10 @@ var loadMainPage = function(){
 						         .style("fill", "transparent")       
 						         .style("stroke", circle.outer)     
 						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					             .on("mouseout", tip.hide);
+						         .on("mouseenter", function(){
+						         	tip.show(circle)
+						         })
+					             .on("mouseleave", tip.hide);
 					    }
 						   
 					  });
@@ -461,6 +478,7 @@ var loadMainPage = function(){
 						.attr("stroke", "grey")
 						.attr("stroke-width", 3);
 
+
 				var armBox = groupOne.append("rect")
 						.attr("width", 40)
 						.attr("height", 40)
@@ -472,15 +490,13 @@ var loadMainPage = function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadARM();
-							console.log("MOUSE ENTER");
-						})
+													})
 						.on("mouseleave", function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadMainPage();
-							console.log("MOUSE OUT");
-						})
-						;
+							clickCount = 0
+						});
 
 
 				groupOne.append("text")
@@ -500,14 +516,14 @@ var loadMainPage = function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadMoonToMars();
-							console.log("MOUSE ENTER");
+							clickCount = 1;
 						})
 						.on("mouseleave", function(){
 							$(".canvas").html("");
 							$(".chart").html("");
 							loadMainPage();
-							console.log("MOUSE OUT");
-						})
+							clickCount = 0;
+						});
 
 				groupTwo.append("text")
 						.attr("x", "110")
@@ -539,7 +555,7 @@ var loadMainPage = function(){
 						  .attr("x", 290)
 						  .attr("y", -50)
 						  .attr("font-size", "14px")
-						  .text("ENHANCED EXPLORATION")
+						  .text("ENHANCED EXPLORATION");
 
 				desOneOne.attr("x", -50).attr("y", 25).text("ARM");
 				desOneTwo.attr("x", -50).attr("y", 40).text("TO");
