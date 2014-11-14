@@ -5,7 +5,7 @@ var loadMainPage = function(){
 
 		 var svg = d3.select(".canvas").append("svg")
 			  		 								.attr("height", "430px")
-			  		 								.attr("width", ($(window).width() / 2) - 30)
+			  		 								.attr("width", 550)
 			  		 								.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
@@ -421,7 +421,7 @@ var loadMainPage = function(){
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
-		  					.attr("width", ($(window).width() / 2) + 20);
+		  					.attr("width", 600);
 
 			  									 
 
@@ -442,6 +442,8 @@ var loadMainPage = function(){
 				var desOneOne = descripOne.append("tspan");
 				var desOneTwo = descripOne.append("tspan");
 				var desOneThree = descripOne.append("tspan");
+
+				//// TOP SECTION
 
 				groupOne.append("line")
 						.attr("x1", -70)
@@ -466,6 +468,7 @@ var loadMainPage = function(){
 						.attr("y", -80)
 						.attr("fill", "#E65C00")
 						.attr("stroke-width", "5");
+
 
 				groupOne.append("text")
 						.attr("x", 0)
@@ -712,7 +715,7 @@ var loadMainPage = function(){
 			  						.append("svg")
 			  						.attr('id', "chart")
 			  						.attr("height", "500px")
-			  						.attr("width", $(window).width() - 10);
+			  						.attr("width", 1150);
 
 			  		var groupOneOne = svgChart.append("g")
 			  							  .attr("transform", "translate(100, 100)");
