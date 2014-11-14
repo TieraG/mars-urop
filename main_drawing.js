@@ -115,7 +115,7 @@ var loadMainPage = function(){
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
 						  		 	outer: "#E65C00",
-						  		 	info: "ISS"
+						  		 	info: "The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. It is a modular structure whose first component was launched in 1998. Now the largest artificial body in orbit, it can often be seen with the naked eye from Earth."
 						  		 },
 
 						  		 {
@@ -152,7 +152,7 @@ var loadMainPage = function(){
 						  		 	fill: "url(#moon)",
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
-						  		 	info: "The Lunar Surface Sortie reference mission would leverage substantial pre-positioned assets in lunar orbit. It would be a 28-day mission on the lunar surface for a crew of four. Predeployed pressurized lunar surface mobility units would be positioned using SLS launch vehicles and reusable lunar ascent/descent vehicles."
+						  		 	info: "The Lunar Surface Sortie reference mission would leverage substantial pre-positioned assets in lunar orbit. It would be a 28-day mission on the lunar surface for a crew of four. The Lunar Surface Outpost mission is an extension of the Lunar Surface Sortie mission, requiring the deployment of long-duration surface assets. The additional assets extend the potential mission duration from the 28-day sortie to as much as 6 months."
 						  		 },
 
 						  		 {
