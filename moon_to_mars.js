@@ -280,7 +280,19 @@ var loadMoonToMars = function(){
 						.attr("x", -60)
 						.attr("y", -80)
 						.attr("fill", "#E65C00")
-						.attr("stroke-width", "5");
+						.attr("stroke-width", "5")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadARM();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						});
 
 				groupOne.append("text")
 						.attr("x", 0)
@@ -294,7 +306,19 @@ var loadMoonToMars = function(){
 						.attr("x", 50)
 						.attr("y", -80)
 						.attr("fill", "#0099FF")
-						.attr("stroke-width", "5");
+						.attr("stroke-width", "5")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMoonToMars();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						})
 
 				groupTwo.append("text")
 						.attr("x", "110")
@@ -308,7 +332,19 @@ var loadMoonToMars = function(){
 						.attr("x", 240)
 						.attr("y", -80)
 						.attr("fill", "purple")
-						.attr("stroke-width", "3");
+						.attr("stroke-width", "3")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadEnhanced();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						});
 
 				groupThree.append("text")
 						  .attr("x", 290)

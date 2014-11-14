@@ -284,7 +284,7 @@ var loadARM = function(){
 			  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
 
-			  	//// TOP SECTION
+			  //// TOP SECTION
 
 				groupOne.append("line")
 						.attr("x1", -70)
@@ -308,7 +308,21 @@ var loadARM = function(){
 						.attr("x", -60)
 						.attr("y", -80)
 						.attr("fill", "#E65C00")
-						.attr("stroke-width", "5");
+						.attr("stroke-width", "5")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadARM();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						})
+						;
+
 
 				groupOne.append("text")
 						.attr("x", 0)
@@ -322,7 +336,19 @@ var loadARM = function(){
 						.attr("x", 50)
 						.attr("y", -80)
 						.attr("fill", "#0099FF")
-						.attr("stroke-width", "5");
+						.attr("stroke-width", "5")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMoonToMars();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						});
 
 				groupTwo.append("text")
 						.attr("x", "110")
@@ -336,13 +362,25 @@ var loadARM = function(){
 						.attr("x", 240)
 						.attr("y", -80)
 						.attr("fill", "purple")
-						.attr("stroke-width", "3");
+						.attr("stroke-width", "3")
+						.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadEnhanced();
+							console.log("MOUSE ENTER");
+						})
+						.on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+							console.log("MOUSE OUT");
+						});
 
 				groupThree.append("text")
 						  .attr("x", 290)
 						  .attr("y", -50)
 						  .attr("font-size", "14px")
-						  .text("ENHANCED EXPLORATION")
+						  .text("ENHANCED EXPLORATION");
 
 
 			  	var rowOne = [{lineOne: "Asteriod", lineTwo: "Redirect", lineThree: "Mission"}, {lineOne: "Martian", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
@@ -394,7 +432,7 @@ var loadARM = function(){
 											.attr("stroke-width", 6);
 
 
-			  	var rectOne = groupOne.selectAll("rect")
+			  	var rectOne = groupOne.selectAll(".rect1")
 			  						.data(rowOne)
 							  		.enter()
 						  		 	.append("rect")
