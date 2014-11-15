@@ -3,7 +3,7 @@ var loadMoonToMars = function(){
 
 	/////////////////////////////////////////////////////
 
-		var svgNav = d3.select(".canvas").append("svg")
+		var svgNav = d3.select(".headnav").append("svg")
   		 								.attr("height", 70)
   		 								.attr("width", 1150)
   		 								.attr("id", "nav");
