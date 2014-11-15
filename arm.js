@@ -378,8 +378,10 @@ var loadDRMARM = function(){
 				svgData.append("rect")
 						.attr("x", 15)
 						.attr("y", 20)
+						.attr("stroke", "black")
+						.attr("stroke-width", 2)
 						.attr("width", 570)
-						.attr("height", 200)
+						.attr("height", 170)
 						.attr("fill", "grey");
 						
 				var text = svgData.append("text").attr("font-size", 16);

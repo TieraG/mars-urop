@@ -469,6 +469,8 @@ var loadDRMEnh = function(){
 				svgData.append("rect")
 						.attr("x", 15)
 						.attr("y", 20)
+						.attr("stroke", "black")
+						.attr("stroke-width", 2)
 						.attr("width", 570)
 						.attr("height", 270)
 						.attr("fill", "grey");
