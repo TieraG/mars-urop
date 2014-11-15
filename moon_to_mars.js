@@ -1,124 +1,10 @@
-	
-var loadMoonToMars = function(){
+var loadPathwaysMn = function(){
 
-	/////////////////////////////////////////////////////
-
-		var svgNav = d3.select(".headnav").append("svg")
-  		 								.attr("height", 70)
-  		 								.attr("width", 1150)
-  		 								.attr("id", "nav");
-
-  		 var group = svgNav.append("g")
-			  						.attr("transform", "translate(100, 100)");
-
-  		 
-		//// TOP SECTION
-
-			group.append("line")
-					.attr("x1", "20%")
-					.attr("y1", -85)
-					.attr("x2", "78%")
-					.attr("y2", -85)
-					.attr("stroke", "grey")
-					.attr("stroke-width", 3);
-
-			group.append("line")
-					.attr("x1", "20%")
-					.attr("y1", -35)
-					.attr("x2", "78%")
-					.attr("y2", -35)
-					.attr("stroke", "grey")
-					.attr("stroke-width", 3);
-
-
-			var armBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "22%")
-					.attr("y", -75)
-					.attr("fill", "#E65C00")
-					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadARM();
-												})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						clickCount = 0
-					});
-
-
-			group.append("text")
-					.attr("x", "28%")
-					.attr("y", -55)
-					.attr("font-size", "14px")
-					.text("ARM");
-
-			var moonBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "35%")
-					.attr("y", -75)
-					.attr("fill", "#0099FF")
-					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMoonToMars();
-						clickCount = 1;
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						clickCount = 0;
-					});
-
-			group.append("text")
-					.attr("x", "41%")
-					.attr("y", -55)
-					.attr("font-size", "14px")
-					.text("MOON TO MARS");
-
-			var enhancedBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "55%")
-					.attr("y", -75)
-					.attr("fill", "purple")
-					.attr("stroke-width", "3")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadEnhanced();
-						console.log("MOUSE ENTER");
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						console.log("MOUSE OUT");
-					});
-
-			group.append("text")
-					  .attr("x", "61%")
-					  .attr("y", -55)
-					  .attr("font-size", "14px")
-					  .text("ENHANCED EXPLORATION");
-
-		/////////////////////////////////////////////////////
-		///////////////////////////////////////////////////////////////////
-
-		
-		/////////////////////////////////////////////////////
-
-		 var svg = d3.select(".canvas").append("svg")
-			  		 								.attr("height", "430px")
-			  		 								.attr("width", 550)
-			  		 								.attr("id", "pathways");
+var svg = d3.select(".canvas")
+		 					.append("svg")
+							.attr("height", "430px")
+							.attr("width", 550)
+							.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
 
@@ -353,11 +239,11 @@ var loadMoonToMars = function(){
 							   .attr("y", 390)
 							   .text("SURFACE");
 
-					
-		//////////////////////////////////////////////////
+}
 
+var loadDRMMn = function(){
 
-		var svgData = d3.select(".canvas")
+	var svgData = d3.select(".canvas")
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
@@ -378,9 +264,9 @@ var loadMoonToMars = function(){
 				var desTwoTwo = descripTwo.append("tspan");
 				var desTwoThree = descripTwo.append("tspan");
 
-				desTwoOne.attr("x", -50).attr("y", 125).text("MOON");
-				desTwoTwo.attr("x", -50).attr("y", 140).text("TO");
-				desTwoThree.attr("x", -50).attr("y", 155).text("MARS");
+				desTwoOne.attr("x", -50).attr("y", 225).text("MOON");
+				desTwoTwo.attr("x", -50).attr("y", 240).text("TO");
+				desTwoThree.attr("x", -50).attr("y", 255).text("MARS");
 
 				var descripThree = groupThree.append("text").attr("font-size", "14px")
 
@@ -420,7 +306,7 @@ var loadMoonToMars = function(){
 						  		 	.attr("width", 70)
 									.attr("height", 70)
 									.attr("x", function(d, i){return 20 + i*80})
-									.attr("y", 100)
+									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 2){
 											return "#900000"
@@ -436,7 +322,7 @@ var loadMoonToMars = function(){
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
-							  			.attr("y", 120)
+							  			.attr("y", 220)
 							  			.attr("font-size", "11px")
 							  			.text(function(d){return d.lineOne});
 
@@ -445,7 +331,7 @@ var loadMoonToMars = function(){
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
-							  			.attr("y", 135)
+							  			.attr("y", 235)
 							  			.attr("font-size", "11px")
 							  			.text(function(d){
 							  				if (d.lineTwo){
@@ -460,7 +346,7 @@ var loadMoonToMars = function(){
 										  		.enter()
 										  			.append("text")
 										  			.attr("x", function(d, i){return 25 + i*80})
-										  			.attr("y", 150)
+										  			.attr("y", 250)
 										  			.attr("font-size", "11px")
 										  			.text(function(d){
 										  				if (d.lineThree){
@@ -470,10 +356,9 @@ var loadMoonToMars = function(){
 										  				}
 										  			});
 
-				
+}
 
-
-		/////////////////////////////////////////////////
+var loadCumulativeMn = function(){
 
 		var svgChart = d3.select(".chart")
 			  						.append("svg")
@@ -717,6 +602,10 @@ var loadMoonToMars = function(){
 											return "green"
 										}
 									});
+}
 
-					
+var loadMoonToMars = function(){
+	loadPathwaysMn();
+	loadDRMMn();
+	loadCumulativeMn();				
 }

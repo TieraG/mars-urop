@@ -1,122 +1,9 @@
-	
-var loadARM = function(){
-
-		/////////////////////////////////////////////////////
-
-		var svgNav = d3.select(".headnav").append("svg")
-  		 								.attr("height", 70)
-  		 								.attr("width", 1150)
-  		 								.attr("id", "nav");
-
-  		 var group = svgNav.append("g")
-			  						.attr("transform", "translate(100, 100)");
-
-  		 
-		//// TOP SECTION
-
-			group.append("line")
-					.attr("x1", "20%")
-					.attr("y1", -85)
-					.attr("x2", "78%")
-					.attr("y2", -85)
-					.attr("stroke", "grey")
-					.attr("stroke-width", 3);
-
-			group.append("line")
-					.attr("x1", "20%")
-					.attr("y1", -35)
-					.attr("x2", "78%")
-					.attr("y2", -35)
-					.attr("stroke", "grey")
-					.attr("stroke-width", 3);
-
-
-			var armBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "22%")
-					.attr("y", -75)
-					.attr("fill", "#E65C00")
-					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadARM();
-												})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						clickCount = 0
-					});
-
-
-			group.append("text")
-					.attr("x", "28%")
-					.attr("y", -55)
-					.attr("font-size", "14px")
-					.text("ARM");
-
-			var moonBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "35%")
-					.attr("y", -75)
-					.attr("fill", "#0099FF")
-					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMoonToMars();
-						clickCount = 1;
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						clickCount = 0;
-					});
-
-			group.append("text")
-					.attr("x", "41%")
-					.attr("y", -55)
-					.attr("font-size", "14px")
-					.text("MOON TO MARS");
-
-			var enhancedBox = group.append("rect")
-					.attr("width", 30)
-					.attr("height", 30)
-					.attr("x", "55%")
-					.attr("y", -75)
-					.attr("fill", "purple")
-					.attr("stroke-width", "3")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadEnhanced();
-						console.log("MOUSE ENTER");
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-						console.log("MOUSE OUT");
-					});
-
-			group.append("text")
-					  .attr("x", "61%")
-					  .attr("y", -55)
-					  .attr("font-size", "14px")
-					  .text("ENHANCED EXPLORATION");
-
-		/////////////////////////////////////////////////////
-		///////////////////////////////////////////////////////////////////
-
-
-		 var svg = d3.select(".canvas").append("svg")
-			  		 								.attr("height", "430px")
-			  		 								.attr("width", 550)
-			  		 								.attr("id", "pathways");
+var loadPathwaysARM = function(){
+	var svg = d3.select(".canvas")
+						.append("svg")
+						.attr("height", "430px")
+						.attr("width", 550)
+						.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
 
@@ -378,10 +265,10 @@ var loadARM = function(){
 							   .attr("y", 235)
 							   .text("MOONS");
 
-		//////////////////////////////////////////////////
+}
 
-
-		var svgData = d3.select(".canvas")
+var loadDRMARM = function(){
+	var svgData = d3.select(".canvas")
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
@@ -404,9 +291,9 @@ var loadARM = function(){
 				var desOneTwo = descripOne.append("tspan");
 				var desOneThree = descripOne.append("tspan");
 
-				desOneOne.attr("x", -50).attr("y", 25).text("ARM");
-				desOneTwo.attr("x", -50).attr("y", 40).text("TO");
-				desOneThree.attr("x", -50).attr("y", 55).text("MARS");
+				desOneOne.attr("x", -50).attr("y", 225).text("ARM");
+				desOneTwo.attr("x", -50).attr("y", 240).text("TO");
+				desOneThree.attr("x", -50).attr("y", 255).text("MARS");
 
 				var descripTwo = groupTwo.append("text").attr("font-size", "14px")
 
@@ -451,6 +338,7 @@ var loadARM = function(){
 						  		 	.attr("width", 70)
 									.attr("height", 70)
 									.attr("x", function(d, i){return 20 + i*80})
+									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 2){
 											return "#900000"
@@ -466,7 +354,7 @@ var loadARM = function(){
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
-							  			.attr("y", 15)
+							  			.attr("y", 215)
 							  			.attr("font-size", "11px")
 							  			.text(function(d){return d.lineOne})
 
@@ -475,7 +363,7 @@ var loadARM = function(){
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
-							  			.attr("y", 30)
+							  			.attr("y", 230)
 							  			.attr("font-size", "11px")
 							  			.text(function(d){
 							  				if (d.lineTwo){
@@ -484,11 +372,9 @@ var loadARM = function(){
 							  					return "";
 							  				}
 							  			});
+}
 
-				
-
-
-		/////////////////////////////////////////////////
+var loadCumulativeARM = function(){
 
 		var svgChart = d3.select(".chart")
 			  						.append("svg")
@@ -725,6 +611,10 @@ var loadARM = function(){
 											return "green"
 										}
 									});
+}
 
-
+var loadARM = function(){
+	loadPathwaysARM();
+	loadDRMARM();
+	loadCumulativeARM();
 }
