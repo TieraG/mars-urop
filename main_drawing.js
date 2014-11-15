@@ -8,25 +8,24 @@ var loadMainPage = function(){
   		 								.attr("width", 1150)
   		 								.attr("id", "nav");
 
-  		 var group = svgNav.append("g")
-			  						.attr("transform", "translate(100, 100)");
-
+  		 var group = svgNav.append("g");
+			  						
   		 
 		//// TOP SECTION
 
 			group.append("line")
 					.attr("x1", "20%")
-					.attr("y1", -85)
+					.attr("y1", 15)
 					.attr("x2", "78%")
-					.attr("y2", -85)
+					.attr("y2", 15)
 					.attr("stroke", "grey")
 					.attr("stroke-width", 3);
 
 			group.append("line")
 					.attr("x1", "20%")
-					.attr("y1", -35)
+					.attr("y1", 60)
 					.attr("x2", "78%")
-					.attr("y2", -35)
+					.attr("y2", 60)
 					.attr("stroke", "grey")
 					.attr("stroke-width", 3);
 
@@ -35,7 +34,7 @@ var loadMainPage = function(){
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "22%")
-					.attr("y", -75)
+					.attr("y", 22)
 					.attr("fill", "#E65C00")
 					.attr("stroke-width", "5")
 					.on("mouseenter", function(){
@@ -53,7 +52,7 @@ var loadMainPage = function(){
 
 			group.append("text")
 					.attr("x", "28%")
-					.attr("y", -55)
+					.attr("y", 40)
 					.attr("font-size", "14px")
 					.text("ARM");
 
@@ -61,7 +60,7 @@ var loadMainPage = function(){
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "35%")
-					.attr("y", -75)
+					.attr("y", 22)
 					.attr("fill", "#0099FF")
 					.attr("stroke-width", "5")
 					.on("mouseenter", function(){
@@ -79,7 +78,7 @@ var loadMainPage = function(){
 
 			group.append("text")
 					.attr("x", "41%")
-					.attr("y", -55)
+					.attr("y", 40)
 					.attr("font-size", "14px")
 					.text("MOON TO MARS");
 
@@ -87,7 +86,7 @@ var loadMainPage = function(){
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "55%")
-					.attr("y", -75)
+					.attr("y", 22)
 					.attr("fill", "purple")
 					.attr("stroke-width", "3")
 					.on("mouseenter", function(){
@@ -105,7 +104,7 @@ var loadMainPage = function(){
 
 			group.append("text")
 					  .attr("x", "61%")
-					  .attr("y", -55)
+					  .attr("y", 40)
 					  .attr("font-size", "14px")
 					  .text("ENHANCED EXPLORATION");
 

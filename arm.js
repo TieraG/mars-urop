@@ -5,7 +5,7 @@ var loadARM = function(){
 
 		var svgNav = d3.select(".canvas").append("svg")
   		 								.attr("height", 70)
-  		 								.attr("width", "1150")
+  		 								.attr("width", 1150)
   		 								.attr("id", "nav");
 
   		 var group = svgNav.append("g")
