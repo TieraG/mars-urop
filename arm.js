@@ -1,7 +1,117 @@
 	
 var loadARM = function(){
-		
+
 		/////////////////////////////////////////////////////
+
+		var svgNav = d3.select(".canvas").append("svg")
+  		 								.attr("height", 70)
+  		 								.attr("width", "1150")
+  		 								.attr("id", "nav");
+
+  		 var group = svgNav.append("g")
+			  						.attr("transform", "translate(100, 100)");
+
+  		 
+		//// TOP SECTION
+
+			group.append("line")
+					.attr("x1", "20%")
+					.attr("y1", -85)
+					.attr("x2", "78%")
+					.attr("y2", -85)
+					.attr("stroke", "grey")
+					.attr("stroke-width", 3);
+
+			group.append("line")
+					.attr("x1", "20%")
+					.attr("y1", -35)
+					.attr("x2", "78%")
+					.attr("y2", -35)
+					.attr("stroke", "grey")
+					.attr("stroke-width", 3);
+
+
+			var armBox = group.append("rect")
+					.attr("width", 30)
+					.attr("height", 30)
+					.attr("x", "22%")
+					.attr("y", -75)
+					.attr("fill", "#E65C00")
+					.attr("stroke-width", "5")
+					.on("mouseenter", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadARM();
+												})
+					.on("mouseleave", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMainPage();
+						clickCount = 0
+					});
+
+
+			group.append("text")
+					.attr("x", "28%")
+					.attr("y", -55)
+					.attr("font-size", "14px")
+					.text("ARM");
+
+			var moonBox = group.append("rect")
+					.attr("width", 30)
+					.attr("height", 30)
+					.attr("x", "35%")
+					.attr("y", -75)
+					.attr("fill", "#0099FF")
+					.attr("stroke-width", "5")
+					.on("mouseenter", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMoonToMars();
+						clickCount = 1;
+					})
+					.on("mouseleave", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMainPage();
+						clickCount = 0;
+					});
+
+			group.append("text")
+					.attr("x", "41%")
+					.attr("y", -55)
+					.attr("font-size", "14px")
+					.text("MOON TO MARS");
+
+			var enhancedBox = group.append("rect")
+					.attr("width", 30)
+					.attr("height", 30)
+					.attr("x", "55%")
+					.attr("y", -75)
+					.attr("fill", "purple")
+					.attr("stroke-width", "3")
+					.on("mouseenter", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadEnhanced();
+						console.log("MOUSE ENTER");
+					})
+					.on("mouseleave", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMainPage();
+						console.log("MOUSE OUT");
+					});
+
+			group.append("text")
+					  .attr("x", "61%")
+					  .attr("y", -55)
+					  .attr("font-size", "14px")
+					  .text("ENHANCED EXPLORATION");
+
+		/////////////////////////////////////////////////////
+		///////////////////////////////////////////////////////////////////
+
 
 		 var svg = d3.select(".canvas").append("svg")
 			  		 								.attr("height", "430px")
@@ -284,103 +394,6 @@ var loadARM = function(){
 			  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
 
-			//// TOP SECTION
-
-				groupOne.append("line")
-						.attr("x1", -70)
-						.attr("y1", -85)
-						.attr("x2", 470)
-						.attr("y2", -85)
-						.attr("stroke", "grey")
-						.attr("stroke-width", 3);
-
-				groupOne.append("line")
-						.attr("x1", -70)
-						.attr("y1", -35)
-						.attr("x2", 470)
-						.attr("y2", -35)
-						.attr("stroke", "grey")
-						.attr("stroke-width", 3);
-
-				var clickCount = 0;
-
-				var armBox = groupOne.append("rect")
-						.attr("width", 40)
-						.attr("height", 40)
-						.attr("x", -60)
-						.attr("y", -80)
-						.attr("fill", "#E65C00")
-						.attr("stroke-width", "5")
-						.on("mouseenter", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadARM();
-							clickCount = 1;
-													})
-						.on("mouseleave", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadMainPage();
-							clickCount = 0
-						});
-
-
-				groupOne.append("text")
-						.attr("x", 0)
-						.attr("y", -50)
-						.attr("font-size", "14px")
-						.text("ARM");
-
-				var moonBox = groupTwo.append("rect")
-						.attr("width", 40)
-						.attr("height", 40)
-						.attr("x", 50)
-						.attr("y", -80)
-						.attr("fill", "#0099FF")
-						.attr("stroke-width", "5")
-						.on("mouseenter", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadARM();
-							clickCount = 1;
-						})
-						.on("mouseleave", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadMainPage();
-							clickCount = 0;
-						});
-				groupTwo.append("text")
-						.attr("x", "110")
-						.attr("y", "-50")
-						.attr("font-size", "14px")
-						.text("MOON TO MARS");
-
-				var enhancedBox = groupThree.append("rect")
-						.attr("width", 40)
-						.attr("height", 40)
-						.attr("x", 240)
-						.attr("y", -80)
-						.attr("fill", "purple")
-						.attr("stroke-width", "3")
-						.on("mouseenter", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadEnhanced();
-							console.log("MOUSE ENTER");
-						})
-						.on("mouseleave", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadMainPage();
-							console.log("MOUSE OUT");
-						});
-
-				groupThree.append("text")
-						  .attr("x", 290)
-						  .attr("y", -50)
-						  .attr("font-size", "14px")
-						  .text("ENHANCED EXPLORATION");
 
 			  	var rowOne = [{lineOne: "Asteriod", lineTwo: "Redirect", lineThree: "Mission"}, {lineOne: "Martian", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
 

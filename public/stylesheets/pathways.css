@@ -9,7 +9,7 @@ body	{
 	height: 100%; 
 	background-image: url("../images/mars_image.jpg");
 	background-position: 0px 0px;
-	background-repeat: repeat-x;
+	background-repeat: repeat-y;
 	-webkit-animation: animatedBackground 40s linear infinite;
 	animation: animatedBackground 10s linear infinite;
 }
@@ -20,14 +20,17 @@ body	{
 
 .canvas {
 	opacity: 0.85;
-	pa
 }
 
 #pathways {
-/*	background-color: #663300;
-*/	background-color: #996633;
+  background-color: #996633;
 	margin-right: 1px;
+}
 
+#nav {
+  background-color: #996633;
+  margin-right: 1px;
+  text-align: center;
 }
 
 
@@ -44,14 +47,16 @@ body	{
 
 .d3_tip {
   line-height: 1;
-  padding: 12px;
-  font-size: 12px;
-  background: #996633;
+  padding: 5px;
+  font-size: 16px;
+  background: grey;
   border-radius: 2px;
-  width: 200px;
+  border: 2px solid black;
+  width: 550px;
+  text-align: left;
 }
 
-.d3_tip:after {
+/*.d3_tip:after {
   box-sizing: border-box;
   display: inline;
   font-size: 10px;
@@ -60,11 +65,14 @@ body	{
   color: #996633;
   content: "\25BC";
   position: absolute;
-  text-align: center;
+  text-align: left;
 }
 
 .d3_tip.n:after {
   margin: -1px 0 0 0;
   top: 100%;
   left: 0;
+  text-align: left;
+
 }
+*/
