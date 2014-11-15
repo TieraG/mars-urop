@@ -356,6 +356,74 @@ var loadDRMMn = function(){
 										  				}
 										  			});
 
+
+				/// Append Moon Text
+
+				svgData.append("rect")
+						.attr("x", 15)
+						.attr("y", 20)
+						.attr("width", 570)
+						.attr("height", 270)
+						.attr("fill", "grey");
+						
+				var text = svgData.append("text").attr("font-size", 16);
+
+					text.append("tspan")
+						.attr("x", 180)
+						.attr("y", 65)
+						.style("font-weight", "bold")
+						.text("Moon-To-Mars (Blue Pathway)");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 100)
+						.text("This pathway first focuses on missions in the lunar vicinity and surface to");
+						
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 120)
+						.text("demonstrate longer-duration in-space habitats and complex propellant staging");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 140)
+						.text("in lunar orbit as well as to develop critical partial-gravity surface habitats, both");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 160)
+						.text("fixed and mobile, and long-term, reliable power generation to maintain these assets.");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 180)
+						.text("The focus in this pathway is to develop the required assets and techniques for martian");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 200)
+						.text("surface exploration using the nearest and most realistic celestial body with relatively");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 220)
+						.text("short return times and open launch windows. To proceed to the true destination, Mars,");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 240)
+						.text("as soon as is practical, after an appropriate time for examining hardware, operational,");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 260)
+						.text("and human health issues, the lunar assets will be retired from government service");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 280)
+						.text("and optionally maintained and leveraged by future commercial endeavors. ");
+
 }
 
 var loadCumulativeMn = function(){

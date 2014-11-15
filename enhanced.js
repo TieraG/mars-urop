@@ -464,6 +464,73 @@ var loadDRMEnh = function(){
 										  				}
 										  			});
 
+				/// Append Enhanced Text
+
+				svgData.append("rect")
+						.attr("x", 15)
+						.attr("y", 20)
+						.attr("width", 570)
+						.attr("height", 270)
+						.attr("fill", "grey");
+						
+				var text = svgData.append("text").attr("font-size", 16);
+
+					text.append("tspan")
+						.attr("x", 180)
+						.attr("y", 65)
+						.style("font-weight", "bold")
+						.text("Enhanced Exploration (Purple Pathway)");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 100)
+						.text("This pathway presents a potentially lower risk than the other pathways, but it is also");
+						
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 120)
+						.text("a longer duration pathway, exploring several several destinations while slowly");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 140)
+						.text("increasing the capability of key mission elements needed for a full Mars surface");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 160)
+						.text("mission. It begins by focusing on the challenges of a long-term in-space habitat with");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 180)
+						.text("a mission to Earth-Moon L2 and a native asteroid. This is followed by a focus on the");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 200)
+						.text("Moon to develop partial-gravity remote surface operations capabilities. Finally, there");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 220)
+						.text("is the development and use of the advanced in-space propulsion systems with");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 240)
+						.text("missions to the Mars moons followed by Mars surface operations.");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 260)
+						.text("Human health issues are also investigated during this pathway as more challenging");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 280)
+						.text("missions are completed.");
+
 }
 
 var loadCumulativeEnh = function(){

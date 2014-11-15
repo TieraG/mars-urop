@@ -372,6 +372,44 @@ var loadDRMARM = function(){
 							  					return "";
 							  				}
 							  			});
+
+				/// Append ARM Text
+
+				svgData.append("rect")
+						.attr("x", 15)
+						.attr("y", 20)
+						.attr("width", 570)
+						.attr("height", 200)
+						.attr("fill", "grey");
+						
+				var text = svgData.append("text").attr("font-size", 16);
+
+					text.append("tspan")
+						.attr("x", 80)
+						.attr("y", 60)
+						.style("font-weight", "bold")
+						.text("Asteriod Redirect Mission (ARM) To Mars (Orange Pathway)");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 100)
+						.text("This pathway leverages the initial demonstration of the SLS and Orion");
+						
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 120)
+						.text("systems in cislunar space via the ARM and then takes the direct path of");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 140)
+						.text("prioritizing activity in the Mars vicinity by focuing on exploring the moons");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 160)
+						.text("of Mars, followed by a Mars landing.");
+						
 }
 
 var loadCumulativeARM = function(){
