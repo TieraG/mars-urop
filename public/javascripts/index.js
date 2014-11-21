@@ -33,14 +33,14 @@ var loadIndex = function(){
 	 		 svg.append("rect")
 	 		   	.attr("x", "0%")
 	 			.attr("y", "65%")
-	 			.attr("width", "20%")
+	 			.attr("width", "21%")
 	 			.attr("height", "40%")
 	 			.attr("fill", "#996633");
 
 	 		svg.append("a")
 		         .attr("xlink:href", "/pathways")
 	 			 .append("circle")
-	 			 .attr("cx", "10%")
+	 			 .attr("cx", "11%")
 		         .attr("cy", "65%")
 		         .attr("r", "5%")
 		         .style("fill", "#86592d");
@@ -51,7 +51,7 @@ var loadIndex = function(){
 		    	 .append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")
-				 .attr("x", "8.5%")
+				 .attr("x", "9.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
 				 .text("1"); 
@@ -99,12 +99,12 @@ var loadIndex = function(){
 	 		 svg.append("rect")
 	 		   	.attr("x", "25%")
 	 			.attr("y", "65%")
-	 			.attr("width", "20%")
+	 			.attr("width", "21%")
 	 			.attr("height", "40%")
 	 			.attr("fill", "#996633");
 
 	 		svg.append("circle")
-	 			 .attr("cx", "35%")
+	 			 .attr("cx", "36%")
 		         .attr("cy", "65%")
 		         .attr("r", "5%")
 		         .style("fill", "#86592d"); 
@@ -112,7 +112,7 @@ var loadIndex = function(){
 		     svg.append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")
-				 .attr("x", "33.5%")
+				 .attr("x", "34.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
 				 .text("2"); 
@@ -160,12 +160,12 @@ var loadIndex = function(){
 	 		 svg.append("rect")
 	 		   	.attr("x", "50%")
 	 			.attr("y", "65%")
-	 			.attr("width", "20%")
+	 			.attr("width", "21%")
 	 			.attr("height", "40%")
 	 			.attr("fill", "#996633");
 
 	 		svg.append("circle")
-	 			 .attr("cx", "60%")
+	 			 .attr("cx", "61%")
 		         .attr("cy", "65%")
 		         .attr("r", "5%")
 		         .style("fill", "#86592d");
@@ -173,7 +173,7 @@ var loadIndex = function(){
 		    svg.append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")
-				 .attr("x", "58.5%")
+				 .attr("x", "59.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
 				 .text("3"); 
@@ -222,12 +222,12 @@ var loadIndex = function(){
 	 		var trip = svg.append("rect")
 	 		   	.attr("x", "75%")
 	 			.attr("y", "65%")
-	 			.attr("width", "20%")
+	 			.attr("width", "21%")
 	 			.attr("height", "40%")
 	 			.attr("fill", "#996633");
 
 	 		svg.append("circle")
-	 			 .attr("cx", "85%")
+	 			 .attr("cx", "86%")
 		         .attr("cy", "65%")
 		         .attr("r", "5%")
 		         .style("fill", "#86592d");
@@ -235,7 +235,7 @@ var loadIndex = function(){
 		    svg.append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")
-				 .attr("x", "83.5%")
+				 .attr("x", "84.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
 				 .text("4"); 
