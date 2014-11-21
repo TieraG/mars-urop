@@ -447,27 +447,27 @@ var loadDRMEnh = function(){
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway presents a potentially lower risk than the other pathways, but it is also a longer");
+						.text("This pathway presents a potentially lower risk than the other pathways, but it is also");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("duration pathway exploring several several destinations while slowly increasing the capability");
+						.text("a longer duration pathway exploring several several destinations while slowly increasing");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text(" of key mission elements needed for a full Mars surface mission. It begins by developing long");
+						.text("the capability of key mission elements needed for a full Mars surface mission. It begins ");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 160)
-						.text("-term in-space habitat capabilities, followed by partial-gravity remote surface operations");
+						.text("by developing long-term in-space habitat capabilities, followed by partial-gravity remote");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 180)
-						.text("capabilities, and finally the advanced in-space propulsion systems.");
+						.text("surface operations capabilities, and finally the advanced in-space propulsion systems.");
 
 					text.append("tspan")
 						.attr("x", 35)

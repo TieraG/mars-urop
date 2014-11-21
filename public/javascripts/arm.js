@@ -353,17 +353,17 @@ var loadDRMARM = function(){
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway leverages the initial demonstration of the SLS and Orion systems in cislunar");
+						.text("This pathway leverages the initial demonstration of the SLS and Orion systems in");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("space via the ARM and then takes the direct path of prioritizing activity in the Mars vicinity by");
+						.text(" cislunar space via the ARM and then takes the direct path of prioritizing activity in the");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text(" focuing on exploring the moons of Mars, followed by a Mars landing.");
+						.text("Mars vicinity by focuing on exploring the moons of Mars, followed by a Mars landing.");
 
 					text.append("tspan")
 						.attr("x", 35)

@@ -346,27 +346,27 @@ var loadDRMMn = function(){
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway first focuses on missions in the lunar vicinity and surface to demonstrate longer-");
+						.text("This pathway first focuses on missions in the lunar vicinity and surface to demonstrate");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("duration in-space habitats and complex propellant staging in lunar orbit as well as to develop");
+						.text("longer-duration in-space habitats and complex propellant staging in lunar orbit as well as");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text("critical partial-gravity surface habitats. After the lunar missions, the lunar assets will be retired");
+						.text("to develop critical partial-gravity surface habitats. After the lunar missions, the lunar");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 160)
-						.text("from government service and optionally maintained and leveraged by future commercial");
+						.text("assets will be retired from government service and optionally maintained and leveraged");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 180)
-						.text("endeavors.");
+						.text("by future commercial endeavors.");
 
 					text.append("tspan")
 						.attr("x", 35)
