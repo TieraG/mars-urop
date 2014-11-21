@@ -17,7 +17,6 @@ var loadMainPage = function(){
 			  		 			 .offset([50, 5])
 			  		 			 .direction("e")
 			  		 			 .html(function(d){
-			  		 			 	console.log(d.info);
 			  		 			 	return "<p>" + d.info + "<p>";
 			  		 			 });
 
@@ -126,7 +125,7 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#arm)",
 						  		 	inner: "#E65C00",
-						  		 	info: "The Asteroid Redirect Mission (ARM) envisions a crew of two briefly interacting with a 7- to 10-meter asteroid while avoiding the longer travel times and environment required to reach an asteroid in its native orbit."
+						  		 	info: "<b><u>Asteroid Redirect Mission</u></b><br><br><b><u>Description</u></b>: Scientific study (sample collection) on a 7- to 10-meter asteroid taken from its native orbit to the lunar vicinity by a robotic mission.<br><br><b><u>Duration:</u></b> up to 6 days on the surface.<br><br><b><u>Crew:</u></b> 2"
 						  		 },
 
 						  		 {
@@ -135,7 +134,7 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#asteroid)",
 						  		 	inner: "purple",
-						  		 	info: "The Asteroid mission is a deep space mission beyond cislunar space for a crew of four to a near-Earth asteroid. The asteroid for the mission is selected based on scientific interest (or relevance to planetary defense) and Earth-asteroid alignment to allow the crew to transfer to and from the asteroid within a 270-day total mission duration."
+						  		 	info: "<b><u>Asteroid in Native Orbit</u></b><br><br><b><u>Description:</u></b> Asteroid of scientific interest beyond cislunar space. Important scientific returns and development of deep space navigation, low gravity foreign body exploration technologies.<br><br><b><u>Duration:</u></b> 60 to 130 day transit, 14-day mission at the asteroid.<br><br><b><u>Crew:</u></b> 4"
 						  		 },
 
 						  		{
@@ -144,7 +143,7 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#l2)",
 						  		 	inner: "purple",
-						  		 	info: "The Earth-Moon L2 reference mission would demonstrate long-term human habitation and operations in deep space. The spacecraft would transit to either an Earth-Moon Lagrange point or, alternatively, a stable lunar orbit."
+						  		 	info: "<b><u>Earth-Moon L2</u></b><br><br><u><b>Description:</b></u> Provide technologies and techniques that could enable crews to survive on long-duration deep space missions. Observations of the far side of the Moon or support to lunar surface activities.<br><br><u><b>Duration:</b></u> 6 months (minimum)<br><br><u><b>Crew:</b></u> 4 or more"
 						  		 },
 
 						  		 {
@@ -154,7 +153,7 @@ var loadMainPage = function(){
 						  		 	fill: "url(#moon)",
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
-						  		 	info: "The Lunar Surface Sortie reference mission would leverage substantial pre-positioned assets in lunar orbit. It would be a 28-day mission on the lunar surface for a crew of four. The Lunar Surface Outpost mission is an extension of the Lunar Surface Sortie mission, requiring the deployment of long-duration surface assets. The additional assets extend the potential mission duration from the 28-day sortie to as much as 6 months."
+						  		 	info: "<u><b>Lunar Surface Sortie</b></u><br><br><b><u>Description:</u></b> Scientific exploration. Develop required assets and techniques for martian surface exploration using nearest and most realistic celestial body with short return times.<br><br><u><b>Duration:</b></u> 28 days<br><br><u><b>Crew:</b></u> 4 <br><br><u><b>Lunar Surface Outpost</b></u><br><br><b><u>Description:</u></b> Extension of the Lunar Surface Sortie Mission, with long duration surface assets. Scientific exploration and experiment and testing of Mars-focused technologies.<br><br><u><b>Duration:</b></u> 6 months<br><br><u><b>Crew:</b></u> 4<br><br>"
 						  		 },
 
 						  		 {
@@ -164,7 +163,7 @@ var loadMainPage = function(){
 						  		 	fill: "url(#moonmars)",
 						  		 	inner: "purple",
 						  		 	middle: "#E65C00",
-						  		 	info: "The Mars Moons mission is similar to the Asteroid mission in that it is an exploration of a lowgravity body in deep space using space exploration vehicles and EVAs for crewed exploration. The major distinguishing factor is the location of the low-gravity body. A crewed mission to both Phobos and Deimos in Mars orbit would include many elements of a crewed mission to Mars, but without the challenge of the entry, descent, and landing (EDL) and ascent from Mars."
+						  		 	info: "<b><u>Mars Moon</u></b><br><br><u><b>Description:</b></u> Similar to a crewed mission to Mars but without challenges of entry, descent and landing (EDL) and ascent from Mars, because low gravity bodies<br><br><u><b>Duration:</b></u> 60 days at Phobos and Deimos, 2 months Mars orbit, 700-day mission total"
 						  		 },
 
 						  		 {
@@ -175,7 +174,7 @@ var loadMainPage = function(){
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
 						  		 	outer: "#E65C00",
-						  		 	info: "The horizon goal for human spaceflight is the human exploration of the Mars surface. Multiple SLS launches will be required to place both the cargo and crewed portion of the mission in LEO. The cargo portion of the mission would use two vehicles to carry support equipment and travel to Mars during a planetary alignment prior to the crew transit."
+						  		 	info: "<b><u>Mars Surface</u></b><br><br><u><b>Description:</b></u> Horizon of the Human exploration.<br><br><u><b>Duration:</b></u> 6 months transfer to Mars orbit, 6 months on surface."
 						  		 }
 
 			  		 ]
@@ -676,6 +675,16 @@ var loadMainPage = function(){
 			  						.attr("height", "500px")
 			  						.attr("width", 1150);
 
+			  		 var tipBar = d3.tip()
+			  		 			 .attr("class", "d3_tip")
+			  		 			 .offset([20, -5])
+			  		 			 .direction("w")
+			  		 			 .html(function(d){
+			  		 			 	return "<p>" + d.info + "<p>";
+			  		 			 });
+
+			  		 svgChart.call(tipBar);
+
 			  		var groupOneOne = svgChart.append("g")
 			  							  .attr("transform", "translate(100, 100)");
 			  		var groupOneTwo = svgChart.append("g")
@@ -762,28 +771,44 @@ var loadMainPage = function(){
 							  .attr("font-size", "14px")
 							  .text("PRIMARY MISSION ELEMENT");
 
-					groupLabels.append("rect")
-						      .attr("width", 40)
-						      .attr("height", 40)
-							  .attr("x", 750)
-							  .attr("y", -25)
-							  .attr('fill', 'red');
+					// Bar chart labels
 
-					groupLabels.append("rect")
-						      .attr("width", 40)
-						      .attr("height", 40)
-							  .attr("x", 750)
-							  .attr("y", 75)
-							  .attr('fill', 'orange');
+					var bar_chart_data = [
 
-					groupLabels.append("rect")
-						      .attr("width", 40)
-						      .attr("height", 40)
-							  .attr("x", 750)
-							  .attr("y", 175)
-							  .attr('fill', 'green');
-							  
+						{
+							x: 750,
+							y: -25,
+							fill: "red",
+							info: "Elements which have requirements other than what needed for a Mars surface mission and are extraneous to the direct goal of landing humans on Mars."
+						},
+						{
+							x: 750,
+							y: 75,
+							fill: "orange",
+							info: "Elements that are in the technological development path of a primary element"
+						},
+						{
+							x: 750,
+							y: 175,
+							fill: "green",
+							info: "Mission elements needed for a mars surface Mission"
+						}
+					];
 
+					bar_chart_data.forEach(function(bar){
+
+						groupLabels.append("rect")
+									.attr("width", 40)
+								    .attr("height", 40)
+									.attr("x", bar.x)
+									.attr("y", bar.y)
+									.attr('fill', bar.fill)
+									.on("mouseenter", function(){
+					         				tipBar.show(bar);
+					         		})
+					         		.on("mouseleave", tipBar.hide);
+					});
+					
 
 			  		var groupTwoOne = svgChart.append("g")
 			  							  .attr("transform", "translate(100, 100)");
