@@ -89,13 +89,11 @@ var loadNavBar = function(){
 						$(".canvas").html("");
 						$(".chart").html("");
 						loadEnhanced();
-						console.log("MOUSE ENTER");
 					})
 					.on("mouseleave", function(){
 						$(".canvas").html("");
 						$(".chart").html("");
 						loadMainPage();
-						console.log("MOUSE OUT");
 					});
 
 			group.append("text")
