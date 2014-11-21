@@ -1,20 +1,12 @@
-	
+var loadPathwaysMn = function(){
 
-var loadPathwaysEnh = function(){
-	var svg = d3.select(".canvas")
-		 				.append("svg")
-						.attr("height", "430px")
-						.attr("width", 550)
-						.attr("id", "pathways");
+var svg = d3.select(".canvas")
+		 					.append("svg")
+							.attr("height", "430px")
+							.attr("width", 550)
+							.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
-
-			  		 var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([5, 5])
-			  		 			 .html("<p> ISS do you copy <p>");
-
-			  		 svg.call(tip);
 
 			  		 // Path info
 
@@ -23,28 +15,8 @@ var loadPathwaysEnh = function(){
 			  		 							id: "iss", 
 			  		 							width: 300, 
 			  		 							height: 300, 
-			  		 							link: "public/images/ISS.png", 
+			  		 							link: "/images/ISS.png", 
 			  		 							x: 0 + shift, 
-			  		 							y: 150
-			  		 						}, 
-
-			  		 						
-
-			  		 						{
-			  		 							id: "asteroid", 
-			  		 							width: 600, 
-			  		 							height: 600, 
-			  		 							link: "public/images/asteroid.png", 
-			  		 							x: 380 + shift, 
-			  		 							y: 3
-			  		 						}, 
-
-			  		 						{
-			  		 							id: "l2", 
-			  		 							width: 500, 
-			  		 							height: 500, 
-			  		 							link: "public/images/L2.png", 
-			  		 							x: 180 + shift, 
 			  		 							y: 150
 			  		 						}, 
 
@@ -52,25 +24,16 @@ var loadPathwaysEnh = function(){
 			  		 							id: "moon", 
 			  		 							width: 500, 
 			  		 							height: 500, 
-			  		 							link: "public/images/moon.png", 
+			  		 							link: "/images/moon.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 300
-			  		 						}, 
-
-			  		 						{
-			  		 							id: "moonmars", 
-			  		 							width: 600, 
-			  		 							height: 600, 
-			  		 							link: "public/images/moonmars.png", 
-			  		 							x: 380 + shift, 
-			  		 							y: 150
 			  		 						}, 
 
 			  		 						{
 			  		 							id: "marsurface", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/marsurface.png", 
+			  		 							link: "/images/marsurface.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 300
 			  		 						}
@@ -78,18 +41,18 @@ var loadPathwaysEnh = function(){
 
 			  		 patternInfo.forEach(function(pattern){
 
-				  		 svg.append("defs")
-							   .append("pattern")
-							   .attr("id", pattern.id)
-							   .attr('patternUnits', 'userSpaceOnUse')
-							   .attr("width", pattern.width)
-							   .attr("height", pattern.height)
-							   .append("image")
-							   .attr("width", 100)
-							   .attr("height", 100)
-							   .attr("xlink:href", pattern.link)
-							   .attr('x', pattern.x)
-			                   .attr('y', pattern.y);
+					  	svg.append("defs")
+								   .append("pattern")
+								   .attr("id", pattern.id)
+								   .attr('patternUnits', 'userSpaceOnUse')
+								   .attr("width", pattern.width)
+								   .attr("height", pattern.height)
+								   .append("image")
+								   .attr("width", 100)
+								   .attr("height", 100)
+								   .attr("xlink:href", pattern.link)
+								   .attr('x', pattern.x)
+				                   .attr('y', pattern.y);
 
 			  		 });
 
@@ -100,44 +63,16 @@ var loadPathwaysEnh = function(){
 						  		 	cy: 200,
 						  		 	r: 40,
 						  		 	fill: "url(#iss)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "#0099FF",
 						  		 },
 
-
-						  		 {
-						  		 	cx: 430 + shift,
-						  		 	cy: 53,
-						  		 	r: 40,
-						  		 	fill: "url(#asteroid)",
-						  		 	inner: "purple"
-						  		 },
-
-						  		{
-						  		 	cx: 230 + shift,
-						  		 	cy: 200,
-						  		 	r: 40,
-						  		 	fill: "url(#l2)",
-						  		 	inner: "purple"
-						  		 },
 
 						  		 {
 						  		 	cx: 230 + shift,
 						  		 	cy: 350,
 						  		 	r: 40,
 						  		 	fill: "url(#moon)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF"
-						  		 },
-
-						  		 {
-						  		 	cx: 430 + shift,
-						  		 	cy: 200,
-						  		 	r: 40,
-						  		 	fill: "url(#moonmars)",
-						  		 	inner: "purple",
-						  		 	middle: "#E65C00"
+						  		 	inner: "#0099FF"
 						  		 },
 
 						  		 {
@@ -145,49 +80,20 @@ var loadPathwaysEnh = function(){
 						  		 	cy: 350,
 						  		 	r: 40,
 						  		 	fill: "url(#marsurface)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "#0099FF"
 						  		 }
 
 			  		 ]
 
 			  		 circleInfo.forEach(function(circle){
 
-				  		 svg.append("circle")
+				  		  svg.append("circle")
 					         .attr("cx", circle.cx)
 					         .attr("cy", circle.cy)
 					         .attr("r", 40)
 					         .style("fill", circle.fill)       
 					         .style("stroke", circle.inner)     
-					         .style("stroke-width", 5)
-					         .on("mouseover", tip.show)
-					         .on("mouseout", tip.hide);
-
-					    if (circle.middle){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 45)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.middle)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					         	 .on("mouseout", tip.hide);
-					    }
-
-					    if (circle.outer){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 50)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.outer)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					             .on("mouseout", tip.hide);
-					    }
-						   
+					         .style("stroke-width", 5);						   
 					  });
 
 			  		 // Paths
@@ -229,67 +135,43 @@ var loadPathwaysEnh = function(){
 			  		 	.append("path")
 			  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
 
-			  		 
-
-					var issToLtwo = svg.append("line")
-											.attr("x1", 100 + shift)
-											.attr("y1", 200)
-											.attr("x2", 172 + shift)
-											.attr("y2", 200)
-											.attr("stroke", "purple")
-											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowPurple)");
+			  		
 
 				
-					var marsmoonToMarsTwo = svg.append("line")
-											.attr("x1", 440 + shift)
-											.attr("y1", 240)
-											.attr("x2", 440 + shift)
-											.attr("y2", 295)
-											.attr("stroke", "purple")
+
+					var issToMoon = svg.append("line")
+											.attr("x1", 100 + shift)
+											.attr("y1", 205)
+											.attr("x2", 180 + shift)
+											.attr("y2", 340)
+											.attr("stroke", "#0099FF")
 											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowPurple)");
-
-					var ltwoToAsteriod = svg.append("line")
-											.attr("x1", 270 + shift)
-											.attr("y1", 200)
-											.attr("x2", 380 + shift)
-											.attr("y2", 60)
-											.attr("stroke", "purple")
-											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowPurple)");
+											.attr("marker-end", "url(#arrowBlue)");
 
 
-					var moonToMasrmoon = svg.append("line")
+					
+					
+
+					
+
+					var moonToMarsurface = svg.append("line")
 											.attr("x1", 270 + shift)
 											.attr("y1", 350)
-											.attr("x2", 380 + shift)
-											.attr("y2", 210)
-											.attr("stroke", "purple")
+											.attr("x2", 375 + shift)
+											.attr("y2", 350)
+											.attr("stroke", "#0099FF")
 											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowPurple)");
+											.attr("marker-end", "url(#arrowBlue)");
 
-					var asteriodToMoon = svg.append("line")
-											.attr("x1", 395 + shift)
-											.attr("y1", 70)
-											.attr("x2", 220 + shift)
-											.attr("y2", 300)
-											.attr("stroke", "purple")
-											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowPurple)");
+					
 					// Labels
 
+					
 					var issText = svg.append("text")
 									 .attr("font-size", "13px")
 									 .attr("x", 30 + shift)
 									 .attr("y", 280)
 									 .text("LEO/ISS");
-
-					var ltwoText = svg.append("text")
-									 .attr("font-size", "13px")
-									 .attr("x", 150 + shift)
-									 .attr("y", 170)
-									 .text("E-M L2");
 
 					var moonText = svg.append("text")
 									 .attr("font-size", "13px")
@@ -323,67 +205,43 @@ var loadPathwaysEnh = function(){
 							   .attr("y", 390)
 							   .text("SURFACE");
 
-					var marsmoonText = svg.append("text")
-									 .attr("font-size", "13px")
-				
-					marsmoonText.append("tspan")
-							   .attr("x", 300 + shift)
-							   .attr("y", 220)
-							   .text("MARTIAN");
-
-					marsmoonText.append("tspan")
-							   .attr("x", 300 + shift)
-							   .attr("y", 235)
-							   .text("MOONS");
-
-					var asteriodText = svg.append("text")
-									 .attr("font-size", "13px")
-				
-					asteriodText.append("tspan")
-							   .attr("x", 320 + shift)
-							   .attr("y", 20)
-							   .text("ASTERIOD");
-
-					asteriodText.append("tspan")
-							   .attr("x", 320 + shift)
-							   .attr("y", 35)
-							   .text("INITIATIVE");
-
-					asteriodText.append("tspan")
-							   .attr("x", 320 + shift)
-							   .attr("y", 50)
-							   .text("ORBIT");
 }
 
-var loadDRMEnh = function(){
+var loadDRMMn = function(){
 
-		var svgData = d3.select(".canvas")
+	var svgData = d3.select(".canvas")
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
 		  					.attr("width", 600);
 
-			  									 
-
-
+			  							
 			  	var groupOne = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
 
-			  
-			  	var rowThree = [{lineOne: "Earth", lineTwo: "Moon", lineThree: "L2"}, {lineOne: "Asteriod in", lineTwo: "Native", lineThree: "Orbit"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Martians", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
 
-			  
+			  	var rowTwo = [{lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Mars", lineTwo: "Surface"}];
+
+
+				var descripTwo = groupTwo.append("text").attr("font-size", "14px")
+
+				var desTwoOne = descripTwo.append("tspan");
+				var desTwoTwo = descripTwo.append("tspan");
+				var desTwoThree = descripTwo.append("tspan");
+
+				desTwoOne.attr("x", -50).attr("y", 225).text("MOON");
+				desTwoTwo.attr("x", -50).attr("y", 240).text("TO");
+				desTwoThree.attr("x", -50).attr("y", 255).text("MARS");
+
 				var descripThree = groupThree.append("text").attr("font-size", "14px")
 
-				var desThreeOne = descripThree.append("tspan");
-				var desThreeTwo = descripThree.append("tspan");
+			
 				var pathwayLabel = descripThree.append("tspan");
 				var drmLabel = descripThree.append("tspan");
 
 
-				desThreeOne.attr("x", -80).attr("y", 225).text("ENHANCED");
-				desThreeTwo.attr("x", -85).attr("y", 240).text("EXPLORATION");
+				
 				pathwayLabel.attr("x", -80).attr("y", 300).text("PATHWAY");
 				drmLabel.attr("x", 150).attr("y", 300).text("DESIGN REFERENCE MISSION (DRM)");
 
@@ -407,8 +265,8 @@ var loadDRMEnh = function(){
 
 			  
 
-				var rectThree = groupThree.selectAll(".rect")
-			  						.data(rowThree)
+				var rectTwo = groupTwo.selectAll(".rect2")
+			  						.data(rowTwo)
 							  		.enter()
 						  		 	.append("rect")
 						  		 	.attr("width", 70)
@@ -416,17 +274,17 @@ var loadDRMEnh = function(){
 									.attr("x", function(d, i){return 20 + i*80})
 									.attr("y", 200)
 									.style("fill", function(d,i){
-										if (i == 5){
+										if (i == 2){
 											return "#900000"
 										} 
 
 										return "transparent";
 									})
 									.style("stroke", "black")
-						 			.style("stroke-width", 3);	
+						 			.style("stroke-width", 3);
 
-				var textLineThreeOne = groupThree.selectAll(".three")
-							  		.data(rowThree)
+				var textLineTwoOne = groupTwo.selectAll(".two")
+							  		.data(rowTwo)
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
@@ -434,23 +292,23 @@ var loadDRMEnh = function(){
 							  			.attr("font-size", "11px")
 							  			.text(function(d){return d.lineOne});
 
-				var textLineThreeTwo = groupThree.selectAll(".three")
-										  		.data(rowThree)
-										  		.enter()
-										  			.append("text")
-										  			.attr("x", function(d, i){return 25 + i*80})
-										  			.attr("y", 235)
-										  			.attr("font-size", "11px")
-										  			.text(function(d){
-										  				if (d.lineTwo){
-										  					return d.lineTwo
-										  				} else {
-										  					return "";
-										  				}
-										  			});
+				var textLineTwoTwo = groupTwo.selectAll(".two")
+							  		.data(rowTwo)
+							  		.enter()
+							  			.append("text")
+							  			.attr("x", function(d, i){return 25 + i*80})
+							  			.attr("y", 235)
+							  			.attr("font-size", "11px")
+							  			.text(function(d){
+							  				if (d.lineTwo){
+							  					return d.lineTwo
+							  				} else {
+							  					return "";
+							  				}
+							  			});
 
-				var textLineThreeThree = groupThree.selectAll(".three")
-										  		.data(rowThree)
+				var textLineTwoThree = groupTwo.selectAll(".two")
+										  		.data(rowTwo)
 										  		.enter()
 										  			.append("text")
 										  			.attr("x", function(d, i){return 25 + i*80})
@@ -464,7 +322,8 @@ var loadDRMEnh = function(){
 										  				}
 										  			});
 
-				/// Append Enhanced Text
+
+				/// Append Moon Text
 
 				svgData.append("rect")
 						.attr("x", 15)
@@ -475,69 +334,78 @@ var loadDRMEnh = function(){
 						.attr("height", 270)
 						.attr("fill", "grey");
 						
-				var text = svgData.append("text").attr("font-size", 16);
+				var text = svgData.append("text").attr("font-size", 14);
 
 					text.append("tspan")
 						.attr("x", 180)
 						.attr("y", 65)
 						.style("font-weight", "bold")
-						.text("Enhanced Exploration (Purple Pathway)");
+						.style("text-decoration", "underline")
+						.text("Moon-To-Mars (Blue Pathway)");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway presents a potentially lower risk than the other pathways, but it is also");
+						.text("This pathway first focuses on missions in the lunar vicinity and surface to demonstrate longer-");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("a longer duration pathway, exploring several several destinations while slowly");
+						.text("duration in-space habitats and complex propellant staging in lunar orbit as well as to develop");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text("increasing the capability of key mission elements needed for a full Mars surface");
+						.text("critical partial-gravity surface habitats. After the lunar missions, the lunar assets will be retired");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 160)
-						.text("mission. It begins by focusing on the challenges of a long-term in-space habitat with");
+						.text("from government service and optionally maintained and leveraged by future commercial");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 180)
-						.text("a mission to Earth-Moon L2 and a native asteroid. This is followed by a focus on the");
+						.text("endeavors.");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 200)
-						.text("Moon to develop partial-gravity remote surface operations capabilities. Finally, there");
+						.attr("y", 205)
+						.style('font-weight', 'bold')
+						.style("text-decoration", "underline")
+						.text("Desirable Properties:");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 220)
-						.text("is the development and use of the advanced in-space propulsion systems with");
+						.attr("y", 225)
+						.text("- Significance of destinations: mineral wealth exploitation (moon)");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 240)
-						.text("missions to the Mars moons followed by Mars surface operations.");
+						.text("- Show progress with intermediate destinations");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 260)
-						.text("Human health issues are also investigated during this pathway as more challenging");
+						.attr("y", 255)
+						.text("- Logical technological feed-forward");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 280)
-						.text("missions are completed.");
+						.attr("y", 270)
+						.text("- Minimize dead-end elements");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 285)
+						.text("- Good operational tempo");
+
 
 }
 
-var loadCumulativeEnh = function(){
+var loadCumulativeMn = function(){
 
-	var svgChart = d3.select(".chart")
+		var svgChart = d3.select(".chart")
 			  						.append("svg")
 			  						.attr('id', "chart")
 			  						.attr("height", "500px")
@@ -675,48 +543,18 @@ var loadCumulativeEnh = function(){
 			  							  .attr("transform", "translate(100, 100)");
 
 			 
-			  		var armDataOneOne = [ 
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 3, attr: "dead_mission" }
-
-			  		]
-
 			  		
-
-			  		var armDataThreeOne = [ 
+			  		var armDataTwoOne = [ 
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"}
-			  		]
-
-			  		var armDataThreeTwo = [ 
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
-			  		var armDataThreeThree = [ 
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" }
-
-			  		]
-
-			  		var armDataThreeFour = [ 
-			  			{type: 1, attr: "primary"},
+			  		var armDataTwoTwo = [ 
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
@@ -727,30 +565,10 @@ var loadCumulativeEnh = function(){
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
-			  			{type: 3, attr: "dead_mission" },
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
-			  		var armDataThreeFive = [ 
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 1, attr: "primary"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" }
-			  		]
-
-			  		var armDataThreeSix = [ 
+			  		var armDataTwoThree = [ 
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
@@ -765,22 +583,22 @@ var loadCumulativeEnh = function(){
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" },
-			  			{type: 3, attr: "dead_mission" },
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
 			  		
+			  		
 
-					groupThreeOne.selectAll(".rect1")
-			  				   .data(armDataThreeOne)
+			  	
+
+					groupTwoOne.selectAll("rect")
+			  				   .data(armDataTwoOne)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 500 )
+									.attr("x", 300)
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -792,15 +610,14 @@ var loadCumulativeEnh = function(){
 										}
 									});
 
-
-					groupThreeTwo.selectAll(".rect2")
-			  				   .data(armDataThreeTwo)
+					groupTwoTwo.selectAll("rect")
+			  				   .data(armDataTwoTwo)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 500 + 30)
+									.attr("x", 300 + 30)
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -812,71 +629,14 @@ var loadCumulativeEnh = function(){
 										}
 									});
 
-					groupThreeThree.selectAll(".rect3")
-			  				   .data(armDataThreeThree)
+					groupTwoThree.selectAll("rect")
+			  				   .data(armDataTwoThree)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 500 + 60)
-									.attr("y", function(d, i){return 300 - i*20})
-									.style("fill", function(d,i){
-										if (d.type === 3){
-											return "red"
-										} else if (d.type === 2) {
-											return "orange"
-										} else {
-											return "green"
-										}
-									});
-
-					groupThreeFour.selectAll(".rect4")
-			  				   .data(armDataThreeFour)
-			  				   .enter()
-			  				   		.append("rect")
-			  				   		.attr("width", 15)
-			  				   		.attr("class", function(d){return d.attr})
-									.attr("height", 15)
-									.attr("x", 500 + 90)
-									.attr("y", function(d, i){return 300 - i*20})
-									.style("fill", function(d,i){
-										if (d.type === 3){
-											return "red"
-										} else if (d.type === 2) {
-											return "orange"
-										} else {
-											return "green"
-										}
-									});
-
-					groupThreeFive.selectAll(".rect5")
-			  				   .data(armDataThreeFive)
-			  				   .enter()
-			  				   		.append("rect")
-			  				   		.attr("width", 15)
-			  				   		.attr("class", function(d){return d.attr})
-									.attr("height", 15)
-									.attr("x", 500 + 120)
-									.attr("y", function(d, i){return 300 - i*20})
-									.style("fill", function(d,i){
-										if (d.type === 3){
-											return "red"
-										} else if (d.type === 2) {
-											return "orange"
-										} else {
-											return "green"
-										}
-									});
-
-					groupThreeSix.selectAll(".rect6")
-			  				   .data(armDataThreeSix)
-			  				   .enter()
-			  				   		.append("rect")
-			  				   		.attr("width", 15)
-			  				   		.attr("class", function(d){return d.attr})
-									.attr("height", 15)
-									.attr("x", 500 + 150)
+									.attr("x", 300 + 60)
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -889,8 +649,8 @@ var loadCumulativeEnh = function(){
 									});
 }
 
-var loadEnhanced = function(){
-		 loadPathwaysEnh();
-		 loadDRMEnh();
-		 loadCumulativeEnh();
+var loadMoonToMars = function(){
+	loadPathwaysMn();
+	loadDRMMn();
+	loadCumulativeMn();				
 }

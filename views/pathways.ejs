@@ -1,47 +1,32 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>NRC Report</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel='stylesheet' href='/stylesheets/pathways.css' />
-    <script src='javascripts/handlebars.runtime.js'></script>
-    <script src='javascripts/templates.js'></script>
-    <script src='javascripts/pathways.js'></script>
-  </head>
-  <body>
-      <div id='main-container'>
-          <div class="container-fluid">
-            <div class='row row_buffer' >
-                 <div id = 'paths' class ='col-md-6 paths'>
-                    <img src="../images/different_paths.png" height="500" width="600" usemap="#pathmap">
-                    <map name='pathmap'>
-                        <area id='arm_to_mars' shape='rect' coords='90,470, 200,500' href='#'>
-                        <area id ='moon_to_mars' shape='rect' coords='210,470, 330,500' href='#'>
-                        <area id='enhanced'  shape='rect' coords='340,470, 520,500' href='#'>
-                    </map>
-
-                 </div>
-                 <div id ='table' class ='col-md-6 paths'>
-                    <img src="../images/table_all.png" height="450" width="500">
-                 </div>
-            </div>
-            <hr>
-            <div class='row row_buffer'>
-                <div class ='col-md-6' id='path_info'>
-                </div>
-                <div class ='col-md-6' id="chart">
-                      <img src="../images/chart_all.png" height="500" width="500">
-                </div>
-            </div>
-          </div>
-      </div>
-  </body>
+	<head>
+		<title>Pathways</title>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="/javascripts/start_script.js"></script>
+		<script src="/javascripts/main_drawing.js"></script>
+		<script src="/javascripts/arm.js"></script>
+		<script src="/javascripts/moon_to_mars.js"></script>
+		<script src="/javascripts/enhanced.js"></script>
+		<script src="/javascripts/navbar.js"></script>
+		<link rel="stylesheet" href="/stylesheets/pathways.css" />
+	</head>	
+	<body>
+		<div id='animate-area' class='container'>
+			<div class='row'>
+				<div class='col-md-12 headnav'>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-12 canvas'>
+				</div>
+			</div>
+			<div class='row'>
+				<div  class='col-md-12 chart'>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

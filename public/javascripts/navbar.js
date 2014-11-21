@@ -48,6 +48,7 @@ var loadNavBar = function(){
 					.attr("x", "28%")
 					.attr("y", 40)
 					.attr("font-size", "14px")
+					.style('font-family', 'sans-serif')
 					.text("ARM");
 
 			var moonBox = group.append("rect")
@@ -74,6 +75,7 @@ var loadNavBar = function(){
 					.attr("x", "41%")
 					.attr("y", 40)
 					.attr("font-size", "14px")
+					.style('font-family', 'sans-serif')
 					.text("MOON TO MARS");
 
 			var enhancedBox = group.append("rect")
@@ -100,6 +102,7 @@ var loadNavBar = function(){
 					  .attr("x", "61%")
 					  .attr("y", 40)
 					  .attr("font-size", "14px")
+					  .style('font-family', 'sans-serif')
 					  .text("ENHANCED EXPLORATION");
 
 }

@@ -29,7 +29,7 @@ var loadMainPage = function(){
 			  		 							id: "iss", 
 			  		 							width: 300, 
 			  		 							height: 300, 
-			  		 							link: "public/images/ISS.png", 
+			  		 							link: "/images/ISS.png", 
 			  		 							x: 0 + shift, 
 			  		 							y: 150
 			  		 						}, 
@@ -38,7 +38,7 @@ var loadMainPage = function(){
 			  		 							id: "arm", 
 			  		 							width: 400, 
 			  		 							height: 400, 
-			  		 							link: "public/images/ARM.png", 
+			  		 							link: "/images/ARM.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 3
 			  		 						}, 
@@ -47,7 +47,7 @@ var loadMainPage = function(){
 			  		 							id: "asteroid", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/asteroid.png", 
+			  		 							link: "/images/asteroid.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 3
 			  		 						}, 
@@ -56,7 +56,7 @@ var loadMainPage = function(){
 			  		 							id: "l2", 
 			  		 							width: 500, 
 			  		 							height: 500, 
-			  		 							link: "public/images/L2.png", 
+			  		 							link: "/images/L2.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 150
 			  		 						}, 
@@ -65,7 +65,7 @@ var loadMainPage = function(){
 			  		 							id: "moon", 
 			  		 							width: 500, 
 			  		 							height: 500, 
-			  		 							link: "public/images/moon.png", 
+			  		 							link: "/images/moon.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 300
 			  		 						}, 
@@ -74,7 +74,7 @@ var loadMainPage = function(){
 			  		 							id: "moonmars", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/moonmars.png", 
+			  		 							link: "/images/moonmars.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 150
 			  		 						}, 
@@ -83,7 +83,7 @@ var loadMainPage = function(){
 			  		 							id: "marsurface", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/marsurface.png", 
+			  		 							link: "/images/marsurface.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 300
 			  		 						}
@@ -116,7 +116,7 @@ var loadMainPage = function(){
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
 						  		 	outer: "#E65C00",
-						  		 	info: "The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. It is a modular structure whose first component was launched in 1998. Now the largest artificial body in orbit, it can often be seen with the naked eye from Earth."
+						  		 	info: "<b><u>International Space Station</u></b><br><br>The International Space Station (ISS) is a space station, or a habitable artificial satellite, in low Earth orbit. It is a modular structure whose first component was launched in 1998. Now the largest artificial body in orbit, it can often be seen with the naked eye from Earth."
 						  		 },
 
 						  		 {
@@ -143,7 +143,7 @@ var loadMainPage = function(){
 						  		 	r: 40,
 						  		 	fill: "url(#l2)",
 						  		 	inner: "purple",
-						  		 	info: "<b><u>Earth-Moon L2</u></b><br><br><u><b>Description:</b></u> Provide technologies and techniques that could enable crews to survive on long-duration deep space missions. Observations of the far side of the Moon or support to lunar surface activities.<br><br><u><b>Duration:</b></u> 6 months (minimum)<br><br><u><b>Crew:</b></u> 4 or more"
+						  		 	info: "<b><u>Earth-Moon L2</u></b><br><br><u><b>Description:</b></u> Provide technologies and techniques that could enable crews to survive on long-duration deep space missions. Observations of the far side of the Moon or support to lunar surface activities.<br><br><u><b>Duration:</b></u> 6 months (minimum).<br><br><u><b>Crew:</b></u> 4 or more"
 						  		 },
 
 						  		 {
@@ -163,7 +163,7 @@ var loadMainPage = function(){
 						  		 	fill: "url(#moonmars)",
 						  		 	inner: "purple",
 						  		 	middle: "#E65C00",
-						  		 	info: "<b><u>Mars Moon</u></b><br><br><u><b>Description:</b></u> Similar to a crewed mission to Mars but without challenges of entry, descent and landing (EDL) and ascent from Mars, because low gravity bodies<br><br><u><b>Duration:</b></u> 60 days at Phobos and Deimos, 2 months Mars orbit, 700-day mission total"
+						  		 	info: "<b><u>Mars Moon</u></b><br><br><u><b>Description:</b></u> Similar to a crewed mission to Mars but without challenges of entry, descent and landing (EDL) and ascent from Mars, because low gravity bodies.<br><br><u><b>Duration:</b></u> 60 days at Phobos and Deimos, 2 months Mars orbit, 700-day mission total."
 						  		 },
 
 						  		 {
@@ -785,13 +785,13 @@ var loadMainPage = function(){
 							x: 750,
 							y: 75,
 							fill: "orange",
-							info: "Elements that are in the technological development path of a primary element"
+							info: "Elements that are in the technological development path of a primary element."
 						},
 						{
 							x: 750,
 							y: 175,
 							fill: "green",
-							info: "Mission elements needed for a mars surface Mission"
+							info: "Mission elements needed for a mars surface Mission."
 						}
 					];
 

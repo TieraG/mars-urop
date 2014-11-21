@@ -1,19 +1,13 @@
-var loadPathwaysMn = function(){
+	
 
-var svg = d3.select(".canvas")
-		 					.append("svg")
-							.attr("height", "430px")
-							.attr("width", 550)
-							.attr("id", "pathways");
+var loadPathwaysEnh = function(){
+	var svg = d3.select(".canvas")
+		 				.append("svg")
+						.attr("height", "430px")
+						.attr("width", 550)
+						.attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
-
-			  		 var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([5, 5])
-			  		 			 .html("<p> ISS do you copy <p>");
-
-			  		 svg.call(tip);
 
 			  		 // Path info
 
@@ -22,8 +16,28 @@ var svg = d3.select(".canvas")
 			  		 							id: "iss", 
 			  		 							width: 300, 
 			  		 							height: 300, 
-			  		 							link: "public/images/ISS.png", 
+			  		 							link: "/images/ISS.png", 
 			  		 							x: 0 + shift, 
+			  		 							y: 150
+			  		 						}, 
+
+			  		 						
+
+			  		 						{
+			  		 							id: "asteroid", 
+			  		 							width: 600, 
+			  		 							height: 600, 
+			  		 							link: "/images/asteroid.png", 
+			  		 							x: 380 + shift, 
+			  		 							y: 3
+			  		 						}, 
+
+			  		 						{
+			  		 							id: "l2", 
+			  		 							width: 500, 
+			  		 							height: 500, 
+			  		 							link: "/images/L2.png", 
+			  		 							x: 180 + shift, 
 			  		 							y: 150
 			  		 						}, 
 
@@ -31,16 +45,25 @@ var svg = d3.select(".canvas")
 			  		 							id: "moon", 
 			  		 							width: 500, 
 			  		 							height: 500, 
-			  		 							link: "public/images/moon.png", 
+			  		 							link: "/images/moon.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 300
+			  		 						}, 
+
+			  		 						{
+			  		 							id: "moonmars", 
+			  		 							width: 600, 
+			  		 							height: 600, 
+			  		 							link: "/images/moonmars.png", 
+			  		 							x: 380 + shift, 
+			  		 							y: 150
 			  		 						}, 
 
 			  		 						{
 			  		 							id: "marsurface", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/marsurface.png", 
+			  		 							link: "/images/marsurface.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 300
 			  		 						}
@@ -48,18 +71,18 @@ var svg = d3.select(".canvas")
 
 			  		 patternInfo.forEach(function(pattern){
 
-					  	svg.append("defs")
-								   .append("pattern")
-								   .attr("id", pattern.id)
-								   .attr('patternUnits', 'userSpaceOnUse')
-								   .attr("width", pattern.width)
-								   .attr("height", pattern.height)
-								   .append("image")
-								   .attr("width", 100)
-								   .attr("height", 100)
-								   .attr("xlink:href", pattern.link)
-								   .attr('x', pattern.x)
-				                   .attr('y', pattern.y);
+				  		 svg.append("defs")
+							   .append("pattern")
+							   .attr("id", pattern.id)
+							   .attr('patternUnits', 'userSpaceOnUse')
+							   .attr("width", pattern.width)
+							   .attr("height", pattern.height)
+							   .append("image")
+							   .attr("width", 100)
+							   .attr("height", 100)
+							   .attr("xlink:href", pattern.link)
+							   .attr('x', pattern.x)
+			                   .attr('y', pattern.y);
 
 			  		 });
 
@@ -70,11 +93,25 @@ var svg = d3.select(".canvas")
 						  		 	cy: 200,
 						  		 	r: 40,
 						  		 	fill: "url(#iss)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "purple"
 						  		 },
 
+
+						  		 {
+						  		 	cx: 430 + shift,
+						  		 	cy: 53,
+						  		 	r: 40,
+						  		 	fill: "url(#asteroid)",
+						  		 	inner: "purple"
+						  		 },
+
+						  		{
+						  		 	cx: 230 + shift,
+						  		 	cy: 200,
+						  		 	r: 40,
+						  		 	fill: "url(#l2)",
+						  		 	inner: "purple"
+						  		 },
 
 						  		 {
 						  		 	cx: 230 + shift,
@@ -82,7 +119,14 @@ var svg = d3.select(".canvas")
 						  		 	r: 40,
 						  		 	fill: "url(#moon)",
 						  		 	inner: "purple",
-						  		 	middle: "#0099FF"
+						  		 },
+
+						  		 {
+						  		 	cx: 430 + shift,
+						  		 	cy: 200,
+						  		 	r: 40,
+						  		 	fill: "url(#moonmars)",
+						  		 	inner: "purple"
 						  		 },
 
 						  		 {
@@ -90,49 +134,20 @@ var svg = d3.select(".canvas")
 						  		 	cy: 350,
 						  		 	r: 40,
 						  		 	fill: "url(#marsurface)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "purple"
 						  		 }
 
 			  		 ]
 
 			  		 circleInfo.forEach(function(circle){
 
-				  		 svg.append("circle")
+				  		svg.append("circle")
 					         .attr("cx", circle.cx)
 					         .attr("cy", circle.cy)
 					         .attr("r", 40)
 					         .style("fill", circle.fill)       
 					         .style("stroke", circle.inner)     
-					         .style("stroke-width", 5)
-					         .on("mouseover", tip.show)
-					         .on("mouseout", tip.hide);
-
-					    if (circle.middle){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 45)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.middle)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					         	 .on("mouseout", tip.hide);
-					    }
-
-					    if (circle.outer){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 50)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.outer)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					             .on("mouseout", tip.hide);
-					    }
-						   
+					         .style("stroke-width", 5);
 					  });
 
 			  		 // Paths
@@ -174,38 +189,67 @@ var svg = d3.select(".canvas")
 			  		 	.append("path")
 			  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
 
-			  		
+			  		 
+
+					var issToLtwo = svg.append("line")
+											.attr("x1", 100 + shift)
+											.attr("y1", 200)
+											.attr("x2", 172 + shift)
+											.attr("y2", 200)
+											.attr("stroke", "purple")
+											.attr("stroke-width", 6)
+											.attr("marker-end", "url(#arrowPurple)");
 
 				
-
-					var issToMoon = svg.append("line")
-											.attr("x1", 105 + shift)
-											.attr("y1", 205)
-											.attr("x2", 177 + shift)
-											.attr("y2", 340)
-											.attr("stroke", "#0099FF")
+					var marsmoonToMarsTwo = svg.append("line")
+											.attr("x1", 440 + shift)
+											.attr("y1", 240)
+											.attr("x2", 440 + shift)
+											.attr("y2", 295)
+											.attr("stroke", "purple")
 											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowBlue)");
+											.attr("marker-end", "url(#arrowPurple)");
+
+					var ltwoToAsteriod = svg.append("line")
+											.attr("x1", 270 + shift)
+											.attr("y1", 200)
+											.attr("x2", 380 + shift)
+											.attr("y2", 60)
+											.attr("stroke", "purple")
+											.attr("stroke-width", 6)
+											.attr("marker-end", "url(#arrowPurple)");
 
 
-					
-					
-
-					
-
-					var moonToMarsurface = svg.append("line")
-											.attr("x1", 275 + shift)
+					var moonToMasrmoon = svg.append("line")
+											.attr("x1", 270 + shift)
 											.attr("y1", 350)
-											.attr("x2", 370 + shift)
-											.attr("y2", 350)
-											.attr("stroke", "#0099FF")
+											.attr("x2", 380 + shift)
+											.attr("y2", 210)
+											.attr("stroke", "purple")
 											.attr("stroke-width", 6)
-											.attr("marker-end", "url(#arrowBlue)");
+											.attr("marker-end", "url(#arrowPurple)");
 
-					
+					var asteriodToMoon = svg.append("line")
+											.attr("x1", 395 + shift)
+											.attr("y1", 70)
+											.attr("x2", 220 + shift)
+											.attr("y2", 300)
+											.attr("stroke", "purple")
+											.attr("stroke-width", 6)
+											.attr("marker-end", "url(#arrowPurple)");
 					// Labels
 
-					
+					var issText = svg.append("text")
+									 .attr("font-size", "13px")
+									 .attr("x", 30 + shift)
+									 .attr("y", 280)
+									 .text("LEO/ISS");
+
+					var ltwoText = svg.append("text")
+									 .attr("font-size", "13px")
+									 .attr("x", 150 + shift)
+									 .attr("y", 170)
+									 .text("E-M L2");
 
 					var moonText = svg.append("text")
 									 .attr("font-size", "13px")
@@ -239,43 +283,67 @@ var svg = d3.select(".canvas")
 							   .attr("y", 390)
 							   .text("SURFACE");
 
+					var marsmoonText = svg.append("text")
+									 .attr("font-size", "13px")
+				
+					marsmoonText.append("tspan")
+							   .attr("x", 300 + shift)
+							   .attr("y", 220)
+							   .text("MARTIAN");
+
+					marsmoonText.append("tspan")
+							   .attr("x", 300 + shift)
+							   .attr("y", 235)
+							   .text("MOONS");
+
+					var asteriodText = svg.append("text")
+									 .attr("font-size", "13px")
+				
+					asteriodText.append("tspan")
+							   .attr("x", 320 + shift)
+							   .attr("y", 20)
+							   .text("ASTERIOD");
+
+					asteriodText.append("tspan")
+							   .attr("x", 320 + shift)
+							   .attr("y", 35)
+							   .text("INITIATIVE");
+
+					asteriodText.append("tspan")
+							   .attr("x", 320 + shift)
+							   .attr("y", 50)
+							   .text("ORBIT");
 }
 
-var loadDRMMn = function(){
+var loadDRMEnh = function(){
 
-	var svgData = d3.select(".canvas")
+		var svgData = d3.select(".canvas")
 		  					.append("svg")
 		  					.attr("id", "drm")
 		  					.attr("height", "430px")
 		  					.attr("width", 600);
 
-			  							
+			  									 
+
+
 			  	var groupOne = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupTwo = svgData.append("g").attr("transform", "translate(100, 100)");
 			  	var groupThree = svgData.append("g").attr("transform", "translate(100, 100)");
 
+			  
+			  	var rowThree = [{lineOne: "Earth", lineTwo: "Moon", lineThree: "L2"}, {lineOne: "Asteriod in", lineTwo: "Native", lineThree: "Orbit"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Martians", lineTwo: "Moons"}, {lineOne: "Mars", lineTwo: "Surface"}];
 
-			  	var rowTwo = [{lineOne: "Lunar", lineTwo: "Surface", lineThree: "Sortie"}, {lineOne: "Lunar", lineTwo: "Surface", lineThree: "Outpost"}, {lineOne: "Mars", lineTwo: "Surface"}];
-
-
-				var descripTwo = groupTwo.append("text").attr("font-size", "14px")
-
-				var desTwoOne = descripTwo.append("tspan");
-				var desTwoTwo = descripTwo.append("tspan");
-				var desTwoThree = descripTwo.append("tspan");
-
-				desTwoOne.attr("x", -50).attr("y", 225).text("MOON");
-				desTwoTwo.attr("x", -50).attr("y", 240).text("TO");
-				desTwoThree.attr("x", -50).attr("y", 255).text("MARS");
-
+			  
 				var descripThree = groupThree.append("text").attr("font-size", "14px")
 
-			
+				var desThreeOne = descripThree.append("tspan");
+				var desThreeTwo = descripThree.append("tspan");
 				var pathwayLabel = descripThree.append("tspan");
 				var drmLabel = descripThree.append("tspan");
 
 
-				
+				desThreeOne.attr("x", -80).attr("y", 225).text("ENHANCED");
+				desThreeTwo.attr("x", -85).attr("y", 240).text("EXPLORATION");
 				pathwayLabel.attr("x", -80).attr("y", 300).text("PATHWAY");
 				drmLabel.attr("x", 150).attr("y", 300).text("DESIGN REFERENCE MISSION (DRM)");
 
@@ -299,8 +367,8 @@ var loadDRMMn = function(){
 
 			  
 
-				var rectTwo = groupTwo.selectAll(".rect2")
-			  						.data(rowTwo)
+				var rectThree = groupThree.selectAll(".rect")
+			  						.data(rowThree)
 							  		.enter()
 						  		 	.append("rect")
 						  		 	.attr("width", 70)
@@ -308,17 +376,17 @@ var loadDRMMn = function(){
 									.attr("x", function(d, i){return 20 + i*80})
 									.attr("y", 200)
 									.style("fill", function(d,i){
-										if (i == 2){
+										if (i == 5){
 											return "#900000"
 										} 
 
 										return "transparent";
 									})
 									.style("stroke", "black")
-						 			.style("stroke-width", 3);
+						 			.style("stroke-width", 3);	
 
-				var textLineTwoOne = groupTwo.selectAll(".two")
-							  		.data(rowTwo)
+				var textLineThreeOne = groupThree.selectAll(".three")
+							  		.data(rowThree)
 							  		.enter()
 							  			.append("text")
 							  			.attr("x", function(d, i){return 25 + i*80})
@@ -326,23 +394,23 @@ var loadDRMMn = function(){
 							  			.attr("font-size", "11px")
 							  			.text(function(d){return d.lineOne});
 
-				var textLineTwoTwo = groupTwo.selectAll(".two")
-							  		.data(rowTwo)
-							  		.enter()
-							  			.append("text")
-							  			.attr("x", function(d, i){return 25 + i*80})
-							  			.attr("y", 235)
-							  			.attr("font-size", "11px")
-							  			.text(function(d){
-							  				if (d.lineTwo){
-							  					return d.lineTwo
-							  				} else {
-							  					return "";
-							  				}
-							  			});
+				var textLineThreeTwo = groupThree.selectAll(".three")
+										  		.data(rowThree)
+										  		.enter()
+										  			.append("text")
+										  			.attr("x", function(d, i){return 25 + i*80})
+										  			.attr("y", 235)
+										  			.attr("font-size", "11px")
+										  			.text(function(d){
+										  				if (d.lineTwo){
+										  					return d.lineTwo
+										  				} else {
+										  					return "";
+										  				}
+										  			});
 
-				var textLineTwoThree = groupTwo.selectAll(".two")
-										  		.data(rowTwo)
+				var textLineThreeThree = groupThree.selectAll(".three")
+										  		.data(rowThree)
 										  		.enter()
 										  			.append("text")
 										  			.attr("x", function(d, i){return 25 + i*80})
@@ -356,8 +424,7 @@ var loadDRMMn = function(){
 										  				}
 										  			});
 
-
-				/// Append Moon Text
+				/// Append Enhanced Text
 
 				svgData.append("rect")
 						.attr("x", 15)
@@ -368,69 +435,79 @@ var loadDRMMn = function(){
 						.attr("height", 270)
 						.attr("fill", "grey");
 						
-				var text = svgData.append("text").attr("font-size", 16);
+				var text = svgData.append("text").attr("font-size", 14);
 
 					text.append("tspan")
 						.attr("x", 180)
 						.attr("y", 65)
 						.style("font-weight", "bold")
-						.text("Moon-To-Mars (Blue Pathway)");
+						.style("text-decoration", "underline")
+						.text("Enhanced Exploration (Purple Pathway)");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway first focuses on missions in the lunar vicinity and surface to");
+						.text("This pathway presents a potentially lower risk than the other pathways, but it is also a longer");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("demonstrate longer-duration in-space habitats and complex propellant staging");
+						.text("duration pathway exploring several several destinations while slowly increasing the capability");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text("in lunar orbit as well as to develop critical partial-gravity surface habitats, both");
+						.text(" of key mission elements needed for a full Mars surface mission. It begins by developing long");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 160)
-						.text("fixed and mobile, and long-term, reliable power generation to maintain these assets.");
+						.text("-term in-space habitat capabilities, followed by partial-gravity remote surface operations");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 180)
-						.text("The focus in this pathway is to develop the required assets and techniques for martian");
+						.text("capabilities, and finally the advanced in-space propulsion systems.");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 200)
-						.text("surface exploration using the nearest and most realistic celestial body with relatively");
+						.attr("y", 210)
+						.style('font-weight', 'bold')
+						.style("text-decoration", "underline")
+						.text("Desirable Properties:");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 220)
-						.text("short return times and open launch windows. To proceed to the true destination, Mars,");
+						.attr("y", 230)
+						.text("- Significance of destinations: planetary defense and exploitation (near earth asteroid)");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 240)
-						.text("as soon as is practical, after an appropriate time for examining hardware, operational,");
+						.attr("y", 245)
+						.text("- Show progress with intermediate destinations");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 260)
-						.text("and human health issues, the lunar assets will be retired from government service");
+						.text("- Logical technological feed-forward");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 280)
-						.text("and optionally maintained and leveraged by future commercial endeavors. ");
+						.attr("y", 275)
+						.text("- Incremental growth of capability");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 287)
+						.text("- Good operation temp");
+
+				
 
 }
 
-var loadCumulativeMn = function(){
+var loadCumulativeEnh = function(){
 
-		var svgChart = d3.select(".chart")
+	var svgChart = d3.select(".chart")
 			  						.append("svg")
 			  						.attr('id', "chart")
 			  						.attr("height", "500px")
@@ -568,18 +645,48 @@ var loadCumulativeMn = function(){
 			  							  .attr("transform", "translate(100, 100)");
 
 			 
+			  		var armDataOneOne = [ 
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 3, attr: "dead_mission" }
+
+			  		]
+
 			  		
-			  		var armDataTwoOne = [ 
+
+			  		var armDataThreeOne = [ 
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
-			  			{type: 2, attr: "translational"},
-			  			{type: 2, attr: "translational"},
+			  			{type: 1, attr: "primary"}
+			  		]
+
+			  		var armDataThreeTwo = [ 
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
-			  		var armDataTwoTwo = [ 
+			  		var armDataThreeThree = [ 
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" }
+
+			  		]
+
+			  		var armDataThreeFour = [ 
+			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
@@ -590,10 +697,30 @@ var loadCumulativeMn = function(){
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
+			  			{type: 3, attr: "dead_mission" },
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
-			  		var armDataTwoThree = [ 
+			  		var armDataThreeFive = [ 
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 1, attr: "primary"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 2, attr: "translational"},
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" }
+			  		]
+
+			  		var armDataThreeSix = [ 
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
 			  			{type: 1, attr: "primary"},
@@ -608,22 +735,22 @@ var loadCumulativeMn = function(){
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
 			  			{type: 2, attr: "translational"},
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" },
+			  			{type: 3, attr: "dead_mission" },
 			  			{type: 3, attr: "dead_mission" }
 			  		]
 
 			  		
-			  		
 
-			  	
-
-					groupTwoOne.selectAll("rect")
-			  				   .data(armDataTwoOne)
+					groupThreeOne.selectAll(".rect1")
+			  				   .data(armDataThreeOne)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 300)
+									.attr("x", 500 )
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -635,14 +762,15 @@ var loadCumulativeMn = function(){
 										}
 									});
 
-					groupTwoTwo.selectAll("rect")
-			  				   .data(armDataTwoTwo)
+
+					groupThreeTwo.selectAll(".rect2")
+			  				   .data(armDataThreeTwo)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 300 + 30)
+									.attr("x", 500 + 30)
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -654,14 +782,71 @@ var loadCumulativeMn = function(){
 										}
 									});
 
-					groupTwoThree.selectAll("rect")
-			  				   .data(armDataTwoThree)
+					groupThreeThree.selectAll(".rect3")
+			  				   .data(armDataThreeThree)
 			  				   .enter()
 			  				   		.append("rect")
 			  				   		.attr("width", 15)
 			  				   		.attr("class", function(d){return d.attr})
 									.attr("height", 15)
-									.attr("x", 300 + 60)
+									.attr("x", 500 + 60)
+									.attr("y", function(d, i){return 300 - i*20})
+									.style("fill", function(d,i){
+										if (d.type === 3){
+											return "red"
+										} else if (d.type === 2) {
+											return "orange"
+										} else {
+											return "green"
+										}
+									});
+
+					groupThreeFour.selectAll(".rect4")
+			  				   .data(armDataThreeFour)
+			  				   .enter()
+			  				   		.append("rect")
+			  				   		.attr("width", 15)
+			  				   		.attr("class", function(d){return d.attr})
+									.attr("height", 15)
+									.attr("x", 500 + 90)
+									.attr("y", function(d, i){return 300 - i*20})
+									.style("fill", function(d,i){
+										if (d.type === 3){
+											return "red"
+										} else if (d.type === 2) {
+											return "orange"
+										} else {
+											return "green"
+										}
+									});
+
+					groupThreeFive.selectAll(".rect5")
+			  				   .data(armDataThreeFive)
+			  				   .enter()
+			  				   		.append("rect")
+			  				   		.attr("width", 15)
+			  				   		.attr("class", function(d){return d.attr})
+									.attr("height", 15)
+									.attr("x", 500 + 120)
+									.attr("y", function(d, i){return 300 - i*20})
+									.style("fill", function(d,i){
+										if (d.type === 3){
+											return "red"
+										} else if (d.type === 2) {
+											return "orange"
+										} else {
+											return "green"
+										}
+									});
+
+					groupThreeSix.selectAll(".rect6")
+			  				   .data(armDataThreeSix)
+			  				   .enter()
+			  				   		.append("rect")
+			  				   		.attr("width", 15)
+			  				   		.attr("class", function(d){return d.attr})
+									.attr("height", 15)
+									.attr("x", 500 + 150)
 									.attr("y", function(d, i){return 300 - i*20})
 									.style("fill", function(d,i){
 										if (d.type === 3){
@@ -674,8 +859,8 @@ var loadCumulativeMn = function(){
 									});
 }
 
-var loadMoonToMars = function(){
-	loadPathwaysMn();
-	loadDRMMn();
-	loadCumulativeMn();				
+var loadEnhanced = function(){
+		 loadPathwaysEnh();
+		 loadDRMEnh();
+		 loadCumulativeEnh();
 }

@@ -7,13 +7,6 @@ var loadPathwaysARM = function(){
 
 			  		 var shift = ($(window).width() / 30); 
 
-			  		 var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([5, 5])
-			  		 			 .html("<p> ISS do you copy <p>");
-
-			  		 svg.call(tip);
-
 			  		 // Path info
 
 			  		 var patternInfo = [
@@ -21,7 +14,7 @@ var loadPathwaysARM = function(){
 			  		 							id: "iss", 
 			  		 							width: 300, 
 			  		 							height: 300, 
-			  		 							link: "public/images/ISS.png", 
+			  		 							link: "/images/ISS.png", 
 			  		 							x: 0 + shift, 
 			  		 							y: 150
 			  		 						}, 
@@ -30,7 +23,7 @@ var loadPathwaysARM = function(){
 			  		 							id: "arm", 
 			  		 							width: 400, 
 			  		 							height: 400, 
-			  		 							link: "public/images/ARM.png", 
+			  		 							link: "/images/ARM.png", 
 			  		 							x: 180 + shift, 
 			  		 							y: 3
 			  		 						},
@@ -40,7 +33,7 @@ var loadPathwaysARM = function(){
 			  		 							id: "moonmars", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/moonmars.png", 
+			  		 							link: "/images/moonmars.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 150
 			  		 						}, 
@@ -49,7 +42,7 @@ var loadPathwaysARM = function(){
 			  		 							id: "marsurface", 
 			  		 							width: 600, 
 			  		 							height: 600, 
-			  		 							link: "public/images/marsurface.png", 
+			  		 							link: "/images/marsurface.png", 
 			  		 							x: 380 + shift, 
 			  		 							y: 300
 			  		 						}
@@ -79,9 +72,7 @@ var loadPathwaysARM = function(){
 						  		 	cy: 200,
 						  		 	r: 40,
 						  		 	fill: "url(#iss)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "#E65C00"
 						  		 },
 
 						  		 {
@@ -97,8 +88,7 @@ var loadPathwaysARM = function(){
 						  		 	cy: 200,
 						  		 	r: 40,
 						  		 	fill: "url(#moonmars)",
-						  		 	inner: "purple",
-						  		 	middle: "#E65C00"
+						  		 	inner: "#E65C00"
 						  		 },
 
 						  		 {
@@ -106,9 +96,7 @@ var loadPathwaysARM = function(){
 						  		 	cy: 350,
 						  		 	r: 40,
 						  		 	fill: "url(#marsurface)",
-						  		 	inner: "purple",
-						  		 	middle: "#0099FF",
-						  		 	outer: "#E65C00"
+						  		 	inner: "#E65C00"
 						  		 }
 
 			  		 ]
@@ -121,34 +109,7 @@ var loadPathwaysARM = function(){
 					         .attr("r", 40)
 					         .style("fill", circle.fill)       
 					         .style("stroke", circle.inner)     
-					         .style("stroke-width", 5)
-					         .on("mouseover", tip.show)
-					         .on("mouseout", tip.hide);
-
-					    if (circle.middle){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 45)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.middle)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					         	 .on("mouseout", tip.hide);
-					    }
-
-					    if (circle.outer){
-					    	 svg.append("circle")
-						         .attr("cx", circle.cx)
-						         .attr("cy", circle.cy)
-						         .attr("r", 50)
-						         .style("fill", "transparent")       
-						         .style("stroke", circle.outer)     
-						         .style("stroke-width", 5)
-						         .on("mouseover", tip.show)
-					             .on("mouseout", tip.hide);
-					    }
-						   
+					         .style("stroke-width", 5);
 					  });
 
 			  		 // Paths
@@ -191,7 +152,7 @@ var loadPathwaysARM = function(){
 			  		 	.attr("d", "M 0 0 L 10 5 L 0 10 z");
 
 			  		 var issToArm = svg.append("line")
-											.attr("x1", 110 + shift)
+											.attr("x1", 100 + shift)
 											.attr("y1", 200)
 											.attr("x2", 180 + shift)
 											.attr("y2", 70)
@@ -203,7 +164,7 @@ var loadPathwaysARM = function(){
 					var armToMarsmoon = svg.append("line")
 											.attr("x1", 270 + shift)
 											.attr("y1", 53)
-											.attr("x2", 375 + shift)
+											.attr("x2", 380 + shift)
 											.attr("y2", 180)
 											.attr("stroke", "#E65C00")
 											.attr("stroke-width", 6)
@@ -211,9 +172,9 @@ var loadPathwaysARM = function(){
 
 					var marsmoonToMarsOne = svg.append("line")
 											.attr("x1", 420 + shift)
-											.attr("y1", 245)
+											.attr("y1", 240)
 											.attr("x2", 420 + shift)
-											.attr("y2", 284)
+											.attr("y2", 295)
 											.attr("stroke", "#E65C00")
 											.attr("stroke-width", 6)
 											.attr("marker-end", "url(#arrowOrange)");
@@ -297,10 +258,6 @@ var loadDRMARM = function(){
 
 				var descripTwo = groupTwo.append("text").attr("font-size", "14px")
 
-			
-
-				
-
 				var descripThree = groupThree.append("text").attr("font-size", "14px")
 
 				var desThreeOne = descripThree.append("tspan");
@@ -381,37 +338,49 @@ var loadDRMARM = function(){
 						.attr("stroke", "black")
 						.attr("stroke-width", 2)
 						.attr("width", 570)
-						.attr("height", 170)
+						.attr("height", 270)
 						.attr("fill", "grey");
 						
-				var text = svgData.append("text").attr("font-size", 16);
+				var text = svgData.append("text").attr("font-size", 14);
 
 					text.append("tspan")
 						.attr("x", 80)
 						.attr("y", 60)
 						.style("font-weight", "bold")
+						.style("text-decoration", "underline")
 						.text("Asteriod Redirect Mission (ARM) To Mars (Orange Pathway)");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 100)
-						.text("This pathway leverages the initial demonstration of the SLS and Orion");
+						.text("This pathway leverages the initial demonstration of the SLS and Orion systems in cislunar");
 						
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 120)
-						.text("systems in cislunar space via the ARM and then takes the direct path of");
+						.text("space via the ARM and then takes the direct path of prioritizing activity in the Mars vicinity by");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 140)
-						.text("prioritizing activity in the Mars vicinity by focuing on exploring the moons");
+						.text(" focuing on exploring the moons of Mars, followed by a Mars landing.");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 160)
-						.text("of Mars, followed by a Mars landing.");
-						
+						.attr("y", 180)
+						.style('font-weight', 'bold')
+						.style("text-decoration", "underline")
+						.text("Desirable Properties:");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 200)
+						.text("- Affordability");
+					
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 220)
+						.text("- Duration of the program");
 }
 
 var loadCumulativeARM = function(){
