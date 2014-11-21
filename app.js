@@ -61,4 +61,6 @@ var ip = process.env.OPENSHIFT_NODEJS_IP;
 
 app.listen(port || 3000, ip);
 
+console.log("RUNNING ON LOCAL HOST 3000");
+
 module.exports = app;

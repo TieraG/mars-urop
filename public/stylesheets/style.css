@@ -1,15 +1,17 @@
-body {
-  padding: 0px;
-  margin: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 
-a {
-  color: #00B7FF;
-}
-
-body {
-	background-image: url("../images/background.jpg");
+body	{ 
+	width: 100%; 
+	height: 100%; 
+	background-image: url("../images/mars_image.jpg");
+	background-position: 0px 0px;
+	background-repeat: repeat-y;
+	-webkit-animation: animatedBackground 40s linear infinite;
+	animation: animatedBackground 10s linear infinite;
 }
 
 
@@ -17,4 +19,32 @@ body {
 	padding-top: 25%;
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.container.canvas {
+	height: 100%;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 1.6vw;
+}
+
+text.number {
+  font-family: sans-serif;
+  font-size: 4vw;
+}
+
+text.sub {
+  font-family: sans-serif;
+  font-size: 1.4vw;
+}
+
+text.content {
+  font-family: sans-serif;
+  font-size: 1.1vw;
+}
+
+.canvas {
+	opacity: 0.75;
 }
