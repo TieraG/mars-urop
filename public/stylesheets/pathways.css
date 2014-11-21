@@ -4,14 +4,32 @@
 	to { background-position: 100% 0; }
 }
 
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+@-ms-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+@-o-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
 body	{ 
 	width: 100%; 
 	height: 100%; 
 	background-image: url("../images/mars_image.jpg");
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	-webkit-animation: animatedBackground 40s linear infinite;
-	animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 30s linear infinite alternate;
+		-moz-animation: animatedBackground 30s linear infinite alternate;
+    		-ms-animation: animatedBackground 30s linear infinite alternate;
+     			-o-animation: animatedBackground 30s linear infinite alternate;
+					animation: animatedBackground 30s linear infinite;
 }
 
 #animate-area {
