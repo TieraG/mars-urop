@@ -15,8 +15,8 @@ var loadIndex = function(){
 	 			.attr("fill", "#996633");
 
 	 		svg.append("text")
-				 .attr("font-size", "24px")
-				 .attr("x", "35%")
+				 .attr("font-size", "26px")
+				 .attr("x", "34%")
 				 .attr("y", "15%")
 				 .style("font-weight", "bold")
 				 .text("PATHWAYS TO EXPLORATION"); 
