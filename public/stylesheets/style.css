@@ -27,22 +27,6 @@ body	{
 
 text {
   font-family: sans-serif;
-  font-size: 1.6vw;
-}
-
-text.number {
-  font-family: sans-serif;
-  font-size: 4vw;
-}
-
-text.sub {
-  font-family: sans-serif;
-  font-size: 1.4vw;
-}
-
-text.content {
-  font-family: sans-serif;
-  font-size: 1.1vw;
 }
 
 .canvas {

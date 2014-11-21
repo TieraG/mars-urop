@@ -23,7 +23,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", "sub")
-				 .attr("font-size", "24px")
+				 .attr("font-size", "21px")
 				 .attr("x", "29%")
 				 .attr("y", "20%")
 				 .style("font-weight", "bold")
@@ -50,7 +50,7 @@ var loadIndex = function(){
 		         .attr("xlink:href", "/pathways")
 		    	 .append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "30px")
+				 .attr("font-size", "50px")
 				 .attr("x", "8.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
@@ -65,7 +65,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "1%")
 				 .attr("y", "82%")
 				 .style("font-weight", "bold")
@@ -73,7 +73,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "1%")
 				 .attr("y", "85%")
 				 .style("font-weight", "bold")
@@ -81,7 +81,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "1%")
 				 .attr("y", "88%")
 				 .style("font-weight", "bold")
@@ -89,7 +89,7 @@ var loadIndex = function(){
 	 			
 	 		svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "1%")
 				 .attr("y", "91%")
 				 .style("font-weight", "bold")
@@ -111,7 +111,7 @@ var loadIndex = function(){
 
 		     svg.append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "30px")
+				 .attr("font-size", "50px")
 				 .attr("x", "33.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
@@ -126,7 +126,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "26%")
 				 .attr("y", "82%")
 				 .style("font-weight", "bold")
@@ -134,7 +134,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "26%")
 				 .attr("y", "85%")
 				 .style("font-weight", "bold")
@@ -142,7 +142,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "26%")
 				 .attr("y", "88%")
 				 .style("font-weight", "bold")
@@ -150,7 +150,7 @@ var loadIndex = function(){
 	 			
 	 		svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "26%")
 				 .attr("y", "91%")
 				 .style("font-weight", "bold")
@@ -172,7 +172,7 @@ var loadIndex = function(){
 
 		    svg.append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "30px")
+				 .attr("font-size", "50px")
 				 .attr("x", "58.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
@@ -188,7 +188,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "51%")
 				 .attr("y", "82%")
 				 .style("font-weight", "bold")
@@ -196,7 +196,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "51%")
 				 .attr("y", "85%")
 				 .style("font-weight", "bold")
@@ -204,7 +204,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "51%")
 				 .attr("y", "88%")
 				 .style("font-weight", "bold")
@@ -212,7 +212,7 @@ var loadIndex = function(){
 	 			
 	 		svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "51%")
 				 .attr("y", "91%")
 				 .style("font-weight", "bold")
@@ -234,7 +234,7 @@ var loadIndex = function(){
 
 		    svg.append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "30px")
+				 .attr("font-size", "50px")
 				 .attr("x", "83.5%")
 				 .attr("y", "66.5%")
 				 .style("font-weight", "bold")
@@ -250,7 +250,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "76%")
 				 .attr("y", "82%")
 				 .style("font-weight", "bold")
@@ -258,7 +258,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "76%")
 				 .attr("y", "85%")
 				 .style("font-weight", "bold")
@@ -266,7 +266,7 @@ var loadIndex = function(){
 
 			svg.append("text")
 				 .attr("class", 'content')
-				 .attr("font-size", "24px")
+				 .attr("font-size", "16px")
 				 .attr("x", "76%")
 				 .attr("y", "88%")
 				 .style("font-weight", "bold")
