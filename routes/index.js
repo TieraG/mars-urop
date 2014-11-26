@@ -11,4 +11,9 @@ router.get('/', function(req, res) {
   res.render('index');
 });
 
+/* GET home page. */
+router.get('/mission', function(req, res) {
+  res.render('mission_elements');
+});
+
 module.exports = router;
