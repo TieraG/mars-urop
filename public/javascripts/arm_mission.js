@@ -11,7 +11,7 @@ loadARM = function(){
 			svg.append("text")
 			   .attr("class", "header")
 			   .attr("x", 60)
-			   .attr("y", 80)
+			   .attr("y", 90)
 			   .text("ARM");
 
 			svg.append("text")
@@ -36,7 +36,7 @@ loadARM = function(){
 			   .attr("class", "header")
 			   .style("fill", "red")
 			   .attr("x", 260)
-			   .attr("y", 80)
+			   .attr("y", 90)
 			   .text("DEAD-END");
 
 			svg.append("text")
@@ -61,7 +61,7 @@ loadARM = function(){
 			   .attr("class", "header")
 			   .style("fill", "orange")
 			   .attr("x", 520)
-			   .attr("y", 80)
+			   .attr("y", 90)
 			   .text("TRANSLATIONAL");
 
 			svg.append("text")
@@ -218,7 +218,7 @@ loadARM = function(){
 	  		 							width: 2000, 
 	  		 							height: 2000, 
 	  		 							link: "/images/CPS.png", 
-	  		 							x: 490 , 
+	  		 							x: 500 , 
 	  		 							y: text.textOne.height,
 	  		 							sizeW: 25,
 	  		 							sizeH: 70
@@ -229,7 +229,7 @@ loadARM = function(){
 	  		 							width: 2000, 
 	  		 							height: 2000, 
 	  		 							link: "/images/LM.png", 
-	  		 							x: 540 , 
+	  		 							x: 550 , 
 	  		 							y: text.textOne.height,
 	  		 							sizeW: 45,
 	  		 							sizeH: 70
@@ -240,7 +240,7 @@ loadARM = function(){
 	  		 							width: 2000, 
 	  		 							height: 2000, 
 	  		 							link: "/images/LOP.png", 
-	  		 							x: 620 , 
+	  		 							x: 630 , 
 	  		 							y: text.textOne.height,
 	  		 							sizeW: 40,
 	  		 							sizeH: 70
@@ -392,7 +392,7 @@ loadARM = function(){
 	  					{
 					  		 	x: 210,
 					  		 	y: text.textOne.height,
-					  		 	id: "arv"+count,
+					  		 	id: "arvRect"+count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#arv" + count + ")",
@@ -402,7 +402,7 @@ loadARM = function(){
 						{
 					  		 	x: 260,
 					  		 	y: text.textOne.height,
-					  		 	id: "myd" + count,
+					  		 	id: "mydRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#myd" + count + ")",
@@ -412,7 +412,7 @@ loadARM = function(){
 						{
 					  		 	x: 300,
 					  		 	y: text.textOne.height,
-					  		 	id: "lss" + count,
+					  		 	id: "lssRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lss" + count + ")",
@@ -422,7 +422,7 @@ loadARM = function(){
 						{
 					  		 	x: 360,
 					  		 	y: text.textOne.height,
-					  		 	id: "mot" + count,
+					  		 	id: "motRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#mot" + count + ")",
@@ -432,7 +432,7 @@ loadARM = function(){
 						{
 					  		 	x: 420,
 					  		 	y: text.textOne.height,
-					  		 	id: "sev" + count,
+					  		 	id: "sevRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#sev" + count + ")",
@@ -440,9 +440,9 @@ loadARM = function(){
 						}, 
 
 						{
-					  		 	x: 490,
+					  		 	x: 500,
 					  		 	y: text.textOne.height,
-					  		 	id: "cps" + count,
+					  		 	id: "cpsRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#cps" + count + ")",
@@ -450,9 +450,9 @@ loadARM = function(){
 						}, 
 
 						{
-					  		 	x: 540,
+					  		 	x: 550,
 					  		 	y: text.textOne.height,
-					  		 	id: "lm" + count,
+					  		 	id: "lmRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lm" + count + ")",
@@ -460,9 +460,9 @@ loadARM = function(){
 						},
 
 						{
-					  		 	x: 620,
+					  		 	x: 630,
 					  		 	y: text.textOne.height,
-					  		 	id: "lop" + count,
+					  		 	id: "lopRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lop" + count + ")",
@@ -472,7 +472,7 @@ loadARM = function(){
 						{
 					  		 	x: 710,
 					  		 	y: text.textOne.height,
-					  		 	id: "hll" + count,
+					  		 	id: "hllRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#hll" + count + ")",
@@ -482,7 +482,7 @@ loadARM = function(){
 						{
 					  		 	x: 740,
 					  		 	y: text.textOne.height,
-					  		 	id: "ap" + count,
+					  		 	id: "apRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ap" + count + ")",
@@ -492,7 +492,7 @@ loadARM = function(){
 						{
 					  		 	x: 770,
 					  		 	y: text.textOne.height,
-					  		 	id: "trr" + count,
+					  		 	id: "trrRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#trr" + count + ")",
@@ -502,7 +502,7 @@ loadARM = function(){
 						{
 					  		 	x: 830,
 					  		 	y: text.textOne.height,
-					  		 	id: "snp" + count,
+					  		 	id: "snpRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#snp" + count + ")",
@@ -512,7 +512,7 @@ loadARM = function(){
 						{
 					  		 	x: 830,
 					  		 	y: text.textOne.height,
-					  		 	id: "av" + count,
+					  		 	id: "avRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#av" + count + ")",
@@ -522,7 +522,7 @@ loadARM = function(){
 						{
 					  		 	x: 895,
 					  		 	y: text.textOne.height,
-					  		 	id: "av" + count,
+					  		 	id: "psmRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#psm" + count + ")",
@@ -532,7 +532,7 @@ loadARM = function(){
 						{
 					  		 	x: 950,
 					  		 	y: text.textOne.height,
-					  		 	id: "aas" + count,
+					  		 	id: "aasRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#aas" + count + ")",
@@ -542,7 +542,7 @@ loadARM = function(){
 						{
 					  		 	x: 985,
 					  		 	y: text.textOne.height,
-					  		 	id: "ccs" + count,
+					  		 	id: "ccsRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ccs" + count + ")",
@@ -552,7 +552,7 @@ loadARM = function(){
 						{
 					  		 	x: 1035,
 					  		 	y: text.textOne.height,
-					  		 	id: "dsh" + count,
+					  		 	id: "dshRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#dsh" + count + ")",
@@ -562,7 +562,7 @@ loadARM = function(){
 						{
 					  		 	x: 1090,
 					  		 	y: text.textOne.height,
-					  		 	id: "ldsh" + count,
+					  		 	id: "ldshRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ldsh" + count + ")",
@@ -572,7 +572,7 @@ loadARM = function(){
 						{
 					  		 	x: 1125,
 					  		 	y: text.textOne.height,
-					  		 	id: "mav" + count,
+					  		 	id: "mavRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#mav" + count + ")",
@@ -594,936 +594,214 @@ loadARM = function(){
 
 		  count+=1
 
+		  if (text.plus){
+			  	svg.append("line")
+					.attr("x1", 210)
+					.attr("y1", text.plus.y)
+					.attr("x2", 1150)
+					.attr("y2", text.plus.y)
+					.attr("stroke", "grey")
+					.attr("stroke-width", "3")
+		  }
+
 
 });
 
 
-		// 	 // ARM Diagram 
-		// 	 svg.append("text")
-		// 	   .attr("class", "label")
-		// 	   .attr("x", 60)
-		// 	   .attr("y", 200)
-		// 	   .text("ARM");
-
-		// 	// DIAGRAMS
-
-		// 	 var patternInfo = [
-		// 	  		 				{
-	 //  		 							id: "arv1", 
-	 //  		 							width: 400, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/ARV.png", 
-	 //  		 							x: 210 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "myd1", 
-	 //  		 							width: 400, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/MYD.png", 
-	 //  		 							x: 260 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "lss1", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/LSS.png", 
-	 //  		 							x: 310 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "mot1", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/MOT.png", 
-	 //  		 							x: 350 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "sev1", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/SEV.png", 
-	 //  		 							x: 410 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "cps1", 
-	 //  		 							width: 700, 
-	 //  		 							height: 700, 
-	 //  		 							link: "/images/CPS.png", 
-	 //  		 							x: 490 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "lm1", 
-	 //  		 							width: 700, 
-	 //  		 							height: 700, 
-	 //  		 							link: "/images/LM.png", 
-	 //  		 							x: 540 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "lop1", 
-	 //  		 							width: 800, 
-	 //  		 							height: 800, 
-	 //  		 							link: "/images/LOP.png", 
-	 //  		 							x: 620 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 40,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "hll1", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/HLL.png", 
-	 //  		 							x: 710 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 60
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ap1", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/AP.png", 
-	 //  		 							x: 740 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "trr1", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/TRR.png", 
-	 //  		 							x: 770 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 55,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "snp1", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/SNP.png", 
-	 //  		 							x: 830 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "av1", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/AV.png", 
-	 //  		 							x: 860 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 40,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "psm1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/PSM.png", 
-	 //  		 							x: 905 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "aas1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/AAS.png", 
-	 //  		 							x: 950 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ccs1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/CCS.png", 
-	 //  		 							x: 985 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 50,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "dsh1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/DSH.png", 
-	 //  		 							x: 1035 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 50,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ldsh1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/LDSH.png", 
-	 //  		 							x: 1090 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "mav1", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/MAV.png", 
-	 //  		 							x: 1125 , 
-	 //  		 							y: 150,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				}
-
-
-
-		// 	 ];
-
-		//   patternInfo.forEach(function(pattern){
-
-		// 	  		 svg.append("defs")
-		// 				   .append("pattern")
-		// 				   .attr("id", pattern.id)
-		// 				   .attr('patternUnits', 'userSpaceOnUse')
-		// 				   .attr("width", pattern.width)
-		// 				   .attr("height", pattern.height)
-		// 				   .append("image")
-		// 				   .attr("width", pattern.sizeW)
-		// 				   .attr("height", pattern.sizeH)
-		// 				   .attr("xlink:href", pattern.link)
-		// 				   .attr('x', pattern.x)
-		//                    .attr('y', pattern.y);
-
-		//   		 });
-
-		//   rectInfo = [
-	 //  					{
-		// 			  		 	x: 210,
-		// 			  		 	y: 150,
-		// 			  		 	id: "arv1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#arv1)",
-		// 			  		 	info: "ARV Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 260,
-		// 			  		 	y: 150,
-		// 			  		 	id: "myd1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#myd1)",
-		// 			  		 	info: "MYD Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 300,
-		// 			  		 	y: 150,
-		// 			  		 	id: "lss1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lss1)",
-		// 			  		 	info: "LSS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 360,
-		// 			  		 	y: 150,
-		// 			  		 	id: "mot1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#mot1)",
-		// 			  		 	info: "MOT Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 420,
-		// 			  		 	y: 150,
-		// 			  		 	id: "sev1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#sev1)",
-		// 			  		 	info: "SEV Info"
-		// 				}, 
-
-		// 				{
-		// 			  		 	x: 490,
-		// 			  		 	y: 150,
-		// 			  		 	id: "cps1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#cps1)",
-		// 			  		 	info: "CPS Info"
-		// 				}, 
-
-		// 				{
-		// 			  		 	x: 540,
-		// 			  		 	y: 150,
-		// 			  		 	id: "lm1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lm1)",
-		// 			  		 	info: "LM Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 620,
-		// 			  		 	y: 150,
-		// 			  		 	id: "lop1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lop1)",
-		// 			  		 	info: "LOP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 710,
-		// 			  		 	y: 150,
-		// 			  		 	id: "hll1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#hll1)",
-		// 			  		 	info: "HLL Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 740,
-		// 			  		 	y: 150,
-		// 			  		 	id: "ap1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ap1)",
-		// 			  		 	info: "AP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 770,
-		// 			  		 	y: 150,
-		// 			  		 	id: "trr1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#trr1)",
-		// 			  		 	info: "TRR Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 830,
-		// 			  		 	y: 150,
-		// 			  		 	id: "snp1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#snp1)",
-		// 			  		 	info: "SNP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 830,
-		// 			  		 	y: 150,
-		// 			  		 	id: "av1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#av1)",
-		// 			  		 	info: "AV Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 895,
-		// 			  		 	y: 150,
-		// 			  		 	id: "av1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#psm1)",
-		// 			  		 	info: "PSM Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 950,
-		// 			  		 	y: 150,
-		// 			  		 	id: "aas1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#aas1)",
-		// 			  		 	info: "ASS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 985,
-		// 			  		 	y: 150,
-		// 			  		 	id: "ccs1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ccs1)",
-		// 			  		 	info: "CCS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1035,
-		// 			  		 	y: 150,
-		// 			  		 	id: "dsh1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#dsh1)",
-		// 			  		 	info: "DSH Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1090,
-		// 			  		 	y: 150,
-		// 			  		 	id: "ldsh1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ldsh1)",
-		// 			  		 	info: "LDSH Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1125,
-		// 			  		 	y: 150,
-		// 			  		 	id: "mav1",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#mav1)",
-		// 			  		 	info: "MAV Info"
-		// 				}
-
-
-		//   ];
-
-		//   rectInfo.forEach(function(rect){
-		//   			svg.append("rect")
-		//   			   .attr("id",rect.id)
-		//   			   .attr("x", rect.x)
-		//   			   .attr("y", rect.y)
-		//   			   .attr("width", rect.width)
-		//   			   .attr("height", rect.height)
-		//   			   .attr("fill", rect.fill)
-		//   });
-
-
-		// svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 280)
-		//    .text("+");
-
-		//  // MARTIAN MOONS 
-		//  svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 350)
-		//    .text("MARTIAN");	
-
-		// svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 380)
-		//    .text("MOONS");	
-
-
-		// // DIAGRAMS
-
-		// 	 var patternInfo = [
-		// 	  		 				{
-	 //  		 							id: "arv2", 
-	 //  		 							width: 400, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/ARV.png", 
-	 //  		 							x: 210 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "myd2", 
-	 //  		 							width: 400, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/MYD.png", 
-	 //  		 							x: 260 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "lss2", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/LSS.png", 
-	 //  		 							x: 310 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "mot2", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/MOT.png", 
-	 //  		 							x: 350 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "sev2", 
-	 //  		 							width: 600, 
-	 //  		 							height: 400, 
-	 //  		 							link: "/images/SEV.png", 
-	 //  		 							x: 410 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "cps2", 
-	 //  		 							width: 700, 
-	 //  		 							height: 700, 
-	 //  		 							link: "/images/CPS.png", 
-	 //  		 							x: 490 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 25,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "lm2", 
-	 //  		 							width: 700, 
-	 //  		 							height: 700, 
-	 //  		 							link: "/images/LM.png", 
-	 //  		 							x: 540 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				}, 
-
-		// 	  		 				{
-	 //  		 							id: "lop2", 
-	 //  		 							width: 800, 
-	 //  		 							height: 800, 
-	 //  		 							link: "/images/LOP.png", 
-	 //  		 							x: 620 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 40,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "hll2", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/HLL.png", 
-	 //  		 							x: 710 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 60
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ap2", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/AP.png", 
-	 //  		 							x: 740 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "trr2", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/TRR.png", 
-	 //  		 							x: 770 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 55,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "snp2", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/SNP.png", 
-	 //  		 							x: 830 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 30,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "av2", 
-	 //  		 							width: 1000, 
-	 //  		 							height: 1000, 
-	 //  		 							link: "/images/AV.png", 
-	 //  		 							x: 860 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 40,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "psm2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/PSM.png", 
-	 //  		 							x: 905 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 45,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "aas2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/AAS.png", 
-	 //  		 							x: 950 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ccs2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/CCS.png", 
-	 //  		 							x: 985 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 50,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "dsh2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/DSH.png", 
-	 //  		 							x: 1035 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 50,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "ldsh2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/LDSH.png", 
-	 //  		 							x: 1090 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				},
-
-		// 	  		 				{
-	 //  		 							id: "mav2", 
-	 //  		 							width: 1200, 
-	 //  		 							height: 1200, 
-	 //  		 							link: "/images/MAV.png", 
-	 //  		 							x: 1125 , 
-	 //  		 							y: 330,
-	 //  		 							sizeW: 35,
-	 //  		 							sizeH: 70
-		// 	  		 				}
-
-
-
-		// 	 ];
-
-		//   patternInfo.forEach(function(pattern){
-
-		// 	  		 svg.append("defs")
-		// 				   .append("pattern")
-		// 				   .attr("id", pattern.id)
-		// 				   .attr('patternUnits', 'userSpaceOnUse')
-		// 				   .attr("width", pattern.width)
-		// 				   .attr("height", pattern.height)
-		// 				   .append("image")
-		// 				   .attr("width", pattern.sizeW)
-		// 				   .attr("height", pattern.sizeH)
-		// 				   .attr("xlink:href", pattern.link)
-		// 				   .attr('x', pattern.x)
-		//                    .attr('y', pattern.y);
-
-		//   		 });
-
-		//   rectInfo = [
-	 //  					{
-		// 			  		 	x: 210,
-		// 			  		 	y: 330,
-		// 			  		 	id: "arv2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#arv2)",
-		// 			  		 	info: "ARV Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 260,
-		// 			  		 	y: 330,
-		// 			  		 	id: "myd2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#myd2)",
-		// 			  		 	info: "MYD Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 300,
-		// 			  		 	y: 330,
-		// 			  		 	id: "lss2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lss2)",
-		// 			  		 	info: "LSS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 360,
-		// 			  		 	y: 330,
-		// 			  		 	id: "mot2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#mot2)",
-		// 			  		 	info: "MOT Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 420,
-		// 			  		 	y: 330,
-		// 			  		 	id: "sev2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#sev2)",
-		// 			  		 	info: "SEV Info"
-		// 				}, 
-
-		// 				{
-		// 			  		 	x: 490,
-		// 			  		 	y: 330,
-		// 			  		 	id: "cps2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#cps2)",
-		// 			  		 	info: "CPS Info"
-		// 				}, 
-
-		// 				{
-		// 			  		 	x: 540,
-		// 			  		 	y: 330,
-		// 			  		 	id: "lm2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lm2)",
-		// 			  		 	info: "LM Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 620,
-		// 			  		 	y: 330,
-		// 			  		 	id: "lop2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#lop2)",
-		// 			  		 	info: "LOP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 710,
-		// 			  		 	y: 330,
-		// 			  		 	id: "hll2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#hll2)",
-		// 			  		 	info: "HLL Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 740,
-		// 			  		 	y: 330,
-		// 			  		 	id: "ap2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ap2)",
-		// 			  		 	info: "AP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 770,
-		// 			  		 	y: 330,
-		// 			  		 	id: "trr2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#trr2)",
-		// 			  		 	info: "TRR Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 830,
-		// 			  		 	y: 330,
-		// 			  		 	id: "snp2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#snp2)",
-		// 			  		 	info: "SNP Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 830,
-		// 			  		 	y: 330,
-		// 			  		 	id: "av2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#av2)",
-		// 			  		 	info: "AV Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 895,
-		// 			  		 	y: 330,
-		// 			  		 	id: "psm2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#psm2)",
-		// 			  		 	info: "PSM Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 950,
-		// 			  		 	y: 330,
-		// 			  		 	id: "aas2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#aas2)",
-		// 			  		 	info: "ASS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 985,
-		// 			  		 	y: 330,
-		// 			  		 	id: "ccs2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ccs2)",
-		// 			  		 	info: "CCS Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1035,
-		// 			  		 	y: 330,
-		// 			  		 	id: "dsh2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#dsh2)",
-		// 			  		 	info: "DSH Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1090,
-		// 			  		 	y: 330,
-		// 			  		 	id: "ldsh2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#ldsh2)",
-		// 			  		 	info: "LDSH Info"
-		// 				},
-
-		// 				{
-		// 			  		 	x: 1125,
-		// 			  		 	y: 330,
-		// 			  		 	id: "mav2",
-		// 			  		 	width: 70,
-		// 			  		 	height: 100,
-		// 			  		 	fill: "url(#mav2)",
-		// 			  		 	info: "MAV Info"
-		// 				}
-
-
-		//   ];
-
-		//   rectInfo.forEach(function(rect){
-		//   			svg.append("rect")
-		//   			   .attr("id",rect.id)
-		//   			   .attr("x", rect.x)
-		//   			   .attr("y", rect.y)
-		//   			   .attr("width", rect.width)
-		//   			   .attr("height", rect.height)
-		//   			   .attr("fill", rect.fill)
-		//   });
-
-
-	 // // MARs SURFACE
-
-	 // svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 450)
-		//    .text("+");
-
-
-		//  svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 500)
-		//    .text("MARTIAN");	
-
-		// svg.append("text")
-		//    .attr("class", "label")
-		//    .attr("x", 60)
-		//    .attr("y", 530)
-		//    .text("SURFACE");
 
+// SETTING OPACITY TO 0.3
 
+// ROW ONE
 
+$("#mydRect1").attr("opacity", "0.2");
+$("#lssRect1").attr("opacity", "0.2");
+$("#motRect1").attr("opacity", "0.2");
+$("#sevRect1").attr("opacity", "0.2");
 
+$("#cpsRect1").attr("opacity", "0.2");
+$("#lmRect1").attr("opacity", "0.2");
+$("#lopRect1").attr("opacity", "0.2");
 
+
+
+$("#apRect1").attr("opacity", "0.2");
+$("#trrRect1").attr("opacity", "0.2");
+$("#snpRect1").attr("opacity", "0.2");
+$("#aasRect1").attr("opacity", "0.2");
+$("#psmRect1").attr("opacity", "0.2");
+$("#dshRect1").attr("opacity", "0.2");
+$("#ldshRect1").attr("opacity", "0.2");
+$("#mavRect1").attr("opacity", "0.2");
+
+// ROW TWO
+
+$("#arvRect2").attr("opacity", "0.2");
+$("#lssRect2").attr("opacity", "0.2");
+
+$("#cpsRect2").attr("opacity", "0.2");
+$("#lmRect2").attr("opacity", "0.2");
+$("#lopRect2").attr("opacity", "0.2");
+
+$("#trrRect2").attr("opacity", "0.3");
+$("#snpRect2").attr("opacity", "0.3");
+$("#psmRect2").attr("opacity", "0.3");
+$("#aasRect2").attr("opacity", "0.3");
+$("#dshRect2").attr("opacity", "0.3");
+$("#ldshRect2").attr("opacity", "0.3");
+$("#mavRect2").attr("opacity", "0.3");
+
+
+
+// ROW THREE
+
+$("#arvRect3").attr("opacity", "0.2");
+$("#mydRect3").attr("opacity", "0.2");
+$("#lssRect3").attr("opacity", "0.2");
+$("#motRect3").attr("opacity", "0.2");
+$("#sevRect3").attr("opacity", "0.2");
+
+$("#cpsRect3").attr("opacity", "0.2");
+$("#lmRect3").attr("opacity", "0.2");
+$("#lopRect3").attr("opacity", "0.2");
+
+
+
+
+
+
+// BOTTOM TEXT
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 600)
+	.attr("transform", "rotate(90 215,600)")
+	.text("ASTERIOD RETRIEVAL VEHICLE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 550)
+	.attr("transform", "rotate(90 215,600)")
+	.text("MULTI-YEAR DEEP SPACE HABITAT");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 500)
+	.attr("transform", "rotate(90 215,600)")
+	.text("LARGE STORAGE STAGE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 450)
+	.attr("transform", "rotate(90 215,600)")
+	.text("MARS ORBIT TRANSFER VEHICLE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 400)
+	.attr("transform", "rotate(90 215,600)")
+	.text("SPACE EXPLORATION VEHICLE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 310)
+	.attr("transform", "rotate(90 215,600)")
+	.text("CRYOGENIC PROPULSION SYSTEM");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 250)
+	.attr("transform", "rotate(90 215,600)")
+	.text("LUNAR MODULE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 180)
+	.attr("transform", "rotate(90 215,600)")
+	.text("LUNAR ORBITAL OUTPOST");
+
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 100)
+	.attr("transform", "rotate(90 215,600)")
+	.text("HEAVY LIFT LAUNCH VEHICLE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 70)
+	.attr("transform", "rotate(90 215,600)")
+	.text("ADVANCED PROPULSION");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", 20)
+	.attr("transform", "rotate(90 215,600)")
+	.text("TELE-ROBOTIC ROVERS");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -20)
+	.attr("transform", "rotate(90 215,600)")
+	.text("SURFACE NUCLEAR POWER");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -70)
+	.attr("transform", "rotate(90 215,600)")
+	.text("ADVANCED EVA");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -110)
+	.attr("transform", "rotate(90 215,600)")
+	.text("PRESSURIZED SURFACE MOBILITY");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -150)
+	.attr("transform", "rotate(90 215,600)")
+	.text("AERO ASSIT SYSTEM");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -190)
+	.attr("transform", "rotate(90 215,600)")
+	.text("CREW COMMAND AND SERVICE MODULE");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -240)
+	.attr("transform", "rotate(90 215,600)")
+	.text("DEEP SPACE HABITATION");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -280)
+	.attr("transform", "rotate(90 215,600)")
+	.text("LONG DURATION SURFACE HABITAT");
+
+svg.append("text")
+	.attr("class", 'bottom')
+	.attr("x", 215)
+	.attr("y", -320)
+	.attr("transform", "rotate(90 215,600)")
+	.text("MARS ASCENT VEHICLE");
+		
 };

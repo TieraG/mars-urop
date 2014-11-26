@@ -25,22 +25,17 @@ var loadNavBar = function(){
 					.attr("stroke", "grey")
 					.attr("stroke-width", 3);
 
-			var armBox = group.append("rect")
+			var armBox = group.append("a")
+					.attr("xlink:href", "#")
+					.append("rect")
+					.attr("id", "armBox")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "22%")
 					.attr("y", 22)
 					.attr("fill", "#E65C00")
 					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadARM();
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-					});
+					
 
 			group.append("text")
 					.attr("x", "25%")
@@ -49,21 +44,17 @@ var loadNavBar = function(){
 					.style('font-family', 'sans-serif')
 					.text("ARM TO MARS");
 
-			var moonBox = group.append("rect")
+			var moonBox = group.append("a")
+					.attr("xlink:href", "#")
+					.append("rect")
+					.attr("id", "moonBox")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "37%")
 					.attr("y", 22)
 					.attr("fill", "#0099FF")
-					.attr("stroke-width", "5")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-					});
+					.attr("stroke-width", "5");
+					
 
 			group.append("text")
 					.attr("x", "41%")
@@ -72,21 +63,16 @@ var loadNavBar = function(){
 					.style('font-family', 'sans-serif')
 					.text("MOON TO MARS");
 
-			var enhancedBox = group.append("rect")
+			var enhancedBox = group.append("a")
+					.attr("xlink:href", "#")
+					.append("rect")
+					.attr("id", "enhancedBox")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "55%")
 					.attr("y", 22)
 					.attr("fill", "purple")
-					.attr("stroke-width", "3")
-					.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-					});
+					.attr("stroke-width", "3");
 
 			group.append("text")
 					  .attr("x", "59%")
