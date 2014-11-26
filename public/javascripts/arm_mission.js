@@ -2,7 +2,7 @@ loadARM = function(){
 
 			var svg = d3.select(".canvas")
 						.append("svg")
-						.attr("height", 950)
+						.attr("height", 930)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
 
