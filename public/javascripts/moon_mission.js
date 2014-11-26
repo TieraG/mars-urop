@@ -6,6 +6,16 @@ loadMoonToMars = function(){
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
 
+			var tip = d3.tip()
+			  		 			 .attr("class", "d3_tip")
+			  		 			 .offset([-20, 40])
+			  		 			 .direction("sw")
+			  		 			 .html(function(d){
+			  		 			 	return "<p>" + d.info + "<p>";
+			  		 			 });
+
+			 svg.call(tip);
+
 			// ARM LABEL
 
 			svg.append("text")
@@ -398,7 +408,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#arv" + count + ")",
-					  		 	info: "ARV Info"
+					  		 	info: "<b><u>ASTERIOD RETRIEVAL VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>"
 						},
 
 						{
@@ -408,7 +418,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#myd" + count + ")",
-					  		 	info: "MYD Info"
+					  		 	info: "<b><u>MULTI-YEAR DEEP SPACE HABITAT</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>"
 						},
 
 						{
@@ -418,7 +428,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lss" + count + ")",
-					  		 	info: "LSS Info"
+					  		 	info: "<b><u>LARGE STORAGE STAGE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -428,7 +438,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#mot" + count + ")",
-					  		 	info: "MOT Info"
+					  		 	info: "<b><u>MARS ORBIT TRANSFER VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>"
 						},
 
 						{
@@ -438,7 +448,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#sev" + count + ")",
-					  		 	info: "SEV Info"
+					  		 	info: "<b><u>SPACE EXPLORATION VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
 						}, 
 
 						{
@@ -448,7 +458,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#cps" + count + ")",
-					  		 	info: "CPS Info"
+					  		 	info: "<b><u>CRYOGENIC PROPULSION SYSTEM</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
 						}, 
 
 						{
@@ -458,7 +468,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lm" + count + ")",
-					  		 	info: "LM Info"
+					  		 	info: "<b><u>LUNAR MODULE</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
 						},
 
 						{
@@ -468,7 +478,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#lop" + count + ")",
-					  		 	info: "LOP Info"
+					  		 	info: "<b><u>LUNAR ORBITAL OUTPOST</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
 						},
 
 						{
@@ -478,7 +488,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#hll" + count + ")",
-					  		 	info: "HLL Info"
+					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -488,7 +498,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ap" + count + ")",
-					  		 	info: "AP Info"
+					  		 	info: "<b><u>ADVANCED PROPULSION</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, Mars Surface"
 						},
 
 						{
@@ -498,27 +508,27 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#trr" + count + ")",
-					  		 	info: "TRR Info"
+					  		 	info: "<b><u>TELE-ROBOTIC ROVERS</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
 					  		 	x: 830,
 					  		 	y: text.textOne.height,
 					  		 	id: "snpRect" + count,
-					  		 	width: 70,
+					  		 	width: 50,
 					  		 	height: 100,
 					  		 	fill: "url(#snp" + count + ")",
-					  		 	info: "SNP Info"
+					  		 	info: "<b><u>SURFACE NUCLEAR POWER</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
-					  		 	x: 830,
+					  		 	x: 860,
 					  		 	y: text.textOne.height,
 					  		 	id: "avRect" + count,
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#av" + count + ")",
-					  		 	info: "AV Info"
+					  		 	info: "<b><u>ADVANCED EVA</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -528,7 +538,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#psm" + count + ")",
-					  		 	info: "PSM Info"
+					  		 	info: "<b><u>PRESSURIZED SURFACE MOBILITY</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -538,7 +548,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#aas" + count + ")",
-					  		 	info: "ASS Info"
+					  		 	info: "<b><u>AEROASSIST SYSTEM</u></b><br><br> <b>Required for:</b> Mars Surface"
 						},
 
 						{
@@ -548,7 +558,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ccs" + count + ")",
-					  		 	info: "CCS Info"
+					  		 	info: "<b><u>CREW COMMAND & SERVICE MODULE (ORION):</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -558,7 +568,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#dsh" + count + ")",
-					  		 	info: "DSH Info"
+					  		 	info: "<b><u>DEEP SPACE HABITATION:</u></b><br><br> <b>Required for:</b> <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -568,7 +578,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#ldsh" + count + ")",
-					  		 	info: "LDSH Info"
+					  		 	info: "<b><u>LONG DURATION SURFACE HABITAT:</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
@@ -578,7 +588,7 @@ loadMoonToMars = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#mav" + count + ")",
-					  		 	info: "MAV Info"
+					  		 	info: "<b><u>MARS ASCENT VEHICLE</u></b><br><br> <b>Required for:</b> Mars Surface"
 						}
 
 
@@ -592,6 +602,10 @@ loadMoonToMars = function(){
 		  			   .attr("width", rect.width)
 		  			   .attr("height", rect.height)
 		  			   .attr("fill", rect.fill)
+		  			   .on("mouseenter", function(){
+					         	tip.show(rect);
+					   })
+					   .on("mouseleave", tip.hide);
 		  });
 
 		  count+=1
