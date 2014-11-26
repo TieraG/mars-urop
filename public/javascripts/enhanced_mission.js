@@ -1,19 +1,10 @@
-loadARM = function(){
+loadEnhanced = function(){
 
 			var svg = d3.select(".canvas")
 						.append("svg")
-						.attr("height", 930)
+						.attr("height", 1500)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
-			 var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([-20, 40])
-			  		 			 .direction("sw")
-			  		 			 .html(function(d){
-			  		 			 	return "<p>" + d.info + "<p>";
-			  		 			 });
-
-			 svg.call(tip);
 
 			// ARM LABEL
 
@@ -116,25 +107,50 @@ loadARM = function(){
 			var texts = [
 
 					{
-						textOne: {x: 60, y:200, text: "ARM", height: 150},
+						textOne: {x: 60, y:200, text: "EARTH-", height: 150},
+						textTwo: {x: 60, y: 230, text: "MOON L2"}
+
 					},
 
 					{
 
 						plus: {x: 60, y: 280, text: "+"},
-						textOne: {x: 60, y: 350, text: "MARTIAN", height: 330},
-						textTwo: {x: 60, y: 380, text: "MOONS"}
+						textOne: {x: 60, y: 350, text: "ASTERIOD IN", height: 330},
+						textTwo: {x: 60, y: 380, text: "NATIVE ORBIT"}
 
 					},
 
 					{
 
 						plus: {x: 60, y: 460, text: "+"},
-						textOne: {x: 60, y: 530, text: "MARS", height: 510},
-						textTwo: {x: 60, y: 560, text: "SURFACE"}
+						textOne: {x: 60, y: 530, text: "LUNAR", height: 510},
+						textTwo: {x: 60, y: 560, text: "SORTIE"}
+
+					},
+
+					{
+
+						plus: {x: 60, y: 640, text: "+"},
+						textOne: {x: 60, y: 710, text: "LUNAR", height: 690},
+						textTwo: {x: 60, y: 740, text: "OUTPOST"}
+
+					},
+
+					{
+
+						plus: {x: 60, y: 820, text: "+"},
+						textOne: {x: 60, y: 890, text: "MARTIAN", height: 870},
+						textTwo: {x: 60, y: 920, text: "MOONS"}
+
+					},
+
+					{
+
+						plus: {x: 60, y: 1000, text: "+"},
+						textOne: {x: 60, y: 1070, text: "MARS", height: 1050},
+						textTwo: {x: 60, y: 1100, text: "SURFACE"}
 
 					}
-
 			];
 
 
@@ -485,7 +501,7 @@ loadARM = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#hll" + count + ")",
-					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "HLL Info"
 						},
 
 						{
@@ -599,10 +615,6 @@ loadARM = function(){
 		  			   .attr("width", rect.width)
 		  			   .attr("height", rect.height)
 		  			   .attr("fill", rect.fill)
-		  			   .on("mouseenter", function(){
-					         	tip.show(rect);
-					   })
-					   .on("mouseleave", tip.hide);
 		  });
 
 		  count+=1
@@ -626,6 +638,7 @@ loadARM = function(){
 
 // ROW ONE
 
+$("#arvRect1").attr("opacity", "0.2");
 $("#mydRect1").attr("opacity", "0.2");
 $("#lssRect1").attr("opacity", "0.2");
 $("#motRect1").attr("opacity", "0.2");
@@ -636,30 +649,31 @@ $("#lmRect1").attr("opacity", "0.2");
 $("#lopRect1").attr("opacity", "0.2");
 
 
-
 $("#apRect1").attr("opacity", "0.2");
 $("#trrRect1").attr("opacity", "0.2");
 $("#snpRect1").attr("opacity", "0.2");
 $("#aasRect1").attr("opacity", "0.2");
 $("#psmRect1").attr("opacity", "0.2");
-$("#dshRect1").attr("opacity", "0.2");
 $("#ldshRect1").attr("opacity", "0.2");
 $("#mavRect1").attr("opacity", "0.2");
 
 // ROW TWO
 
 $("#arvRect2").attr("opacity", "0.2");
+$("#mydRect2").attr("opacity", "0.2");
+$("#motRect2").attr("opacity", "0.2");
 $("#lssRect2").attr("opacity", "0.2");
 
-$("#cpsRect2").attr("opacity", "0.2");
+
 $("#lmRect2").attr("opacity", "0.2");
 $("#lopRect2").attr("opacity", "0.2");
 
+
+$("#apRect2").attr("opacity", "0.2");
 $("#trrRect2").attr("opacity", "0.2");
 $("#snpRect2").attr("opacity", "0.2");
-$("#psmRect2").attr("opacity", "0.2");
 $("#aasRect2").attr("opacity", "0.2");
-$("#dshRect2").attr("opacity", "0.2");
+$("#psmRect2").attr("opacity", "0.2");
 $("#ldshRect2").attr("opacity", "0.2");
 $("#mavRect2").attr("opacity", "0.2");
 
@@ -669,72 +683,115 @@ $("#mavRect2").attr("opacity", "0.2");
 
 $("#arvRect3").attr("opacity", "0.2");
 $("#mydRect3").attr("opacity", "0.2");
-$("#lssRect3").attr("opacity", "0.2");
 $("#motRect3").attr("opacity", "0.2");
 $("#sevRect3").attr("opacity", "0.2");
 
-$("#cpsRect3").attr("opacity", "0.2");
-$("#lmRect3").attr("opacity", "0.2");
-$("#lopRect3").attr("opacity", "0.2");
+
+$("#apRect3").attr("opacity", "0.2");
+$("#trrRect3").attr("opacity", "0.2");
+$("#snpRect3").attr("opacity", "0.2");
+$("#aasRect3").attr("opacity", "0.2");
+$("#dshRect3").attr("opacity", "0.2");
+$("#ldshRect3").attr("opacity", "0.2");
+$("#mavRect3").attr("opacity", "0.2");
 
 
+// ROW FOUR
 
+$("#arvRect4").attr("opacity", "0.2");
+$("#mydRect4").attr("opacity", "0.2");
+$("#motRect4").attr("opacity", "0.2");
+$("#sevRect4").attr("opacity", "0.2");
+
+$("#apRect4").attr("opacity", "0.2");
+$("#aasRect4").attr("opacity", "0.2");
+$("#dshRect4").attr("opacity", "0.2");
+$("#mavRect4").attr("opacity", "0.2");
+
+// ROW FIVE
+
+$("#arvRect5").attr("opacity", "0.2");
+$("#lssRect5").attr("opacity", "0.2");
+
+$("#cpsRect5").attr("opacity", "0.2");
+$("#lmRect5").attr("opacity", "0.2");
+$("#lopRect5").attr("opacity", "0.2");
+
+$("#trrRect5").attr("opacity", "0.2");
+$("#snpRect5").attr("opacity", "0.2");
+$("#psmRect5").attr("opacity", "0.2");
+$("#aasRect5").attr("opacity", "0.2");
+$("#dshRect5").attr("opacity", "0.2");
+$("#ldshRect5").attr("opacity", "0.2");
+$("#mavRect5").attr("opacity", "0.2");
+
+// ROW SIX
+
+$("#arvRect6").attr("opacity", "0.2");
+$("#mydRect6").attr("opacity", "0.2");
+$("#lssRect6").attr("opacity", "0.2");
+$("#motRect6").attr("opacity", "0.2");
+$("#sevRect6").attr("opacity", "0.2");
+
+$("#cpsRect6").attr("opacity", "0.2");
+$("#lmRect6").attr("opacity", "0.2");
+$("#lopRect6").attr("opacity", "0.2");
 
 
 
 // BOTTOM TEXT
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 600)
 	.attr("transform", "rotate(90 215,600)")
 	.text("ASTERIOD RETRIEVAL VEHICLE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 550)
 	.attr("transform", "rotate(90 215,600)")
 	.text("MULTI-YEAR DEEP SPACE HABITAT");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 500)
 	.attr("transform", "rotate(90 215,600)")
 	.text("LARGE STORAGE STAGE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 450)
 	.attr("transform", "rotate(90 215,600)")
 	.text("MARS ORBIT TRANSFER VEHICLE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 400)
 	.attr("transform", "rotate(90 215,600)")
 	.text("SPACE EXPLORATION VEHICLE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 310)
 	.attr("transform", "rotate(90 215,600)")
 	.text("CRYOGENIC PROPULSION SYSTEM");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 250)
 	.attr("transform", "rotate(90 215,600)")
 	.text("LUNAR MODULE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 180)
 	.attr("transform", "rotate(90 215,600)")
 	.text("LUNAR ORBITAL OUTPOST");
@@ -742,77 +799,77 @@ svg.append("text")
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 100)
 	.attr("transform", "rotate(90 215,600)")
 	.text("HEAVY LIFT LAUNCH VEHICLE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 70)
 	.attr("transform", "rotate(90 215,600)")
 	.text("ADVANCED PROPULSION");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", 20)
 	.attr("transform", "rotate(90 215,600)")
 	.text("TELE-ROBOTIC ROVERS");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -20)
 	.attr("transform", "rotate(90 215,600)")
 	.text("SURFACE NUCLEAR POWER");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -70)
 	.attr("transform", "rotate(90 215,600)")
 	.text("ADVANCED EVA");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -110)
 	.attr("transform", "rotate(90 215,600)")
 	.text("PRESSURIZED SURFACE MOBILITY");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -150)
 	.attr("transform", "rotate(90 215,600)")
 	.text("AERO ASSIT SYSTEM");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -190)
 	.attr("transform", "rotate(90 215,600)")
 	.text("CREW COMMAND AND SERVICE MODULE");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -240)
 	.attr("transform", "rotate(90 215,600)")
 	.text("DEEP SPACE HABITATION");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -280)
 	.attr("transform", "rotate(90 215,600)")
 	.text("LONG DURATION SURFACE HABITAT");
 
 svg.append("text")
 	.attr("class", 'bottom')
-	.attr("x", 215)
+	.attr("x", 750)
 	.attr("y", -320)
 	.attr("transform", "rotate(90 215,600)")
 	.text("MARS ASCENT VEHICLE");

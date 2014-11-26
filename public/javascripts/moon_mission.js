@@ -1,19 +1,10 @@
-loadARM = function(){
+loadMoonToMars = function(){
 
 			var svg = d3.select(".canvas")
 						.append("svg")
 						.attr("height", 930)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
-			 var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([-20, 40])
-			  		 			 .direction("sw")
-			  		 			 .html(function(d){
-			  		 			 	return "<p>" + d.info + "<p>";
-			  		 			 });
-
-			 svg.call(tip);
 
 			// ARM LABEL
 
@@ -116,14 +107,16 @@ loadARM = function(){
 			var texts = [
 
 					{
-						textOne: {x: 60, y:200, text: "ARM", height: 150},
+						textOne: {x: 60, y:200, text: "LUNAR", height: 150},
+						textTwo: {x: 60, y: 230, text: "SORTIE"}
+
 					},
 
 					{
 
 						plus: {x: 60, y: 280, text: "+"},
-						textOne: {x: 60, y: 350, text: "MARTIAN", height: 330},
-						textTwo: {x: 60, y: 380, text: "MOONS"}
+						textOne: {x: 60, y: 350, text: "LUNAR", height: 330},
+						textTwo: {x: 60, y: 380, text: "OUTPOST"}
 
 					},
 
@@ -485,7 +478,7 @@ loadARM = function(){
 					  		 	width: 70,
 					  		 	height: 100,
 					  		 	fill: "url(#hll" + count + ")",
-					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "HLL Info"
 						},
 
 						{
@@ -599,10 +592,6 @@ loadARM = function(){
 		  			   .attr("width", rect.width)
 		  			   .attr("height", rect.height)
 		  			   .attr("fill", rect.fill)
-		  			   .on("mouseenter", function(){
-					         	tip.show(rect);
-					   })
-					   .on("mouseleave", tip.hide);
 		  });
 
 		  count+=1
@@ -626,22 +615,16 @@ loadARM = function(){
 
 // ROW ONE
 
+$("#arvRect1").attr("opacity", "0.2");
 $("#mydRect1").attr("opacity", "0.2");
-$("#lssRect1").attr("opacity", "0.2");
 $("#motRect1").attr("opacity", "0.2");
 $("#sevRect1").attr("opacity", "0.2");
-
-$("#cpsRect1").attr("opacity", "0.2");
-$("#lmRect1").attr("opacity", "0.2");
-$("#lopRect1").attr("opacity", "0.2");
-
 
 
 $("#apRect1").attr("opacity", "0.2");
 $("#trrRect1").attr("opacity", "0.2");
 $("#snpRect1").attr("opacity", "0.2");
 $("#aasRect1").attr("opacity", "0.2");
-$("#psmRect1").attr("opacity", "0.2");
 $("#dshRect1").attr("opacity", "0.2");
 $("#ldshRect1").attr("opacity", "0.2");
 $("#mavRect1").attr("opacity", "0.2");
@@ -649,18 +632,13 @@ $("#mavRect1").attr("opacity", "0.2");
 // ROW TWO
 
 $("#arvRect2").attr("opacity", "0.2");
-$("#lssRect2").attr("opacity", "0.2");
+$("#mydRect2").attr("opacity", "0.2");
+$("#motRect2").attr("opacity", "0.2");
+$("#sevRect2").attr("opacity", "0.2");
 
-$("#cpsRect2").attr("opacity", "0.2");
-$("#lmRect2").attr("opacity", "0.2");
-$("#lopRect2").attr("opacity", "0.2");
-
-$("#trrRect2").attr("opacity", "0.2");
-$("#snpRect2").attr("opacity", "0.2");
-$("#psmRect2").attr("opacity", "0.2");
+$("#apRect2").attr("opacity", "0.2");
 $("#aasRect2").attr("opacity", "0.2");
 $("#dshRect2").attr("opacity", "0.2");
-$("#ldshRect2").attr("opacity", "0.2");
 $("#mavRect2").attr("opacity", "0.2");
 
 
