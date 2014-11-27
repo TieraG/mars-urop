@@ -553,7 +553,7 @@ loadARM = function(){
 					  		 	x: 985,
 					  		 	y: text.textOne.height,
 					  		 	id: "ccsRect" + count,
-					  		 	width: 30,
+					  		 	width: 40,
 					  		 	height: 100,
 					  		 	fill: "url(#ccs" + count + ")",
 					  		 	info: "<b><u>CREW COMMAND & SERVICE MODULE (ORION):</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
