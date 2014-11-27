@@ -16,4 +16,9 @@ router.get('/mission', function(req, res) {
   res.render('mission_elements');
 });
 
+/* GET home page. */
+router.get('/mission/moon', function(req, res) {
+  res.render('mission_moon');
+});
+
 module.exports = router;
