@@ -2,19 +2,21 @@ loadEnhanced = function(){
 
 			var svg = d3.select(".canvas")
 						.append("svg")
-						.attr("height", 1500)
+						.attr("id", "svg")
+						.attr("height", 930)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
 
 			var tip = d3.tip()
-			  		 			 .attr("class", "d3_tip")
-			  		 			 .offset([-20, 40])
-			  		 			 .direction("sw")
-			  		 			 .html(function(d){
-			  		 			 	return "<p>" + d.info + "<p>";
-			  		 			 });
+			 			 .attr("class", "d3_tip")
+			 			 .offset([-20, 40])
+			 			 .direction("sw")
+			 			 .html(function(d){
+			 			 	return "<p>" + d.info + "<p>";
+			 			 });
 
-			 svg.call(tip);
+			svg.call(tip);
+
 
 			// ARM LABEL
 
