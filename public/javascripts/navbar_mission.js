@@ -35,6 +35,10 @@ var loadNavBar = function(){
 					.attr("y", 22)
 					.attr("fill", "#E65C00")
 					.attr("stroke-width", "5")
+					.on("click", function(){
+							$(".canvas").html("");
+							loadARM();
+					});
 					
 
 			group.append("text")
@@ -53,7 +57,11 @@ var loadNavBar = function(){
 					.attr("x", "37%")
 					.attr("y", 22)
 					.attr("fill", "#0099FF")
-					.attr("stroke-width", "5");
+					.attr("stroke-width", "5")
+					.on("click", function(){
+							$(".canvas").html("");
+							loadMoonToMars();
+					});
 					
 
 			group.append("text")
@@ -72,7 +80,11 @@ var loadNavBar = function(){
 					.attr("x", "55%")
 					.attr("y", 22)
 					.attr("fill", "purple")
-					.attr("stroke-width", "3");
+					.attr("stroke-width", "3")
+					.on("click", function(){
+							$(".canvas").html("");
+							loadEnhanced();
+					});
 
 			group.append("text")
 					  .attr("x", "59%")

@@ -1,6 +1,5 @@
 loadARM = function(){
 
-			//$(".canvas").html("");
 
 			var svg = d3.select(".canvas")
 						.append("svg")
