@@ -5,6 +5,7 @@ loadARM = function(){
 						.attr("height", 930)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
+
 			 var tip = d3.tip()
 			  		 			 .attr("class", "d3_tip")
 			  		 			 .offset([-20, 40])
@@ -293,7 +294,7 @@ loadARM = function(){
 	  		 							width: 2000, 
 	  		 							height: 2000, 
 	  		 							link: snp.src, 
-	  		 							x: 830 , 
+	  		 							x: 820 , 
 	  		 							y: text.textOne.height,
 	  		 							sizeW: 30,
 	  		 							sizeH: 70
@@ -402,7 +403,7 @@ loadARM = function(){
 					  		 	x: 210,
 					  		 	y: text.textOne.height,
 					  		 	id: "arvRect"+count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#arv" + count + ")",
 					  		 	info: "<b><u>ASTERIOD RETRIEVAL VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>"
@@ -412,7 +413,7 @@ loadARM = function(){
 					  		 	x: 260,
 					  		 	y: text.textOne.height,
 					  		 	id: "mydRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#myd" + count + ")",
 					  		 	info: "<b><u>MULTI-YEAR DEEP SPACE HABITAT</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>"
@@ -422,7 +423,7 @@ loadARM = function(){
 					  		 	x: 300,
 					  		 	y: text.textOne.height,
 					  		 	id: "lssRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#lss" + count + ")",
 					  		 	info: "<b><u>LARGE STORAGE STAGE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -432,7 +433,7 @@ loadARM = function(){
 					  		 	x: 360,
 					  		 	y: text.textOne.height,
 					  		 	id: "motRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#mot" + count + ")",
 					  		 	info: "<b><u>MARS ORBIT TRANSFER VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>"
@@ -442,7 +443,7 @@ loadARM = function(){
 					  		 	x: 420,
 					  		 	y: text.textOne.height,
 					  		 	id: "sevRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#sev" + count + ")",
 					  		 	info: "<b><u>SPACE EXPLORATION VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
@@ -452,7 +453,7 @@ loadARM = function(){
 					  		 	x: 500,
 					  		 	y: text.textOne.height,
 					  		 	id: "cpsRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#cps" + count + ")",
 					  		 	info: "<b><u>CRYOGENIC PROPULSION SYSTEM</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
@@ -462,7 +463,7 @@ loadARM = function(){
 					  		 	x: 550,
 					  		 	y: text.textOne.height,
 					  		 	id: "lmRect" + count,
-					  		 	width: 70,
+					  		 	width: 40,
 					  		 	height: 100,
 					  		 	fill: "url(#lm" + count + ")",
 					  		 	info: "<b><u>LUNAR MODULE</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
@@ -472,7 +473,7 @@ loadARM = function(){
 					  		 	x: 630,
 					  		 	y: text.textOne.height,
 					  		 	id: "lopRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#lop" + count + ")",
 					  		 	info: "<b><u>LUNAR ORBITAL OUTPOST</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
@@ -482,7 +483,7 @@ loadARM = function(){
 					  		 	x: 710,
 					  		 	y: text.textOne.height,
 					  		 	id: "hllRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#hll" + count + ")",
 					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -492,7 +493,7 @@ loadARM = function(){
 					  		 	x: 740,
 					  		 	y: text.textOne.height,
 					  		 	id: "apRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#ap" + count + ")",
 					  		 	info: "<b><u>ADVANCED PROPULSION</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, Mars Surface"
@@ -502,17 +503,17 @@ loadARM = function(){
 					  		 	x: 770,
 					  		 	y: text.textOne.height,
 					  		 	id: "trrRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#trr" + count + ")",
 					  		 	info: "<b><u>TELE-ROBOTIC ROVERS</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
-					  		 	x: 830,
+					  		 	x: 820,
 					  		 	y: text.textOne.height,
 					  		 	id: "snpRect" + count,
-					  		 	width: 50,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#snp" + count + ")",
 					  		 	info: "<b><u>SURFACE NUCLEAR POWER</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
@@ -522,7 +523,7 @@ loadARM = function(){
 					  		 	x: 860,
 					  		 	y: text.textOne.height,
 					  		 	id: "avRect" + count,
-					  		 	width: 70,
+					  		 	width: 40,
 					  		 	height: 100,
 					  		 	fill: "url(#av" + count + ")",
 					  		 	info: "<b><u>ADVANCED EVA</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -532,7 +533,7 @@ loadARM = function(){
 					  		 	x: 895,
 					  		 	y: text.textOne.height,
 					  		 	id: "psmRect" + count,
-					  		 	width: 70,
+					  		 	width: 50,
 					  		 	height: 100,
 					  		 	fill: "url(#psm" + count + ")",
 					  		 	info: "<b><u>PRESSURIZED SURFACE MOBILITY</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -542,7 +543,7 @@ loadARM = function(){
 					  		 	x: 950,
 					  		 	y: text.textOne.height,
 					  		 	id: "aasRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#aas" + count + ")",
 					  		 	info: "<b><u>AEROASSIST SYSTEM</u></b><br><br> <b>Required for:</b> Mars Surface"
@@ -552,7 +553,7 @@ loadARM = function(){
 					  		 	x: 985,
 					  		 	y: text.textOne.height,
 					  		 	id: "ccsRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#ccs" + count + ")",
 					  		 	info: "<b><u>CREW COMMAND & SERVICE MODULE (ORION):</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -562,7 +563,7 @@ loadARM = function(){
 					  		 	x: 1035,
 					  		 	y: text.textOne.height,
 					  		 	id: "dshRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#dsh" + count + ")",
 					  		 	info: "<b><u>DEEP SPACE HABITATION:</u></b><br><br> <b>Required for:</b> <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
@@ -572,7 +573,7 @@ loadARM = function(){
 					  		 	x: 1090,
 					  		 	y: text.textOne.height,
 					  		 	id: "ldshRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#ldsh" + count + ")",
 					  		 	info: "<b><u>LONG DURATION SURFACE HABITAT:</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
@@ -582,7 +583,7 @@ loadARM = function(){
 					  		 	x: 1125,
 					  		 	y: text.textOne.height,
 					  		 	id: "mavRect" + count,
-					  		 	width: 70,
+					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#mav" + count + ")",
 					  		 	info: "<b><u>MARS ASCENT VEHICLE</u></b><br><br> <b>Required for:</b> Mars Surface"
