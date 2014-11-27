@@ -1,5 +1,7 @@
 loadMoonToMars = function(){
 
+			$(".canvas").html("");
+
 			var svg = d3.select(".canvas")
 						.append("svg")
 						.attr("id", "svg")
