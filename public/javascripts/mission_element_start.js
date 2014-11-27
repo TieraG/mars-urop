@@ -1,4 +1,6 @@
 $(document).ready(function(){
 	loadNavBar();
-	loadARM();
+	setTimeout(function(){
+			loadARM();
+		}, 500);
 });

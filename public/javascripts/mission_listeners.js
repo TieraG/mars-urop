@@ -2,18 +2,22 @@ $(document).ready(function(){
 
 	$(document).on("click", "#armBox", function(){
 		$(".canvas").html("");
-		loadARM();
+		setTimeout(function(){
+			loadARM();
+		}, 100);
 	});
 
 	$(document).on("click", "#moonBox", function(){
 		$(".canvas").html("");
-		loadMoonToMars();
+		setTimeout(function(){
+			loadMoonToMars();
+		}, 100);
 	});
 
 	$(document).on("click", "#enhancedBox", function(){
 		$(".canvas").html("");
-		loadEnhanced();
+		setTimeout(function(){
+			loadEnhanced();
+		}, 100);
 	});
-
-
 });

@@ -3,7 +3,7 @@ loadEnhanced = function(){
 			var svg = d3.select(".canvas")
 						.append("svg")
 						.attr("id", "svg")
-						.attr("height", 930)
+						.attr("height", 1430)
 						.attr("width", 1200)
 						.attr("id", "arm_mission");
 
