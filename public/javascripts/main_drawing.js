@@ -5,10 +5,10 @@ var loadMainPage = function(){
 		
 		////////////////// Paths
 
-		 var svg = d3.select(".canvas").append("svg")
-			  		 								.attr("height", "430px")
-			  		 								.attr("width", 550)
-			  		 								.attr("id", "pathways");
+		 var svg =  d3.select(".canvas").append("svg")
+			  		  .attr("height", "430px")
+					  .attr("width", 550)
+					  .attr("id", "pathways");
 
 			  		 var shift = ($(window).width() / 30); 
 

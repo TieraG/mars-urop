@@ -169,13 +169,17 @@ var loadIndex = function(){
 	 			.attr("height", "40%")
 	 			.attr("fill", "#996633");
 
-	 		svg.append("circle")
+	 		 svg.append("a")
+	 		 	 .attr("xlink:href", "/capabilities")
+	 			 .append("circle")
 	 			 .attr("cx", "61%")
 		         .attr("cy", "65%")
 		         .attr("r", "5%")
 		         .style("fill", "#86592d");
 
-		    svg.append("text")
+		     svg.append("a")
+		     	 .attr("xlink:href", "/capabilities")
+		         .append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")
 				 .attr("x", "59.5%")
