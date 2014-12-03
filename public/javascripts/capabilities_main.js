@@ -140,7 +140,7 @@ loadCapabilities = function(){
 
 	svg.append("line")
 			.attr("x1", coodX-40)
-			.attr("x2", coodX+780)
+			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
 			.attr("y2", coodY+60)
 			.attr("stroke", "grey")
@@ -151,7 +151,7 @@ loadCapabilities = function(){
 
 	svg.append("line")
 			.attr("x1", coodX-40)
-			.attr("x2", coodX+780)
+			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
 			.attr("y2", coodY+60)
 			.attr("stroke", "grey")
@@ -161,7 +161,7 @@ loadCapabilities = function(){
 
 	svg.append("line")
 			.attr("x1", coodX-40)
-			.attr("x2", coodX+780)
+			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
 			.attr("y2", coodY+60)
 			.attr("stroke", "grey")
