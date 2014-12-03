@@ -3,7 +3,7 @@ loadCapabilities = function(){
 	var svg = d3.select("#content")
 				.append("svg")
 				.attr("height", 1000)
-				.attr("width", "100%")
+				.attr("width", 1500)
 				.attr("id", "capabilities-svg")
 				.append("g");
 
