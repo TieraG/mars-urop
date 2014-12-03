@@ -7,6 +7,10 @@ body	{
 }
 
 #content {
+	text-align: center;
+}
+
+#capabilities-svg {
 	background-color: #996633;
 	opacity: 0.85;
 }
