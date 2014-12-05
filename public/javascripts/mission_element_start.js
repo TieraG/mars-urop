@@ -1,4 +1,4 @@
-$(document).ready(function(){
-	loadNavBar();
-	loadARM();
-});
+// $(document).ready(function(){
+// 	loadNavBar();
+// 	loadARM();
+// });
