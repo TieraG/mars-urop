@@ -16,6 +16,8 @@ loadARM = function(){
 			 			 	return "<p>" + d.info + "<p>";
 			 			 });
 
+			console.log("SVG: " + svg);
+
 			svg.call(tip);
 
 			// ARM LABEL
