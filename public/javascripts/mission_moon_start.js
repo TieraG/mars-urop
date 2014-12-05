@@ -1,4 +1,4 @@
-$(document).ready(function(){
-	loadNavBar();
-	loadMoonToMars();
-});
+// $(document).ready(function(){
+// 	loadNavBar();
+// 	loadMoonToMars();
+// });
