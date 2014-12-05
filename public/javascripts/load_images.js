@@ -1,3 +1,6 @@
+back = new Image();
+back.src = "/images/mars_image.jpg";
+
 arv = new Image(70, 100);
 arv.src = "/images/ARV.png";
 
@@ -54,3 +57,11 @@ ldsh.src = "/images/LDSH.png";
 
 mav = new Image(70, 100);
 mav.src = "/images/MAV.png";
+
+loadBackGround = function(){
+		$("#body").css("width", "100%");
+		$("#body").css("height", "100%");
+		$("#body").css("background-image", "url("+ back.src + ")");
+		$("#body").css("background-position", "0px 0px");
+		$("#body").css("background-repeat", "repeat-y");
+};
