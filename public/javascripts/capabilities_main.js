@@ -1,6 +1,6 @@
 loadCapabilities = function(){
 
-	var svg = d3.select("#content")
+	svgCapa = d3.select("#content")
 				.append("svg")
 				.attr("height", 1000)
 				.attr("width", 1500)
@@ -10,17 +10,17 @@ loadCapabilities = function(){
 	// Rectangles
 	var coodY = 10;
 
-	for (var i = 1; i < 12; i++){
+	for (var i = 1; i < 11; i++){
 
 		if (i%2 === 0){
-			svg.append("rect")
+			svgCapa.append("rect")
 			   .attr("x", 10)
 			   .attr("y", coodY)
 			   .attr("height", 50)
 			   .attr("width", 400)
 			   .attr("fill", "#996633");
 		} else {
-			svg.append("rect")
+			svgCapa.append("rect")
 			   .attr("x", 10)
 			   .attr("y", coodY)
 			   .attr("height", 50)
@@ -35,23 +35,72 @@ loadCapabilities = function(){
 
 	coodY = 40;
 
-	var cap_text = ["MARS EDL", "RADIATION PROTECTION", "IN-SPACE PROPULSION", "FISSION POWER", "HEAVY LIFT LAUNCH VEHICLES", "PLANETARY ASCENT PROPULSION", "HABITATS", 'EVA SUITS', 'ECLSS', 'CREW HEALTH', 'ISRU (MARS ATMOSPHRE'];
+	var cap_text = [
 
-	for (var i = 0; i < 11; i++){
+					{
 
-		if (i%2 === 0){
-			svg.append('text')
-			   .attr("x", 30)
-			   .attr("y", coodY)
-			   .attr("class", "cap-labels")
-			   .text(cap_text[i]);
-		} else {
-			svg.append('text')
-			   .attr("x", 30)
-			   .attr("y", coodY)
-			   .attr("class", "cap-labels")
-			   .text(cap_text[i]);
-		}
+					text: "MARS EDL", 
+					id: "mars-edl"
+
+					},
+
+					{
+						text: "RADIATION PROTECTION",
+						id: "radiation"
+					}, 
+
+					{
+						text: "IN-SPACE PROPULSION",
+						id: "propulsion"
+
+					} , 
+
+					{
+
+						text: "HEAVY LIFT LAUNCH VEHICLES",
+						id: "heavy"
+					},
+
+					{
+						text: "PLANETARY ASCENT PROPULSION",
+						id: 'planetary'
+					},
+					{
+						text: 'ECLSS',
+						id: 'eclss'
+					},
+
+					{
+
+						text: "HABITATS",
+						id: 'habitats'
+					}, 
+					{
+						text: 'EVA SUITS',
+						id: "eva-suits"
+					},
+					
+					{
+						text: 'CREW HEALTH',
+						id: 'crew'
+					},
+					{
+						text: 'ISRU (MARS ATMOSPHRE)',
+						id: "isru"
+					}
+
+	];
+
+	for (var i = 0; i < 10; i++){
+
+		svgCapa.append("a")
+		   .attr("xlink:href", "#")
+		   .attr("id", cap_text[i].id)
+		   .append('text')
+		   .attr("x", 30)
+		   .attr("y", coodY)
+		   .attr("class", "cap-labels glow")
+		   .text(cap_text[i].text);
 
 		coodY+=50;
 	}
@@ -61,14 +110,14 @@ loadCapabilities = function(){
 	var signs = [{line:"HIGH", color: "red"}, {line:"MEDIUM", color: "orange"}, {line:"LOW", color: 'green'}];
 
 	for (var i = 0; i < 3; i++){
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX - 10)
 			   .attr("y", coodY)
 			   .attr("class", "cap-labels")
 			   .attr("fill", signs[i].color)
 			   .text(signs[i].line);
 
-		svg.append("line")
+		svgCapa.append("line")
 			.attr("x1", coodX-100)
 			.attr("x2", coodX+130)
 			.attr("y1", coodY+10)
@@ -112,19 +161,19 @@ loadCapabilities = function(){
 	
 	for (var i = 0; i < 3; i++){
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY)
 			   .attr("class", "cap-text")
 			   .text(tech[i].one);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+20)
 			   .attr("class", "cap-text")
 			   .text(tech[i].two);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+40)
 			   .attr("class", "cap-text")
@@ -138,7 +187,7 @@ loadCapabilities = function(){
 	coodX = 630;
 	coodY = 750;
 
-	svg.append("line")
+	svgCapa.append("line")
 			.attr("x1", coodX-40)
 			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
@@ -149,7 +198,7 @@ loadCapabilities = function(){
 	coodY = 650;
 
 
-	svg.append("line")
+	svgCapa.append("line")
 			.attr("x1", coodX-40)
 			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
@@ -159,7 +208,7 @@ loadCapabilities = function(){
 
 	coodY = 750;
 
-	svg.append("line")
+	svgCapa.append("line")
 			.attr("x1", coodX-40)
 			.attr("x2", coodX+800)
 			.attr("y1", coodY+60)
@@ -169,7 +218,7 @@ loadCapabilities = function(){
 
 	coodY = 850;
 
-	svg.append("line")
+	svgCapa.append("line")
 			.attr("x1", coodX-40)
 			.attr("x2", coodX+780)
 			.attr("y1", coodY+60)
@@ -212,19 +261,19 @@ loadCapabilities = function(){
 	
 	for (var i = 0; i < 3; i++){
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY)
 			   .attr("class", "cap-text")
 			   .text(cap[i].one);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+20)
 			   .attr("class", "cap-text")
 			   .text(cap[i].two);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+40)
 			   .attr("class", "cap-text")
@@ -265,19 +314,19 @@ loadCapabilities = function(){
 	
 	for (var i = 0; i < 3; i++){
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY)
 			   .attr("class", "cap-text")
 			   .text(reg[i].one);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+20)
 			   .attr("class", "cap-text")
 			   .text(reg[i].two);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+40)
 			   .attr("class", "cap-text")
@@ -318,19 +367,19 @@ loadCapabilities = function(){
 	
 	for (var i = 0; i < 3; i++){
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY)
 			   .attr("class", "cap-text")
 			   .text(cost[i].one);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+20)
 			   .attr("class", "cap-text")
 			   .text(cost[i].two);
 
-		svg.append('text')
+		svgCapa.append('text')
 			   .attr("x", coodX)
 			   .attr("y", coodY+40)
 			   .attr("class", "cap-text")
@@ -345,13 +394,13 @@ loadCapabilities = function(){
 	var challenges = [{one: "TECHNICAL", two: "CHALLENGES"}, {one:"CAPABILITY", two: "GAP"}, {one:"REGULATORY", two: "CHALLENGES"}, {one:"COST &", two: "SCHEDULE"}];
 	
 	for (var i = 0; i < 4; i++){
-			svg.append('text')
+			svgCapa.append('text')
 			   .attr("x", 430)
 			   .attr("y", coodY)
 			   .attr("class", "cap-labels")
 			   .text(challenges[i].one);
 
-			svg.append('text')
+			svgCapa.append('text')
 			   .attr("x", 430)
 			   .attr("y", coodY+30)
 			   .attr("class", "cap-labels")
@@ -361,11 +410,10 @@ loadCapabilities = function(){
 	}
 
 
-	var main_content = svg.append("g")
-						  .attr("id", "main_content")
-						  .attr("transform", "translate(410, 0)");
-
-
-
+	// var main_content = svgCapa.append("g")
+	// 					  .attr("id", "main_content")
+	// 					  .attr("width", 500)
+	// 					  .attr("height", 500)
+	// 					  .attr("transform", "translate(410, 0)")
 
 }

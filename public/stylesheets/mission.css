@@ -48,4 +48,9 @@ body	{
   text-align: left;
 }
 
+.glow:hover{
+    opacity: 0.40;
+
+};
+
 
