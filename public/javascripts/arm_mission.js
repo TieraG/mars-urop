@@ -186,7 +186,7 @@ loadARM = function(){
 						   .attr('x', pattern.x)
 		                   .attr('y', text.textOne.height);
 
-		  		 });
+		  });
 
 		  rectInfo.forEach(function(rect){
 		  			svg.append("rect")
