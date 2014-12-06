@@ -319,6 +319,47 @@ $(document).ready(function(){
 			text = htmlBody.append("xhtml:p")
 							   .html("Several types of propulsion are suggested:");
 
+			// FISSION
+			group.append("text")
+				 .attr("x", "180")
+				 .attr("y", "120")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .attr('font-weight', 'bold')
+				 .text("Fission Power");
+
+			group.append("text")
+				 .attr("x", "630")
+				 .attr("y", "120")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .attr('font-weight', 'bold')
+				 .text("In Space Cyrogenic Propulsion");
+
+			group.append("text")
+				 .attr("x", "150")
+				 .attr("y", "260")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .attr('font-weight', 'bold')
+				 .text("Nuclear Electric Propulsion");
+
+			group.append("text")
+				 .attr("x", "650")
+				 .attr("y", "260")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .attr('font-weight', 'bold')
+				 .text("Nuclear Thermal Propulsion");
+
+			group.append("text")
+				 .attr("x", "150")
+				 .attr("y", "400")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .attr('font-weight', 'bold')
+				 .text("Solar Electric Propulsion");
+
 			var rect1 = [
 
 				{
@@ -495,7 +536,7 @@ $(document).ready(function(){
 			];
 
 			var coodX = 0;
-			var coodY = 110;
+			var coodY = 130;
 			
 			rect1.forEach(function(r){
 
@@ -590,7 +631,7 @@ $(document).ready(function(){
 			});
 
 			var coodX = 0;
-			var coodY = 250;
+			var coodY = 270;
 
 			rect3.forEach(function(r){
 
@@ -686,7 +727,7 @@ $(document).ready(function(){
 
 			
 			var coodX = 0;
-			var coodY = 390;
+			var coodY = 410;
 
 			rect5.forEach(function(r){
 
@@ -737,6 +778,7 @@ $(document).ready(function(){
 	$(document).on("click", "#heavy", function(){
 
 			dom.html("");
+			group.html("");
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
@@ -749,11 +791,194 @@ $(document).ready(function(){
 
 			text = htmlBody.append("xhtml:p")
 							   .html("Heavy-lift launch systems (that is, launch systems with a payload capability of about 50 MT or more to LEO) reduce the number of launches required for human exploration missions beyond LEO. The large payload capacity, in terms of mass and volume, enable the launch of larger vehicle elements as single units, which reduces or eliminates the need for on orbit assembly and attendant integration and test risk on orbit. Two heavy-lift launch systems are currently under development in the United States: the NASA SLS and the SpaceX Falcon Heavy.");
+			
+			group.append("text")
+				 .attr("x", "100")
+				 .attr("y", "290")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .text("SLS HEAVY LIFT LAUNCH VEHICLE");
+
+			group.append("text")
+				 .attr("x", "100")
+				 .attr("y", "435")
+				 .attr('font-size', '18')
+				 .attr('font-family', 'sans-serif')
+				 .text("FALCON HEAVY LIFT LAUNCH VEHICLE");
+
+			var rect1 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var rect2 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 300;
+
+
+			rect1.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 100)
+							.attr("width", 110)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+30)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+35)
+					 .attr("y", coodY+80)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '9')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=120;
+			});
+			
+			coodX=0;
+			coodY=450
+
+			rect2.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 100)
+							.attr("width", 110)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+30)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+35)
+					 .attr("y", coodY+80)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '9')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=120;
+			});
+
 	});
 
 	$(document).on("click", "#planetary", function(){
 
 		dom.html("");
+		group.html("");
 
 		dom = svgCapa.append("g")
 				 .attr("width", 700)
@@ -777,11 +1002,90 @@ $(document).ready(function(){
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked medium because of past experience with lunar ascent engines and existing in-space propulsion systems provide a solid foundation for developing the technologies needed for Mars. In addition, new technologies are needed for long-term storage of cryogenic fuels. The capability gap is ranked medium because of the improvements needed to advance available technologies enough to provide the power needed ascent from Mars. Regulatory challenges are ranked low because no regulatory changes are needed. Cost and schedule challenges are ranked high because of the long time that will likely be required to develop the ability to store cryogenic fuel in-space for years at a time.");
 
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 350;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			})
 	});
 	
 	$(document).on("click", "#eclss", function(){
 
 		dom.html("");
+		group.html("");
 
 		dom = svgCapa.append("g")
 				 .attr("width", 700)
@@ -804,11 +1108,92 @@ $(document).ready(function(){
 
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked medium because ECLSS technologies and systems are already operational. The capability gap is ranked high because of the substantial improvements that are needed to extend the lifetime and increase the reliability of existing technologies and systems. Regulatory challenges are ranked low because no regulatory changes are needed. Cost and schedule challenges are ranked high because extraordinary resources and time would be needed develop and validate the performance of closed-loop ECLSS systems that will operate reliably over long time periods in space and on the surface of Mars.");
+	
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 300;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+		});
+
 	});
 
 	$(document).on("click", "#habitats", function(){
 
 		dom.html("");
+		group.html("");
 
 		dom = svgCapa.append("g")
 				 .attr("width", 700)
@@ -831,11 +1216,91 @@ $(document).ready(function(){
 
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked medium because NASA has extensive experience in designing and building habitats in LEO, culminating with the ISS. The capability gap is ranked medium because substantial improvements are needed to extend the lifetime and increase the reliability of existing technologies and systems and to assure that habitat systems work as expected in the partial gravity of the Moon and/or Mars. Regulatory challenges are ranked low because no regulatory changes are needed. Cost and schedule challenges are ranked medium because substantial resources and time would be needed to upgrade and validate the performance of habitat systems that will operate reliably over long time periods in space and on the surface of Mars.");
+	
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "MEDIUM",
+					color: "orange"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 350;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			});
 	});
 	
 	$(document).on("click", "#eva-suits", function(){
 
 		dom.html("");
+		group.html("");
 
 		dom = svgCapa.append("g")
 				 .attr("width", 700)
@@ -858,11 +1323,91 @@ $(document).ready(function(){
 
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked low because substantial research and experience with EVA suits in space and, to a lesser extent, on the surface of the Moon. The capability gap is ranked medium because of the advances needed to accommodate the long duration of a human mission to the Mars surface during transit and on the surface. Regulatory challenges are ranked low because no regulatory changes are needed. Cost and schedule challenges are ranked medium because substantial resources and time would be needed to close the capability gap.");
+	
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "MEDIUM",
+					color: "orange"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 300;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			});
 	});
 
 	$(document).on("click", "#crew", function(){
 
 		dom.html("");
+		group.html("");
 
 		dom = svgCapa.append("g")
 				 .attr("width", 700)
@@ -885,11 +1430,91 @@ $(document).ready(function(){
 
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked medium because final solutions to many physiological and psychosocial threats to crew health have yet to be identified. The capability gap is ranked medium because solutions to some issues are rather well defined, but others still require substantial research. Regulatory challenges are ranked medium because new standards may be needed as research into physiological and psychosocial issues continues, particularly given the results of a recent report on ethical issues associated with HSF.81 Cost and schedule challenges are ranked medium because substantial resources and time would be needed to overcome the technical and regulatory challenges and to close the capability gap.");
+	
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "MEDIUM",
+					color: "orange"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 350;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			});
 	});
 	
 	$(document).on("click", "#isru", function(){
 
 		dom.html("");
+		group.html("");
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -902,5 +1527,84 @@ $(document).ready(function(){
 
 		text = htmlBody.append("xhtml:p")
 						   .html("Technical challenges are ranked low because technologies to achieve the ISRU capabilities described above have been demonstrated on Earth. The capability gap is ranked high because there is a large gap between the capabilities of the small-scale experiments completed to date and the development of a full-scale operational system capable of reliable operation during long-term exposure to the partial gravity, dust, atmosphere, and radiation environment found on the surface of Mars. Regulatory challenges are ranked low because no regulatory changes are needed. Cost and schedule challenges are ranked medium because substantial resources and time would be needed to close the capability gap.");
+		
+		var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "MEDIUM",
+					color: "orange"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 350;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			});
 	});
 });
