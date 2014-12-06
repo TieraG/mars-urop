@@ -8,7 +8,7 @@ loadCapabilities = function(){
 				.append("g");
 
 	// Rectangles
-	var coodY = 60;
+	var coodY = 10;
 
 	for (var i = 1; i < 11; i++){
 
@@ -33,7 +33,7 @@ loadCapabilities = function(){
 
 	// Text for labels
 
-	coodY = 100;
+	coodY = 40;
 
 	var cap_text = [
 
@@ -409,4 +409,5 @@ loadCapabilities = function(){
 
 			coodY+=100;
 	}
+
 }
