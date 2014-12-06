@@ -29,10 +29,6 @@ $(document).ready(function(){
 	var text = htmlBody.append("xhtml:p")
 					   .html("Technical challenges are ranked high because the technologies needed for a Mars EDL system capable of handling very large payloads (40 to 80 MT) have yet to be identified. The capability gap is ranked high because the payload capacity of the necessary EDL systems are currently far beyond the capability of existing EDL systems. Cost and schedule challenges are ranked high because extraordinary resources and time would be needed to identify suitable technologies, scale them up to the requisite size, and conduct flight testing in the atmosphere of Earth and/or Mars to build confidence that they are safe enough for use on a crewed mission.");
 
-	// var image = htmlBody.append("xhtml:img")
-	// 					.attr("width", "700")
-	// 					.attr("height", "200")
-	// 					.attr("src", "/images/edl.png");
 	var rect = [
 
 				{
@@ -129,50 +125,6 @@ $(document).ready(function(){
 			text = htmlBody.append("xhtml:p")
 							   .html("Technical challenges are ranked high because the technologies needed for a Mars EDL system capable of handling very large payloads (40 to 80 MT) have yet to be identified. The capability gap is ranked high because the payload capacity of the necessary EDL systems are currently far beyond the capability of existing EDL systems. Cost and schedule challenges are ranked high because extraordinary resources and time would be needed to identify suitable technologies, scale them up to the requisite size, and conduct flight testing in the atmosphere of Earth and/or Mars to build confidence that they are safe enough for use on a crewed mission.");
 	
-			image = htmlBody.append("xhtml:img")
-						.attr("width", "700")
-						.attr("height", "200")
-						.attr("src", "/images/edl.png");
-	});
-
-	$(document).on("click", "#radiation", function(){
-
-			dom.html("");
-
-			htmlBody = dom.append("xhtml:body")
-							 .style("font-size", "19px")
-							 .attr("class", "cap-labels");
-
-			header = htmlBody.append("xhtml:h3")
-							 .style("text-align", "center")
-							 .style("padding-top", "20px")
-							 .html("RADIATION PROTECTION");
-
-			text = htmlBody.append("xhtml:p")
-							   .html("Technical challenges are ranked high because a suitable approach for providing adequate radiation safety has yet to be identified. The capability gap is ranked high because the ability to provide the level of radiation safety required for a human mission to the Mars surface is so far beyond the state of the art. Regulatory challenges are ranked medium because part of the solution may be to relax current radiation exposure limits (based on greater knowledge of the human health effects of the radiation environment in space and on the Mars surface and/or a reconsideration of the level of acceptable risk). Cost and schedule challenges are ranked medium because the time and resources necessary to develop adequate radiation safety systems are substantial.");
-			
-			image = htmlBody.append("xhtml:img")
-						.attr("width", "700")
-						.attr("height", "200")
-						.attr("src", "/images/radiation.png");
-	});
-
-	$(document).on("click", "#propulsion", function(){
-
-			dom.html("");
-
-			htmlBody = dom.append("xhtml:body")
-							 .style("font-size", "20px")
-							 .attr("class", "cap-labels");
-
-			header = htmlBody.append("xhtml:h3")
-							 .style("text-align", "center")
-							 .style("padding-top", "20px")
-							 .html("IN SPACE PROPULSION");
-
-			text = htmlBody.append("xhtml:p")
-							   .html("Several types of propulsion are suggested:");
-
 			var rect = [
 
 				{
@@ -209,35 +161,577 @@ $(document).ready(function(){
 			];
 
 			var coodX = 0;
-			var coodY = 150;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
 				var rectT = group.append("rect")
 							.attr("x", coodX)
 							.attr("y", coodY)
-							.attr("height", 100)
-							.attr("width", 100)
+							.attr("height", 150)
+							.attr("width", 150)
 							.attr("fill", r.color)
 							.style("opacity", "0.85");
 
-				rectT.append("text")
-					 .attr("x", coodX)
+				group.append("text")
+					 .attr("x", coodX+10)
 					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
 					 .text(r.textTopOne);
 
-				rectT.append("text")
-					 .attr("x", coodX)
+				group.append("text")
+					 .attr("x", coodX+10)
 					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
 					 .text(r.textTopTwo);
 
-				rectT.append("text")
-					 .attr("x", coodX)
+				group.append("text")
+					 .attr("x", coodX+10)
 					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
 					 .text(r.textTopThree);
 
-				coodX+=120;
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
 			})
+	});
+
+	$(document).on("click", "#radiation", function(){
+
+			dom.html("");
+			group.html("");
+
+			htmlBody = dom.append("xhtml:body")
+							 .style("font-size", "19px")
+							 .attr("class", "cap-labels");
+
+			header = htmlBody.append("xhtml:h3")
+							 .style("text-align", "center")
+							 .style("padding-top", "20px")
+							 .html("RADIATION PROTECTION");
+
+			text = htmlBody.append("xhtml:p")
+							   .html("Technical challenges are ranked high because a suitable approach for providing adequate radiation safety has yet to be identified. The capability gap is ranked high because the ability to provide the level of radiation safety required for a human mission to the Mars surface is so far beyond the state of the art. Regulatory challenges are ranked medium because part of the solution may be to relax current radiation exposure limits (based on greater knowledge of the human health effects of the radiation environment in space and on the Mars surface and/or a reconsideration of the level of acceptable risk). Cost and schedule challenges are ranked medium because the time and resources necessary to develop adequate radiation safety systems are substantial.");
+			
+			var rect = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "COST &",
+					textTopTwo: "SCHEDULE",
+					textTopThree: "CHALLENGES",
+					textBot: "MEDIUM",
+					color: "orange"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 300;
+
+			rect.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 150)
+							.attr("width", 150)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+60)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+50)
+					 .attr("y", coodY+130)
+					 .style("font-family", 'sans-serif')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=170;
+			})
+	});
+
+	$(document).on("click", "#propulsion", function(){
+
+			dom.html("");
+			group.html("");
+
+			htmlBody = dom.append("xhtml:body")
+							 .style("font-size", "20px")
+							 .attr("class", "cap-labels");
+
+			header = htmlBody.append("xhtml:h3")
+							 .style("text-align", "center")
+							 .style("padding-top", "20px")
+							 .html("IN SPACE PROPULSION");
+
+			text = htmlBody.append("xhtml:p")
+							   .html("Several types of propulsion are suggested:");
+
+			var rect1 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var rect2 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var rect3 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var rect4 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "MEDIUM",
+					color: "orange"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var rect5 = [
+
+				{
+					textTopOne: "TECHNICAL",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "CAPABILITY",
+					textTopTwo: "GAP",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				},
+
+				{
+					textTopOne: "REGULATORY",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "LOW",
+					color: "green"
+				},
+
+				{
+					textTopOne: "COST & SCHEDULE",
+					textTopTwo: "CHALLENGES",
+					textTopThree: "",
+					textBot: "HIGH",
+					color: "red"
+				}
+			];
+
+			var coodX = 0;
+			var coodY = 110;
+			
+			rect1.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 100)
+							.attr("width", 110)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+30)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+35)
+					 .attr("y", coodY+80)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '9')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=120;
+			});
+			
+			coodX+=30;
+
+			rect2.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 100)
+							.attr("width", 110)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+30)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+35)
+					 .attr("y", coodY+80)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '9')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=120;
+			});
+
+			var coodX = 0;
+			var coodY = 250;
+
+			rect3.forEach(function(r){
+
+				var rectT = group.append("rect")
+							.attr("x", coodX)
+							.attr("y", coodY)
+							.attr("height", 100)
+							.attr("width", 110)
+							.attr("fill", r.color)
+							.style("opacity", "0.85");
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+20)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopOne);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+30)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopTwo);
+
+				group.append("text")
+					 .attr("x", coodX+10)
+					 .attr("y", coodY+40)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '10')
+					 .attr("fill", 'white')
+					 .text(r.textTopThree);
+
+				group.append("text")
+					 .attr("x", coodX+35)
+					 .attr("y", coodY+80)
+					 .style("font-family", 'sans-serif')
+					 .style("font-size", '9')
+					 .attr("fill", 'white')
+					 .text(r.textBot);
+
+				coodX+=120;
+			});
+
+			coodX+=30;
+
+			rect4.forEach(function(r){
+
+					var rectT = group.append("rect")
+								.attr("x", coodX)
+								.attr("y", coodY)
+								.attr("height", 100)
+								.attr("width", 110)
+								.attr("fill", r.color)
+								.style("opacity", "0.85");
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+20)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopOne);
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+30)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopTwo);
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+40)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopThree);
+
+					group.append("text")
+						 .attr("x", coodX+35)
+						 .attr("y", coodY+80)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '9')
+						 .attr("fill", 'white')
+						 .text(r.textBot);
+
+					coodX+=120;
+				});
+
+			
+			var coodX = 0;
+			var coodY = 390;
+
+			rect5.forEach(function(r){
+
+					var rectT = group.append("rect")
+								.attr("x", coodX)
+								.attr("y", coodY)
+								.attr("height", 100)
+								.attr("width", 110)
+								.attr("fill", r.color)
+								.style("opacity", "0.85");
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+20)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopOne);
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+30)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopTwo);
+
+					group.append("text")
+						 .attr("x", coodX+10)
+						 .attr("y", coodY+40)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '10')
+						 .attr("fill", 'white')
+						 .text(r.textTopThree);
+
+					group.append("text")
+						 .attr("x", coodX+35)
+						 .attr("y", coodY+80)
+						 .style("font-family", 'sans-serif')
+						 .style("font-size", '9')
+						 .attr("fill", 'white')
+						 .text(r.textBot);
+
+					coodX+=120;
+				});
 	});
 
 	$(document).on("click", "#heavy", function(){
