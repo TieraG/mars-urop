@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 	var htmlBody = dom.append("xhtml:body")
 					 .style("font-size", "20px")
-					 .attr("class", "cap-labels");
+					 .attr("class", "cap-labels left");
 
 	var header = htmlBody.append("xhtml:h3")
 					 .style("text-align", "center")
@@ -115,7 +115,7 @@ $(document).ready(function(){
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
-							 .attr("class", "cap-labels");
+							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
 							 .style("text-align", "center")
@@ -212,7 +212,7 @@ $(document).ready(function(){
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "19px")
-							 .attr("class", "cap-labels");
+							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
 							 .style("text-align", "center")
@@ -309,7 +309,7 @@ $(document).ready(function(){
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
-							 .attr("class", "cap-labels");
+							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
 							 .style("text-align", "center")
@@ -782,7 +782,7 @@ $(document).ready(function(){
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
-							 .attr("class", "cap-labels");
+							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
 							 .style("text-align", "center")
@@ -992,7 +992,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")
@@ -1099,7 +1099,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")
@@ -1207,7 +1207,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")
@@ -1314,7 +1314,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")
@@ -1421,7 +1421,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")
@@ -1518,7 +1518,7 @@ $(document).ready(function(){
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
-						 .attr("class", "cap-labels");
+						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
 						 .style("text-align", "center")

@@ -6,17 +6,19 @@
 	background-repeat: repeat-y;
 }
 
-/*#content {
-	text-align: center;
-}*/
 
 #capabilities-svg {
 	background-color: #996633;
 	opacity: 0.85;
 }
 
+.left {
+	text-align: left;
+}
+
 #content {
 	overflow: auto;
+	text-align: center;
 }
 
 .cap-labels {
