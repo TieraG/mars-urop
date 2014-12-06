@@ -106,7 +106,6 @@ loadCapabilities = function(){
 	}
 
 	var coodX = 690;
-	coodY+=50;
 
 	var signs = [{line:"HIGH", color: "red"}, {line:"MEDIUM", color: "orange"}, {line:"LOW", color: 'green'}];
 
