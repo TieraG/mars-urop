@@ -333,7 +333,7 @@ $(document).ready(function(){
 			header = htmlBody.append("xhtml:h3")
 							 .style("text-align", "center")
 							 .style("padding-top", "20px")
-							 .html("IN SPACE PROPULSION");
+							 .html("IN-SPACE PROPULSION");
 
 			text = htmlBody.append("xhtml:p")
 							   .html("Several types of propulsion are suggested:");
