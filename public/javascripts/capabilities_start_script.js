@@ -1163,7 +1163,7 @@ $(document).ready(function(){
 			];
 
 			var coodX = 150;
-			var coodY = 250;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
