@@ -409,12 +409,4 @@ loadCapabilities = function(){
 
 			coodY+=100;
 	}
-
-
-	// var main_content = svgCapa.append("g")
-	// 					  .attr("id", "main_content")
-	// 					  .attr("width", 500)
-	// 					  .attr("height", 500)
-	// 					  .attr("transform", "translate(410, 0)")
-
 }

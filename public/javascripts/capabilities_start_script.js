@@ -3,18 +3,18 @@ $(document).ready(function(){
 	loadCapabilities();
 
 	var group = svgCapa.append("g")
-			 		.attr("width", 700)
+			 		.attr("width", 900)
 			 		.attr("height",560)
 			 		.attr("transform", "translate(440, 0)")
 
 	var dom = svgCapa.append("g")
-			 		 .attr("width", 700)
+			 		 .attr("width", 900)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 700)
+				     .attr("width", 900)
 				     .attr("height", 560);
 
 	var htmlBody = dom.append("xhtml:body")
@@ -64,7 +64,8 @@ $(document).ready(function(){
 				}
 	];
 
-	var coodX = 0;
+
+	var coodX = 150;
 	var coodY = 300;
 
 	rect.forEach(function(r){
@@ -113,6 +114,12 @@ $(document).ready(function(){
 			dom.html("");
 			group.html("");
 
+			dom.attr("width", 900);
+			dom.attr("height",560);
+
+			group.attr("width", 900);
+			group.attr("height",560);
+
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
 							 .attr("class", "cap-labels left");
@@ -160,7 +167,7 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
+			var coodX = 150;
 			var coodY = 300;
 
 			rect.forEach(function(r){
@@ -210,6 +217,12 @@ $(document).ready(function(){
 			dom.html("");
 			group.html("");
 
+			dom.attr("width", 900);
+			dom.attr("height",560);
+
+			group.attr("width", 900);
+			group.attr("height",560);
+
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "19px")
 							 .attr("class", "cap-labels left");
@@ -257,7 +270,7 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
+			var coodX = 150;
 			var coodY = 300;
 
 			rect.forEach(function(r){
@@ -306,6 +319,12 @@ $(document).ready(function(){
 
 			dom.html("");
 			group.html("");
+
+			dom.attr("width", 900);
+			dom.attr("height",560);
+
+			group.attr("width", 900);
+			group.attr("height",560);
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
@@ -780,6 +799,12 @@ $(document).ready(function(){
 			dom.html("");
 			group.html("");
 
+			dom.attr("width", 900);
+			dom.attr("height",560);
+
+			group.attr("width", 900);
+			group.attr("height",560);
+
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
 							 .attr("class", "cap-labels left");
@@ -793,16 +818,16 @@ $(document).ready(function(){
 							   .html("Heavy-lift launch systems (that is, launch systems with a payload capability of about 50 MT or more to LEO) reduce the number of launches required for human exploration missions beyond LEO. The large payload capacity, in terms of mass and volume, enable the launch of larger vehicle elements as single units, which reduces or eliminates the need for on orbit assembly and attendant integration and test risk on orbit. Two heavy-lift launch systems are currently under development in the United States: the NASA SLS and the SpaceX Falcon Heavy.");
 			
 			group.append("text")
-				 .attr("x", "100")
-				 .attr("y", "290")
-				 .attr('font-size', '18')
+				 .attr("x", "200")
+				 .attr("y", "240")
+				 .attr('font-size', '16')
 				 .attr('font-family', 'sans-serif')
 				 .text("SLS HEAVY LIFT LAUNCH VEHICLE");
 
 			group.append("text")
-				 .attr("x", "100")
-				 .attr("y", "435")
-				 .attr('font-size', '18')
+				 .attr("x", "200")
+				 .attr("y", "385")
+				 .attr('font-size', '16')
 				 .attr('font-family', 'sans-serif')
 				 .text("FALCON HEAVY LIFT LAUNCH VEHICLE");
 
@@ -876,8 +901,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 300;
+			var coodX = 150;
+			var coodY = 250;
 
 
 			rect1.forEach(function(r){
@@ -925,8 +950,8 @@ $(document).ready(function(){
 				coodX+=120;
 			});
 			
-			coodX=0;
-			coodY=450
+			coodX=150;
+			coodY=400
 
 			rect2.forEach(function(r){
 
@@ -980,16 +1005,13 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
-		dom = svgCapa.append("g")
-				 .attr("width", 700)
-				 .attr("height",560)
-				 .attr("transform", "translate(440, 0)")
-				 .append("foreignObject")
-				 .attr("x", 0)
-				 .attr("y", 0)
-				 .attr("width", 700)
-				 .attr("height", 560);
+		dom.attr("width", 900);
+		dom.attr("height",560);
 
+		group.attr("width", 900);
+		group.attr("height",560);
+
+		
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
 						 .attr("class", "cap-labels left");
@@ -1037,8 +1059,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 350;
+			var coodX = 150;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
@@ -1087,15 +1109,11 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
-		dom = svgCapa.append("g")
-				 .attr("width", 700)
-				 .attr("height",560)
-				 .attr("transform", "translate(440, 0)")
-				 .append("foreignObject")
-				 .attr("x", 0)
-				 .attr("y", 0)
-				 .attr("width", 700)
-				 .attr("height", 560);
+		dom.attr("width", 900);
+		dom.attr("height",560);
+
+		group.attr("width", 900);
+		group.attr("height",560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1144,8 +1162,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 300;
+			var coodX = 150;
+			var coodY = 250;
 
 			rect.forEach(function(r){
 
@@ -1195,15 +1213,11 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
-		dom = svgCapa.append("g")
-				 .attr("width", 700)
-				 .attr("height",560)
-				 .attr("transform", "translate(440, 0)")
-				 .append("foreignObject")
-				 .attr("x", 0)
-				 .attr("y", 0)
-				 .attr("width", 700)
-				 .attr("height", 560);
+		dom.attr("width", 900);
+		dom.attr("height",560);
+
+		group.attr("width", 900);
+		group.attr("height",560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1252,8 +1266,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 350;
+			var coodX = 150;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
@@ -1302,15 +1316,11 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
-		dom = svgCapa.append("g")
-				 .attr("width", 700)
-				 .attr("height",560)
-				 .attr("transform", "translate(440, 0)")
-				 .append("foreignObject")
-				 .attr("x", 0)
-				 .attr("y", 0)
-				 .attr("width", 700)
-				 .attr("height", 560);
+		dom.attr("width", 900);
+		dom.attr("height",560);
+
+		group.attr("width", 900);
+		group.attr("height",560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1359,8 +1369,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 300;
+			var coodX = 150;
+			var coodY = 250;
 
 			rect.forEach(function(r){
 
@@ -1409,15 +1419,11 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
-		dom = svgCapa.append("g")
-				 .attr("width", 700)
-				 .attr("height",560)
-				 .attr("transform", "translate(440, 0)")
-				 .append("foreignObject")
-				 .attr("x", 0)
-				 .attr("y", 0)
-				 .attr("width", 700)
-				 .attr("height", 560);
+		dom.attr("width", 900);
+		dom.attr("height",560);
+
+		group.attr("width", 900);
+		group.attr("height",560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1466,8 +1472,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 350;
+			var coodX = 150;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
@@ -1516,6 +1522,12 @@ $(document).ready(function(){
 		dom.html("");
 		group.html("");
 
+		dom.attr("width", 900);
+		dom.attr("height",560);
+
+		group.attr("width", 900);
+		group.attr("height",560);
+
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
 						 .attr("class", "cap-labels left");
@@ -1563,8 +1575,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 0;
-			var coodY = 350;
+			var coodX = 150;
+			var coodY = 300;
 
 			rect.forEach(function(r){
 
