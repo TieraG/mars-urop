@@ -350,54 +350,54 @@ var loadDRMMn = function(){
 						
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 120)
+						.attr("y", 115)
 						.text("longer-duration in-space habitats and complex propellant staging in lunar orbit as well as");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 140)
-						.text("to develop critical partial-gravity surface habitats. After the lunar missions, the lunar");
+						.attr("y", 130)
+						.text("to develop critical partial-gravity surface habitats. After the lunar missions, the lunar assets");
+
+					text.append("tspan")
+						.attr("x", 35)
+						.attr("y", 145)
+						.text("will be retired from government service and optionally maintained and leveraged by future");
 
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 160)
-						.text("assets will be retired from government service and optionally maintained and leveraged");
+						.text("commercial endeavors.");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 180)
-						.text("by future commercial endeavors.");
-
-					text.append("tspan")
-						.attr("x", 35)
-						.attr("y", 205)
+						.attr("y", 200)
 						.style('font-weight', 'bold')
 						.style("text-decoration", "underline")
 						.text("Desirable Properties:");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 225)
+						.attr("y", 220)
 						.text("- Significance of destinations: mineral wealth exploitation (moon)");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 240)
+						.attr("y", 235)
 						.text("- Show progress with intermediate destinations");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 255)
+						.attr("y", 250)
 						.text("- Logical technological feed-forward");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 270)
+						.attr("y", 265)
 						.text("- Minimize dead-end elements");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 285)
+						.attr("y", 280)
 						.text("- Good operational tempo");
 
 

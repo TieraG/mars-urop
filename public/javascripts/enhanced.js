@@ -451,54 +451,54 @@ var loadDRMEnh = function(){
 						
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 120)
+						.attr("y", 115)
 						.text("a longer duration pathway exploring several several destinations while slowly increasing");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 140)
+						.attr("y", 130)
 						.text("the capability of key mission elements needed for a full Mars surface mission. It begins ");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 160)
+						.attr("y", 145)
 						.text("by developing long-term in-space habitat capabilities, followed by partial-gravity remote");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 180)
+						.attr("y", 160)
 						.text("surface operations capabilities, and finally the advanced in-space propulsion systems.");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 210)
+						.attr("y", 200)
 						.style('font-weight', 'bold')
 						.style("text-decoration", "underline")
 						.text("Desirable Properties:");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 230)
+						.attr("y", 220)
 						.text("- Significance of destinations: planetary defense and exploitation (near earth asteroid)");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 245)
+						.attr("y", 235)
 						.text("- Show progress with intermediate destinations");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 260)
+						.attr("y", 250)
 						.text("- Logical technological feed-forward");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 275)
+						.attr("y", 265)
 						.text("- Incremental growth of capability");
 
 					text.append("tspan")
 						.attr("x", 35)
-						.attr("y", 287)
+						.attr("y", 277)
 						.text("- Good operation temp");
 
 				

@@ -364,6 +364,4 @@ var rectInfo = [
 					  		 	fill: "url(#mav",
 					  		 	info: "<b><u>MARS ASCENT VEHICLE</u></b><br><br> <b>Required for:</b> Mars Surface"
 						}
-
-
 		  ];
