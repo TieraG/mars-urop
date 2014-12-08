@@ -2,7 +2,7 @@ loadCapabilities = function(){
 
 	svgCapa = d3.select("#content")
 				.append("svg")
-				.attr("height", 1000)
+				.attr("height", 1100)
 				.attr("width", 1500)
 				.attr("id", "capabilities-svg")
 				.append("g");

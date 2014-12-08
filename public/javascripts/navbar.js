@@ -26,6 +26,7 @@ var loadNavBar = function(){
 					.attr("stroke-width", 3);
 
 			var armBox = group.append("rect")
+					.attr("class", "glow")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "22%")
@@ -52,6 +53,7 @@ var loadNavBar = function(){
 					.text("ARM");
 
 			var moonBox = group.append("rect")
+					.attr("class", "glow")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "35%")
@@ -79,6 +81,7 @@ var loadNavBar = function(){
 					.text("MOON TO MARS");
 
 			var enhancedBox = group.append("rect")
+					.attr("class", "glow")
 					.attr("width", 30)
 					.attr("height", 30)
 					.attr("x", "55%")
