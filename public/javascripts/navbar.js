@@ -42,15 +42,27 @@ var loadNavBar = function(){
 						$(".canvas").html("");
 						$(".chart").html("");
 						loadMainPage();
-						clickCount = 0
 					});
 
-			group.append("text")
-					.attr("x", "28%")
-					.attr("y", 40)
-					.attr("font-size", "14px")
-					.style('font-family', 'sans-serif')
-					.text("ARM");
+			group.append("a")
+		   		.attr("xlink:href", "#")
+		   		.attr('class', 'glow')
+		   		.on("mouseenter", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadARM();
+												})
+					.on("mouseleave", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMainPage();
+				})
+				.append("text")
+				.attr("x", "28%")
+				.attr("y", 40)
+				.attr("font-size", "14px")
+				.style('font-family', 'sans-serif')
+				.text("ARM");
 
 			var moonBox = group.append("rect")
 					.attr("class", "glow")
@@ -64,16 +76,27 @@ var loadNavBar = function(){
 						$(".canvas").html("");
 						$(".chart").html("");
 						loadMoonToMars();
-						clickCount = 1;
 					})
 					.on("mouseleave", function(){
 						$(".canvas").html("");
 						$(".chart").html("");
 						loadMainPage();
-						clickCount = 0;
 					});
 
-			group.append("text")
+			    group.append("a")
+			   		.attr("xlink:href", "#")
+			   		.attr('class', 'glow')
+			   		.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMoonToMars();
+					})
+					.on("mouseleave", function(){
+						$(".canvas").html("");
+						$(".chart").html("");
+						loadMainPage();
+					})
+					.append("text")
 					.attr("x", "41%")
 					.attr("y", 40)
 					.attr("font-size", "14px")
@@ -99,7 +122,18 @@ var loadNavBar = function(){
 						loadMainPage();
 					});
 
-			group.append("text")
+			group.append("a")
+			   		.attr("xlink:href", "#")
+			   		.attr('class', 'glow')
+			   		.on("mouseenter", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadEnhanced();
+					}).on("mouseleave", function(){
+							$(".canvas").html("");
+							$(".chart").html("");
+							loadMainPage();
+					}).append("text")
 					  .attr("x", "61%")
 					  .attr("y", 40)
 					  .attr("font-size", "14px")

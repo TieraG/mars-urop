@@ -4,19 +4,85 @@ $(document).ready(function(){
 
 	var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+	var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
+
+	groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+	groupExtra.append("line")
+	 		    .attr("x1", 10)
+				.attr("x2", 270)
+				.attr("y1", 110)
+				.attr("y2", 110)
+				.attr("stroke", "green")
+				.attr('stroke-width', '5px');
+
+	groupExtra.append("text")
+			  .attr("x", 20)
+			  .attr("y", 140)
+			  .style("font-size", 17)
+			  .style('font-family', "sans-serif")
+			  .text("Aeroassit System");
+
+	groupExtra.append("text")
+			  .attr("x", 20)
+			  .attr("y", 170)
+			  .style("font-size", 17)
+			  .style('font-family', "sans-serif")
+			  .text("Crew Command & Service Module");
+
+	groupExtra.append("text")
+			  .attr("x", 20)
+			  .attr("y", 220)
+			  .attr("fill", "orange")
+			  .style("font-size", 18)
+			  .style('font-family', "sans-serif")
+			  .text("Primary Mission Elements");
+
+	groupExtra.append("line")
+	 		    .attr("x1", 10)
+				.attr("x2", 270)
+				.attr("y1", 230)
+				.attr("y2", 230)
+				.attr("stroke", "orange")
+				.attr('stroke-width', '5px');
+
+	groupExtra.append("text")
+			  .attr("x", 20)
+			  .attr("y", 260)
+			  .style("font-size", 17)
+			  .style('font-family', "sans-serif")
+			  .text("Lunar Module");
+
+	groupExtra.append("text")
+			  .attr("x", 20)
+			  .attr("y", 290)
+			  .style("font-size", 17)
+			  .style('font-family', "sans-serif")
+			  .text("Lunar Orbital Outpost");
 
 	var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 	var htmlBody = dom.append("xhtml:body")
@@ -69,7 +135,9 @@ $(document).ready(function(){
 	];
 
 
-	var coodX = 150;
+
+
+	var coodX = 10;
 	var coodY = 300;
 
 	rect.forEach(function(r){
@@ -118,23 +186,31 @@ $(document).ready(function(){
 			event.preventDefault();
 		
 			$("#capaGroup").remove();
+			$("#capaGroupExtra").remove();
 			$("#capaDom").remove();
 
 			var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+			var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
+
 
 			var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
@@ -186,7 +262,7 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
+			var coodX = 10;
 			var coodY = 300;
 
 			rect.forEach(function(r){
@@ -228,7 +304,67 @@ $(document).ready(function(){
 					 .text(r.textBot);
 
 				coodX+=170;
-			})
+			});
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 110)
+						.attr("y2", 110)
+						.attr("stroke", "green")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 140)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Aeroassit System");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 170)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Crew Command & Service Module");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 220)
+					  .attr("fill", "orange")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 230)
+						.attr("y2", 230)
+						.attr("stroke", "orange")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 260)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Module");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 290)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Orbital Outpost");
 	});
 
 	$(document).on("click", "#radiation", function(event){
@@ -236,23 +372,30 @@ $(document).ready(function(){
 			event.preventDefault();
 
 			$("#capaGroup").remove();
+			$("#capaGroupExtra").remove();
 			$("#capaDom").remove();
 
 			var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+			var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 			var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
@@ -304,8 +447,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 300;
+			var coodX = 10;
+			var coodY = 330;
 
 			rect.forEach(function(r){
 
@@ -347,6 +490,104 @@ $(document).ready(function(){
 
 				coodX+=170;
 			})
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 110)
+						.attr("y2", 110)
+						.attr("stroke", "green")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 150)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Pressurized Surface Mobility");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 180)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Crew Command & Service Module");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 210)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Deep Space Habitation");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 240)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Long Duration Surface Habitat");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 300)
+					  .attr("fill", "orange")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Translational Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 310)
+						.attr("y2", 310)
+						.attr("stroke", "orange")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 340)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Module");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 370)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Orbital Outpost");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 430)
+					  .attr("fill", "red")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Dead-end Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 440)
+						.attr("y2", 440)
+						.attr("stroke", "red")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 470)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Multi-year Deep Space Habitat");
+
 	});
 
 	$(document).on("click", "#propulsion", function(event){
@@ -354,23 +595,30 @@ $(document).ready(function(){
 			event.preventDefault();
 
 			$("#capaGroup").remove();
+			$("#capaGroupExtra").remove();
 			$("#capaDom").remove();
 
 			var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+			var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 			var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 
@@ -847,23 +1095,30 @@ $(document).ready(function(){
 			event.preventDefault();
 
 			$("#capaGroup").remove();
+			$("#capaGroupExtra").remove();
 			$("#capaDom").remove();
 
 			var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+			var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 			var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
@@ -879,16 +1134,16 @@ $(document).ready(function(){
 							   .html("Heavy-lift launch systems (that is, launch systems with a payload capability of about 50 MT or more to LEO) reduce the number of launches required for human exploration missions beyond LEO. The large payload capacity, in terms of mass and volume, enable the launch of larger vehicle elements as single units, which reduces or eliminates the need for on orbit assembly and attendant integration and test risk on orbit. Two heavy-lift launch systems are currently under development in the United States: the NASA SLS and the SpaceX Falcon Heavy.");
 			
 			group.append("text")
-				 .attr("x", "200")
-				 .attr("y", "240")
-				 .attr('font-size', '16')
+				 .attr("x", "10")
+				 .attr("y", "290")
+				 .attr('font-size', '13')
 				 .attr('font-family', 'sans-serif')
 				 .text("SLS HEAVY LIFT LAUNCH VEHICLE");
 
 			group.append("text")
-				 .attr("x", "200")
-				 .attr("y", "385")
-				 .attr('font-size', '16')
+				 .attr("x", "10")
+				 .attr("y", "435")
+				 .attr('font-size', '13')
 				 .attr('font-family', 'sans-serif')
 				 .text("FALCON HEAVY LIFT LAUNCH VEHICLE");
 
@@ -962,8 +1217,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 250;
+			var coodX = 10;
+			var coodY = 300;
 
 
 			rect1.forEach(function(r){
@@ -1011,8 +1266,8 @@ $(document).ready(function(){
 				coodX+=120;
 			});
 			
-			coodX=150;
-			coodY=400
+			coodX=10;
+			coodY=450
 
 			rect2.forEach(function(r){
 
@@ -1059,6 +1314,90 @@ $(document).ready(function(){
 				coodX+=120;
 			});
 
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 110)
+						.attr("y2", 110)
+						.attr("stroke", "green")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 140)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Heavy Lift Launch Vehicle");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 170)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Crew Command & Service Module");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 200)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Aeroassit System");
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 240)
+					  .attr("fill", "orange")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Translational Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 250)
+						.attr("y2", 250)
+						.attr("stroke", "orange")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 280)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Cyrogenic Propulsion System");
+
+	
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 330)
+					  .attr("fill", "red")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Dead-end Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 340)
+						.attr("y2", 340)
+						.attr("stroke", "red")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 370)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Large Storable Stage");
+
 	});
 
 	$(document).on("click", "#planetary", function(event){
@@ -1066,23 +1405,30 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
-			 		.attr("width", 900)
+			 		.attr("width", 700)
 			 		.attr("height",560)
-			 		.attr("transform", "translate(440, 0)")
+			 		.attr("transform", "translate(440, 0)");
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
-			 		 .attr("width", 900)
+			 		 .attr("width", 700)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
-				     .attr("width", 900)
+				     .attr("width", 700)
 				     .attr("height", 560);
 
 		
@@ -1133,8 +1479,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 300;
+			var coodX = 10;
+			var coodY = 330;
 
 			rect.forEach(function(r){
 
@@ -1175,7 +1521,54 @@ $(document).ready(function(){
 					 .text(r.textBot);
 
 				coodX+=170;
-			})
+			});
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 110)
+						.attr("y2", 110)
+						.attr("stroke", "green")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 140)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Mars Ascent Vehicle");
+
+			
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 180)
+					  .attr("fill", "orange")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Translational Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 200)
+						.attr("y2", 200)
+						.attr("stroke", "orange")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 220)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Module");
 	});
 	
 	$(document).on("click", "#eclss", function(event){
@@ -1183,23 +1576,30 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 				.attr("id", "capaGroup")
-		 		.attr("width", 900)
+		 		.attr("width", 700)
 		 		.attr("height",560)
-		 		.attr("transform", "translate(440, 0)")
+		 		.attr("transform", "translate(440, 0)");
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 				 .attr("id", "capaDom")
-		 		 .attr("width", 900)
+		 		 .attr("width", 700)
 		 		 .attr("height",560)
 		 		 .attr("transform", "translate(440, 0)")
 				 .append("foreignObject")
 			     .attr("x", 0)
 			     .attr("y", 0)
-			     .attr("width", 900)
+			     .attr("width", 700)
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
@@ -1249,7 +1649,7 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
+			var coodX = 10;
 			var coodY = 300;
 
 			rect.forEach(function(r){
@@ -1293,6 +1693,119 @@ $(document).ready(function(){
 				coodX+=170;
 		});
 
+		groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 110)
+					.attr("y2", 110)
+					.attr("stroke", "green")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 140)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Advanced EVA");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 170)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Crew Command & Service Module");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 200)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Pressurized Surface Mobility");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 230)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Deep Space Habitation");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 260)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Long Duration Surface Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 300)
+				  .attr("fill", "orange")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Translational Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 220)
+					.attr("y1", 310)
+					.attr("y2", 310)
+					.attr("stroke", "orange")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 340)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Orbital Outpost");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 370)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Module");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 410)
+				  .attr("fill", "red")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Dead-end Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 420)
+					.attr("y2", 420)
+					.attr("stroke", "red")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 450)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Multi-year Deep Space Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 480)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Space Exploration Vehicle");
+
 	});
 
 	$(document).on("click", "#habitats", function(event){
@@ -1300,23 +1813,30 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 				.attr("id", "capaGroup")
-		 		.attr("width", 900)
+		 		.attr("width", 700)
 		 		.attr("height",560)
-		 		.attr("transform", "translate(440, 0)")
+		 		.attr("transform", "translate(440, 0)");
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 				 .attr("id", "capaDom")
-		 		 .attr("width", 900)
+		 		 .attr("width", 700)
 		 		 .attr("height",560)
 		 		 .attr("transform", "translate(440, 0)")
 				 .append("foreignObject")
 			     .attr("x", 0)
 			     .attr("y", 0)
-			     .attr("width", 900)
+			     .attr("width", 700)
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
@@ -1366,8 +1886,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 300;
+			var coodX = 10;
+			var coodY = 350;
 
 			rect.forEach(function(r){
 
@@ -1409,6 +1929,119 @@ $(document).ready(function(){
 
 				coodX+=170;
 			});
+
+		groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 110)
+					.attr("y2", 110)
+					.attr("stroke", "green")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 140)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Tele-robotic Rovers");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 170)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Crew Command & Service Module");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 200)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Pressurized Surface Mobility");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 230)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Deep Space Habitation");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 260)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Long Duration Surface Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 300)
+				  .attr("fill", "orange")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Translational Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 220)
+					.attr("y1", 310)
+					.attr("y2", 310)
+					.attr("stroke", "orange")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 340)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Orbital Outpost");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 370)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Module");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 410)
+				  .attr("fill", "red")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Dead-end Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 420)
+					.attr("y2", 420)
+					.attr("stroke", "red")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 450)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Multi-year Deep Space Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 480)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Space Exploration Vehicle");
 	});
 	
 	$(document).on("click", "#eva-suits", function(event){
@@ -1416,23 +2049,30 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 				.attr("id", "capaGroup")
-		 		.attr("width", 900)
+		 		.attr("width", 700)
 		 		.attr("height",560)
-		 		.attr("transform", "translate(440, 0)")
+		 		.attr("transform", "translate(440, 0)");
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 				 .attr("id", "capaDom")
-		 		 .attr("width", 900)
+		 		 .attr("width", 700)
 		 		 .attr("height",560)
 		 		 .attr("transform", "translate(440, 0)")
 				 .append("foreignObject")
 			     .attr("x", 0)
 			     .attr("y", 0)
-			     .attr("width", 900)
+			     .attr("width", 700)
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
@@ -1482,8 +2122,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 250;
+			var coodX = 10;
+			var coodY = 280;
 
 			rect.forEach(function(r){
 
@@ -1525,6 +2165,119 @@ $(document).ready(function(){
 
 				coodX+=170;
 			});
+
+		groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 110)
+					.attr("y2", 110)
+					.attr("stroke", "green")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 140)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Advanced EVA");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 170)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Crew Command & Service Module");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 200)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Pressurized Surface Mobility");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 230)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Deep Space Habitation");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 260)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Long Duration Surface Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 300)
+				  .attr("fill", "orange")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Translational Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 220)
+					.attr("y1", 310)
+					.attr("y2", 310)
+					.attr("stroke", "orange")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 340)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Orbital Outpost");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 370)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Module");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 410)
+				  .attr("fill", "red")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Dead-end Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 420)
+					.attr("y2", 420)
+					.attr("stroke", "red")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 450)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Multi-year Deep Space Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 480)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Space Exploration Vehicle");
 	});
 
 	$(document).on("click", "#crew", function(event){
@@ -1532,23 +2285,31 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 				.attr("id", "capaGroup")
-		 		.attr("width", 900)
+		 		.attr("width", 700)
 		 		.attr("height",560)
-		 		.attr("transform", "translate(440, 0)")
+		 		.attr("transform", "translate(440, 0)");
+
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 				 .attr("id", "capaDom")
-		 		 .attr("width", 900)
+		 		 .attr("width", 700)
 		 		 .attr("height",560)
 		 		 .attr("transform", "translate(440, 0)")
 				 .append("foreignObject")
 			     .attr("x", 0)
 			     .attr("y", 0)
-			     .attr("width", 900)
+			     .attr("width", 700)
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
@@ -1598,8 +2359,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 300;
+			var coodX = 10;
+			var coodY = 330;
 
 			rect.forEach(function(r){
 
@@ -1641,6 +2402,119 @@ $(document).ready(function(){
 
 				coodX+=170;
 			});
+
+		groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 110)
+					.attr("y2", 110)
+					.attr("stroke", "green")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 140)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Advanced EVA");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 170)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Crew Command & Service Module");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 200)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Pressurized Surface Mobility");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 230)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Deep Space Habitation");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 260)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Long Duration Surface Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 300)
+				  .attr("fill", "orange")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Translational Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 220)
+					.attr("y1", 310)
+					.attr("y2", 310)
+					.attr("stroke", "orange")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 340)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Orbital Outpost");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 370)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Lunar Module");
+
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 410)
+				  .attr("fill", "red")
+				  .style("font-size", 18)
+				  .style('font-family', "sans-serif")
+				  .text("Dead-end Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 420)
+					.attr("y2", 420)
+					.attr("stroke", "red")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 450)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Multi-year Deep Space Habitat");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 480)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Space Exploration Vehicle");
 	});
 	
 	$(document).on("click", "#isru", function(event){
@@ -1648,23 +2522,30 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		$("#capaGroup").remove();
+		$("#capaGroupExtra").remove();
 		$("#capaDom").remove();
 
 		var group = svgCapa.append("g")
 				.attr("id", "capaGroup")
-		 		.attr("width", 900)
+		 		.attr("width", 700)
 		 		.attr("height",560)
-		 		.attr("transform", "translate(440, 0)")
+		 		.attr("transform", "translate(440, 0)");
+
+		var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
 
 		var dom = svgCapa.append("g")
 				 .attr("id", "capaDom")
-		 		 .attr("width", 900)
+		 		 .attr("width", 700)
 		 		 .attr("height",560)
 		 		 .attr("transform", "translate(440, 0)")
 				 .append("foreignObject")
 			     .attr("x", 0)
 			     .attr("y", 0)
-			     .attr("width", 900)
+			     .attr("width", 700)
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
@@ -1714,8 +2595,8 @@ $(document).ready(function(){
 				}
 			];
 
-			var coodX = 150;
-			var coodY = 300;
+			var coodX = 10;
+			var coodY = 330;
 
 			rect.forEach(function(r){
 
@@ -1756,6 +2637,44 @@ $(document).ready(function(){
 					 .text(r.textBot);
 
 				coodX+=170;
-			});
+		});
+
+		groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 100)
+					  .attr("fill", "green")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Primary Mission Elements");
+
+		groupExtra.append("line")
+		 		    .attr("x1", 10)
+					.attr("x2", 270)
+					.attr("y1", 110)
+					.attr("y2", 110)
+					.attr("stroke", "green")
+					.attr('stroke-width', '5px');
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 140)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Tele-robotic Rovers");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 170)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Surface Nuclear Power");
+
+		groupExtra.append("text")
+				  .attr("x", 20)
+				  .attr("y", 200)
+				  .style("font-size", 17)
+				  .style('font-family', "sans-serif")
+				  .text("Mars Ascent Vehicle");
+
 	});
 });
