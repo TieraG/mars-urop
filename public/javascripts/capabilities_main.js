@@ -10,31 +10,7 @@ loadCapabilities = function(){
 	// Rectangles
 	var coodY = 60;
 
-	for (var i = 1; i < 11; i++){
-
-		if (i%2 === 0){
-			svgCapa.append("rect")
-			   .attr("x", 10)
-			   .attr("y", coodY)
-			   .attr("height", 50)
-			   .attr("width", 400)
-			   .attr("fill", "#996633");
-		} else {
-			svgCapa.append("rect")
-			   .attr("x", 10)
-			   .attr("y", coodY)
-			   .attr("height", 50)
-			   .attr("width", 400)
-			   .attr("fill", "grey");
-		}
-
-		coodY+=50;
-	}
-
 	// Text for labels
-
-	coodY = 100;
-
 	var cap_text = [
 
 					{
@@ -90,6 +66,35 @@ loadCapabilities = function(){
 					}
 
 	];
+
+	for (var i = 1; i < 11; i++){
+
+		if (i%2 === 0){
+			svgCapa.append("a")
+			   .attr("xlink:href", "#")
+			   .attr("id", cap_text[i-1].id)
+			   .append("rect")
+			   .attr("x", 10)
+			   .attr("y", coodY)
+			   .attr("height", 50)
+			   .attr("width", 400)
+			   .attr("fill", "#996633");
+		} else {
+			svgCapa.append("a")
+			   .attr("xlink:href", "#")
+			   .attr("id", cap_text[i-1].id)
+			   .append("rect")
+			   .attr("x", 10)
+			   .attr("y", coodY)
+			   .attr("height", 50)
+			   .attr("width", 400)
+			   .attr("fill", "grey");
+		}
+
+		coodY+=50;
+	}
+
+	coodY = 100;
 
 	for (var i = 0; i < 10; i++){
 
