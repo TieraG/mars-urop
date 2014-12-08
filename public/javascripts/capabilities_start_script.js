@@ -3,11 +3,13 @@ $(document).ready(function(){
 	loadCapabilities();
 
 	var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
 			 		.attr("width", 900)
 			 		.attr("height",560)
 			 		.attr("transform", "translate(440, 0)")
 
 	var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
 			 		 .attr("width", 900)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(440, 0)")
@@ -19,9 +21,11 @@ $(document).ready(function(){
 
 	var htmlBody = dom.append("xhtml:body")
 					 .style("font-size", "20px")
+					 .attr("id", "capaBody")
 					 .attr("class", "cap-labels left");
 
 	var header = htmlBody.append("xhtml:h3")
+					 .attr("id", "capaHeader")
 					 .style("text-align", "center")
 					 .style("padding-top", "20px")
 					 .html("MARS EDL");
@@ -109,22 +113,37 @@ $(document).ready(function(){
 		coodX+=170;
 	})
 
-	$(document).on("click", "#mars-edl", function(){
+	$(document).on("click", "#mars-edl", function(event){
+
+			event.preventDefault();
 		
-			dom.html("");
-			group.html("");
+			$("#capaGroup").remove();
+			$("#capaDom").remove();
 
-			dom.attr("width", 900);
-			dom.attr("height",560);
+			var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
+			 		.attr("width", 900)
+			 		.attr("height",560)
+			 		.attr("transform", "translate(440, 0)")
 
-			group.attr("width", 900);
-			group.attr("height",560);
+			var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 900)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(440, 0)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", 900)
+				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
+							 .attr("id", "capaBody")
 							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
+							 .attr("id", "capaHeader")
 							 .style("text-align", "center")
 							 .style("padding-top", "20px")
 							 .html("MARS EDL");
@@ -212,22 +231,37 @@ $(document).ready(function(){
 			})
 	});
 
-	$(document).on("click", "#radiation", function(){
+	$(document).on("click", "#radiation", function(event){
 
-			dom.html("");
-			group.html("");
+			event.preventDefault();
 
-			dom.attr("width", 900);
-			dom.attr("height",560);
+			$("#capaGroup").remove();
+			$("#capaDom").remove();
 
-			group.attr("width", 900);
-			group.attr("height",560);
+			var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
+			 		.attr("width", 900)
+			 		.attr("height",560)
+			 		.attr("transform", "translate(440, 0)")
+
+			var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 900)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(440, 0)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", 900)
+				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "19px")
+							 .attr("id", "capaBody")
 							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
+							 .attr("id", "capaBody")
 							 .style("text-align", "center")
 							 .style("padding-top", "20px")
 							 .html("RADIATION PROTECTION");
@@ -315,16 +349,30 @@ $(document).ready(function(){
 			})
 	});
 
-	$(document).on("click", "#propulsion", function(){
+	$(document).on("click", "#propulsion", function(event){
 
-			dom.html("");
-			group.html("");
+			event.preventDefault();
 
-			dom.attr("width", 900);
-			dom.attr("height",560);
+			$("#capaGroup").remove();
+			$("#capaDom").remove();
 
-			group.attr("width", 900);
-			group.attr("height",560);
+			var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
+			 		.attr("width", 900)
+			 		.attr("height",560)
+			 		.attr("transform", "translate(440, 0)")
+
+			var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 900)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(440, 0)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", 900)
+				     .attr("height", 560);
+
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
@@ -336,29 +384,29 @@ $(document).ready(function(){
 							 .html("IN-SPACE PROPULSION");
 
 			text = htmlBody.append("xhtml:p")
-							   .html("Several types of propulsion are suggested:");
+							.html("Several types of propulsion are suggested:");
 
 			// FISSION
 			group.append("text")
-				 .attr("x", "180")
-				 .attr("y", "120")
-				 .attr('font-size', '18')
+				 .attr("x", "180px")
+				 .attr("y", "120px")
+				 .attr('font-size', '18px')
 				 .attr('font-family', 'sans-serif')
 				 .attr('font-weight', 'bold')
 				 .text("Fission Power");
 
 			group.append("text")
-				 .attr("x", "630")
-				 .attr("y", "120")
-				 .attr('font-size', '18')
+				 .attr("x", "630px")
+				 .attr("y", "120px")
+				 .attr('font-size', '18px')
 				 .attr('font-family', 'sans-serif')
 				 .attr('font-weight', 'bold')
 				 .text("In Space Cyrogenic Propulsion");
 
 			group.append("text")
-				 .attr("x", "150")
-				 .attr("y", "260")
-				 .attr('font-size', '18')
+				 .attr("x", "150px")
+				 .attr("y", "260px")
+				 .attr('font-size', '18px')
 				 .attr('font-family', 'sans-serif')
 				 .attr('font-weight', 'bold')
 				 .text("Nuclear Electric Propulsion");
@@ -366,15 +414,15 @@ $(document).ready(function(){
 			group.append("text")
 				 .attr("x", "650")
 				 .attr("y", "260")
-				 .attr('font-size', '18')
+				 .attr('font-size', '18px')
 				 .attr('font-family', 'sans-serif')
 				 .attr('font-weight', 'bold')
 				 .text("Nuclear Thermal Propulsion");
 
 			group.append("text")
-				 .attr("x", "150")
-				 .attr("y", "400")
-				 .attr('font-size', '18')
+				 .attr("x", "150px")
+				 .attr("y", "400px")
+				 .attr('font-size', '18px')
 				 .attr('font-family', 'sans-serif')
 				 .attr('font-weight', 'bold')
 				 .text("Solar Electric Propulsion");
@@ -794,16 +842,29 @@ $(document).ready(function(){
 				});
 	});
 
-	$(document).on("click", "#heavy", function(){
+	$(document).on("click", "#heavy", function(event){
 
-			dom.html("");
-			group.html("");
+			event.preventDefault();
 
-			dom.attr("width", 900);
-			dom.attr("height",560);
+			$("#capaGroup").remove();
+			$("#capaDom").remove();
 
-			group.attr("width", 900);
-			group.attr("height",560);
+			var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
+			 		.attr("width", 900)
+			 		.attr("height",560)
+			 		.attr("transform", "translate(440, 0)")
+
+			var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 900)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(440, 0)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", 900)
+				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
 							 .style("font-size", "20px")
@@ -1000,16 +1061,29 @@ $(document).ready(function(){
 
 	});
 
-	$(document).on("click", "#planetary", function(){
+	$(document).on("click", "#planetary", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+					.attr("id", "capaGroup")
+			 		.attr("width", 900)
+			 		.attr("height",560)
+			 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 900)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(440, 0)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", 900)
+				     .attr("height", 560);
 
 		
 		htmlBody = dom.append("xhtml:body")
@@ -1104,16 +1178,29 @@ $(document).ready(function(){
 			})
 	});
 	
-	$(document).on("click", "#eclss", function(){
+	$(document).on("click", "#eclss", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+				.attr("id", "capaGroup")
+		 		.attr("width", 900)
+		 		.attr("height",560)
+		 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+				 .attr("id", "capaDom")
+		 		 .attr("width", 900)
+		 		 .attr("height",560)
+		 		 .attr("transform", "translate(440, 0)")
+				 .append("foreignObject")
+			     .attr("x", 0)
+			     .attr("y", 0)
+			     .attr("width", 900)
+			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1208,16 +1295,29 @@ $(document).ready(function(){
 
 	});
 
-	$(document).on("click", "#habitats", function(){
+	$(document).on("click", "#habitats", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+				.attr("id", "capaGroup")
+		 		.attr("width", 900)
+		 		.attr("height",560)
+		 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+				 .attr("id", "capaDom")
+		 		 .attr("width", 900)
+		 		 .attr("height",560)
+		 		 .attr("transform", "translate(440, 0)")
+				 .append("foreignObject")
+			     .attr("x", 0)
+			     .attr("y", 0)
+			     .attr("width", 900)
+			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1311,16 +1411,29 @@ $(document).ready(function(){
 			});
 	});
 	
-	$(document).on("click", "#eva-suits", function(){
+	$(document).on("click", "#eva-suits", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+				.attr("id", "capaGroup")
+		 		.attr("width", 900)
+		 		.attr("height",560)
+		 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+				 .attr("id", "capaDom")
+		 		 .attr("width", 900)
+		 		 .attr("height",560)
+		 		 .attr("transform", "translate(440, 0)")
+				 .append("foreignObject")
+			     .attr("x", 0)
+			     .attr("y", 0)
+			     .attr("width", 900)
+			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1414,16 +1527,29 @@ $(document).ready(function(){
 			});
 	});
 
-	$(document).on("click", "#crew", function(){
+	$(document).on("click", "#crew", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+				.attr("id", "capaGroup")
+		 		.attr("width", 900)
+		 		.attr("height",560)
+		 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+				 .attr("id", "capaDom")
+		 		 .attr("width", 900)
+		 		 .attr("height",560)
+		 		 .attr("transform", "translate(440, 0)")
+				 .append("foreignObject")
+			     .attr("x", 0)
+			     .attr("y", 0)
+			     .attr("width", 900)
+			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
@@ -1517,16 +1643,29 @@ $(document).ready(function(){
 			});
 	});
 	
-	$(document).on("click", "#isru", function(){
+	$(document).on("click", "#isru", function(event){
 
-		dom.html("");
-		group.html("");
+		event.preventDefault();
 
-		dom.attr("width", 900);
-		dom.attr("height",560);
+		$("#capaGroup").remove();
+		$("#capaDom").remove();
 
-		group.attr("width", 900);
-		group.attr("height",560);
+		var group = svgCapa.append("g")
+				.attr("id", "capaGroup")
+		 		.attr("width", 900)
+		 		.attr("height",560)
+		 		.attr("transform", "translate(440, 0)")
+
+		var dom = svgCapa.append("g")
+				 .attr("id", "capaDom")
+		 		 .attr("width", 900)
+		 		 .attr("height",560)
+		 		 .attr("transform", "translate(440, 0)")
+				 .append("foreignObject")
+			     .attr("x", 0)
+			     .attr("y", 0)
+			     .attr("width", 900)
+			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
 						 .style("font-size", "20px")
