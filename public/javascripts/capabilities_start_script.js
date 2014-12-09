@@ -86,7 +86,7 @@ $(document).ready(function(){
 				     .attr("height", 560);
 
 	var htmlBody = dom.append("xhtml:body")
-					 .style("font-size", "20px")
+					 .style("font-size", "19px")
 					 .attr("id", "capaBody")
 					 .attr("class", "cap-labels left");
 
@@ -214,7 +214,7 @@ $(document).ready(function(){
 				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
-							 .style("font-size", "20px")
+							 .style("font-size", "19px")
 							 .attr("id", "capaBody")
 							 .attr("class", "cap-labels left");
 
@@ -1122,7 +1122,7 @@ $(document).ready(function(){
 				     .attr("height", 560);
 
 			htmlBody = dom.append("xhtml:body")
-							 .style("font-size", "20px")
+							 .style("font-size", "19px")
 							 .attr("class", "cap-labels left");
 
 			header = htmlBody.append("xhtml:h3")
@@ -1433,7 +1433,7 @@ $(document).ready(function(){
 
 		
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
@@ -1603,7 +1603,7 @@ $(document).ready(function(){
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
@@ -1840,7 +1840,7 @@ $(document).ready(function(){
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
@@ -2076,7 +2076,7 @@ $(document).ready(function(){
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
@@ -2313,7 +2313,7 @@ $(document).ready(function(){
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
@@ -2549,7 +2549,7 @@ $(document).ready(function(){
 			     .attr("height", 560);
 
 		htmlBody = dom.append("xhtml:body")
-						 .style("font-size", "20px")
+						 .style("font-size", "19px")
 						 .attr("class", "cap-labels left");
 
 		header = htmlBody.append("xhtml:h3")
