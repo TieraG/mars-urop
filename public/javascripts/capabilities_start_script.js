@@ -1558,8 +1558,8 @@ $(document).ready(function(){
 			groupExtra.append("line")
 			 		    .attr("x1", 10)
 						.attr("x2", 270)
-						.attr("y1", 200)
-						.attr("y2", 200)
+						.attr("y1", 190)
+						.attr("y2", 190)
 						.attr("stroke", "orange")
 						.attr('stroke-width', '5px');
 
