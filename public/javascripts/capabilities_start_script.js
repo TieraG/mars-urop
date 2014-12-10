@@ -1565,7 +1565,7 @@ $(document).ready(function(){
 
 			groupExtra.append("text")
 					  .attr("x", 20)
-					  .attr("y", 220)
+					  .attr("y", 230)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
 					  .text("Lunar Module");
@@ -1755,7 +1755,7 @@ $(document).ready(function(){
 
 		groupExtra.append("line")
 		 		    .attr("x1", 10)
-					.attr("x2", 220)
+					.attr("x2", 280)
 					.attr("y1", 310)
 					.attr("y2", 310)
 					.attr("stroke", "orange")
