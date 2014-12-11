@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	loadCapabilities();
+	loadNav("capabilities");
 
 	var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
