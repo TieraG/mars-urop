@@ -112,7 +112,7 @@ loadCapabilities = function(){
 
 	var coodX = 690;
 
-	var signs = [{line:"HIGH", color: "red"}, {line:"MEDIUM", color: "orange"}, {line:"LOW", color: 'green'}];
+	var signs = [{line:"HIGH", color: "#b30000"}, {line:"MEDIUM", color: "#FFDE00"}, {line:"LOW", color: '#00FF00'}];
 
 	for (var i = 0; i < 3; i++){
 		svgCapa.append('text')

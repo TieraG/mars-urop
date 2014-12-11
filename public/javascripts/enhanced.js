@@ -380,7 +380,7 @@ var loadDRMEnh = function(){
 											return "grey"
 										} 
 
-										return "transparent";
+										return "transparent";`
 									})
 									.style("stroke", "black")
 						 			.style("stroke-width", 3);	

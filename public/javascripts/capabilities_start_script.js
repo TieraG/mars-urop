@@ -107,7 +107,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -115,7 +115,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -123,7 +123,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -131,7 +131,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 	];
 
@@ -235,7 +235,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -243,7 +243,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -251,7 +251,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -259,7 +259,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -420,7 +420,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -428,7 +428,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -436,7 +436,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -444,7 +444,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				}
 			];
 
@@ -683,7 +683,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -691,7 +691,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -699,7 +699,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -707,7 +707,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -718,7 +718,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -726,7 +726,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -734,7 +734,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -742,7 +742,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -753,7 +753,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -761,7 +761,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -769,7 +769,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -777,7 +777,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -788,7 +788,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -796,7 +796,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -804,7 +804,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -812,7 +812,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -823,7 +823,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -831,7 +831,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -839,7 +839,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -847,7 +847,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -1155,7 +1155,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1163,7 +1163,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1171,7 +1171,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1179,7 +1179,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -1190,7 +1190,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1198,7 +1198,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1206,7 +1206,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1214,7 +1214,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				}
 			];
 
@@ -1452,7 +1452,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -1460,7 +1460,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -1468,7 +1468,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1476,7 +1476,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -1622,7 +1622,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -1630,7 +1630,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -1638,7 +1638,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1646,7 +1646,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				}
 			];
 
@@ -1859,7 +1859,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -1867,7 +1867,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -1875,7 +1875,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -1883,7 +1883,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				}
 			];
 
@@ -2095,7 +2095,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -2103,7 +2103,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -2111,7 +2111,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -2119,7 +2119,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				}
 			];
 
@@ -2332,7 +2332,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -2340,7 +2340,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -2348,7 +2348,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				},
 
 				{
@@ -2356,7 +2356,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				}
 			];
 
@@ -2568,7 +2568,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -2576,7 +2576,7 @@ $(document).ready(function(){
 					textTopTwo: "GAP",
 					textTopThree: "",
 					textBot: "HIGH",
-					color: "red"
+					color: "#b30000"
 				},
 
 				{
@@ -2584,7 +2584,7 @@ $(document).ready(function(){
 					textTopTwo: "CHALLENGES",
 					textTopThree: "",
 					textBot: "LOW",
-					color: "green"
+					color: "#00FF00"
 				},
 
 				{
@@ -2592,7 +2592,7 @@ $(document).ready(function(){
 					textTopTwo: "SCHEDULE",
 					textTopThree: "CHALLENGES",
 					textBot: "MEDIUM",
-					color: "orange"
+					color: "#FFDE00"
 				}
 			];
 
