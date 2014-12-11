@@ -165,6 +165,72 @@ loadEnhanced = function(){
 					}
 			];
 
+		var bars = [
+			{x: 200, y1: 160, y2: 210, fill: "red"},
+			{x: 480, y1: 160, y2: 210, fill: "yellow"},
+			{x: 700, y1: 160, y2: 210, fill: "green"}
+		];
+
+		bars.forEach(function(b){
+
+			svg.append("line")
+		  	 .attr("x1", b.x)
+		  	 .attr("y1", b.y1)
+		  	 .attr("x2", b.x)
+		  	 .attr("y2", b.y2)
+		  	 .attr("stroke", b.fill)
+		  	 .attr("stroke-width", "5")
+		  	 .style("opacity", "0.5");
+
+		  	 svg.append("line")
+			  	 .attr("x1", b.x)
+			  	 .attr("y1", b.y1 + 180)
+			  	 .attr("x2", b.x)
+			  	 .attr("y2", b.y2 + 180)
+			  	 .attr("stroke", b.fill)
+			  	 .attr("stroke-width", "5")
+			  	 .style("opacity", "0.5");
+
+			 svg.append("line")
+			  	 .attr("x1", b.x)
+			  	 .attr("y1", b.y1 + 360)
+			  	 .attr("x2", b.x)
+			  	 .attr("y2", b.y2 + 360)
+			  	 .attr("stroke", b.fill)
+			  	 .attr("stroke-width", "5")
+			  	 .style("opacity", "0.5");
+
+			svg.append("line")
+			  	 .attr("x1", b.x)
+			  	 .attr("y1", b.y1 + 540)
+			  	 .attr("x2", b.x)
+			  	 .attr("y2", b.y2 + 540)
+			  	 .attr("stroke", b.fill)
+			  	 .attr("stroke-width", "5")
+			  	 .style("opacity", "0.5");
+
+			svg.append("line")
+			  	 .attr("x1", b.x)
+			  	 .attr("y1", b.y1 + 720)
+			  	 .attr("x2", b.x)
+			  	 .attr("y2", b.y2 + 720)
+			  	 .attr("stroke", b.fill)
+			  	 .attr("stroke-width", "5")
+			  	 .style("opacity", "0.5");
+
+
+			svg.append("line")
+			  	 .attr("x1", b.x)
+			  	 .attr("y1", b.y1 + 900)
+			  	 .attr("x2", b.x)
+			  	 .attr("y2", b.y2 + 900)
+			  	 .attr("stroke", b.fill)
+			  	 .attr("stroke-width", "5")
+			  	 .style("opacity", "0.5");
+
+
+		});
+
 		
 		var count = 1;
 

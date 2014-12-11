@@ -377,7 +377,7 @@ var loadDRMEnh = function(){
 									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 5){
-											return "#900000"
+											return "grey"
 										} 
 
 										return "transparent";

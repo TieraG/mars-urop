@@ -298,7 +298,7 @@ var loadDRMARM = function(){
 									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 2){
-											return "#900000"
+											return "grey"
 										} 
 
 										return "transparent";

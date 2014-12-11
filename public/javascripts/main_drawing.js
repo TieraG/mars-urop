@@ -520,7 +520,7 @@ var loadMainPage = function(){
 									.attr("x", function(d, i){return 20 + i*80})
 									.style("fill", function(d,i){
 										if (i == 2){
-											return "#900000"
+											return "grey"
 										} 
 
 										return "transparent";
@@ -562,7 +562,7 @@ var loadMainPage = function(){
 									.attr("y", 100)
 									.style("fill", function(d,i){
 										if (i == 2){
-											return "#900000"
+											return "grey"
 										} 
 
 										return "transparent";
@@ -619,7 +619,7 @@ var loadMainPage = function(){
 									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 5){
-											return "#900000"
+											return "grey"
 										} 
 
 										return "transparent";
