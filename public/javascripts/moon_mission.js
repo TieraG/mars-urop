@@ -115,39 +115,37 @@ loadMoonToMars = function(){
 				.attr("stroke-width", "5")
 
 		var bars = [
-			{x: 190, y1: 160, y2: 210, fill: "red"},
-			{x: 480, y1: 160, y2: 210, fill: "yellow"},
-			{x: 700, y1: 160, y2: 210, fill: "green"}
+			{x: 190, y: 160, fill: "red", width: 250},
+			{x: 480, y: 160, fill: "orange", width: 200},
+			{x: 700, y: 160, fill: "green", width: 460}
 		];
 
 		bars.forEach(function(b){
 
-			svg.append("line")
-		  	 .attr("x1", b.x)
-		  	 .attr("y1", b.y1)
-		  	 .attr("x2", b.x)
-		  	 .attr("y2", b.y2)
-		  	 .attr("stroke", b.fill)
-		  	 .attr("stroke-width", "5")
-		  	 .style("opacity", "0.5");
+			svg.append("rect")
+		  	 .attr("x", b.x)
+		  	 .attr("y", b.y - 20)
+		  	 .attr("width", b.width)
+		  	 .attr("height", 80)
+		  	 .attr("fill", b.fill)
+		  	 .style("opacity", "0.2");
 
-		  	 svg.append("line")
-			  	 .attr("x1", b.x)
-			  	 .attr("y1", b.y1 + 180)
-			  	 .attr("x2", b.x)
-			  	 .attr("y2", b.y2 + 180)
-			  	 .attr("stroke", b.fill)
-			  	 .attr("stroke-width", "5")
-			  	 .style("opacity", "0.5");
-
-			 svg.append("line")
-			  	 .attr("x1", b.x)
-			  	 .attr("y1", b.y1 + 360)
-			  	 .attr("x2", b.x)
-			  	 .attr("y2", b.y2 + 360)
-			  	 .attr("stroke", b.fill)
-			  	 .attr("stroke-width", "5")
-			  	 .style("opacity", "0.5");
+		  	 svg.append("rect")
+			  	 .attr("x", b.x)
+			  	 .attr("y", b.y + 160)
+			  	 .attr("width", b.width)
+			  	 .attr("height", 80)
+			  	 .attr("fill", b.fill)
+			  	 .style("opacity", "0.2");
+				  	
+			 
+			 svg.append("rect")
+			  	 .attr("x", b.x)
+			  	 .attr("y", b.y + 340)
+			  	 .attr("width", b.width)
+			  	 .attr("height", 80)
+			  	 .attr("fill", b.fill)
+			  	 .style("opacity", "0.2");
 
 
 		});

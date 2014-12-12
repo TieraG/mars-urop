@@ -5,15 +5,40 @@ var loadNav = function(phase){
 								.attr("width", 1150)
 								.attr("id", "navBar");
 
+
+			// Home
+
+			 svg.append("a")
+		         .attr("xlink:href", "/")
+		         .attr("class", "glow")
+	 			 .append("rect")
+	 			 .attr("x", "14.5%")
+		         .attr("y", "25%")
+		         .attr("height", 100)
+		         .attr("width", 150)
+		         .style("fill",  "#86592d");
+		         
+		      svg.append("a")
+		      	 .attr("xlink:href", "/")
+		         .append("text")
+		    	 .attr('class', 'number')
+				 .attr("font-size", "20px")
+				 .attr("x", "18.5%")
+				 .attr("y", "68.5%")
+				 .style("font-weight", "bold")
+				 .style("font-family", "sans-serif")
+				 .text("Home");
+
 			
   		 	 // Pathways
 			 svg.append("a")
 		         .attr("xlink:href", "/pathways")
 		         .attr("class", "glow")
-	 			 .append("circle")
-	 			 .attr("cx", "35.5%")
-		         .attr("cy", "50%")
-		         .attr("r", "4%")
+	 			 .append("rect")
+	 			 .attr("x", "29.5%")
+		         .attr("y", "25%")
+		         .attr("height", 100)
+		         .attr("width", 150)
 		         .style("fill", function(){
 		         	return (phase === "pathways" ? "grey": "#86592d");
 		     }); 
@@ -23,55 +48,87 @@ var loadNav = function(phase){
 		      	 .attr("xlink:href", "/pathways")
 		         .append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "40px")
-				 .attr("x", "34.5%")
-				 .attr("y", "66.5%")
+				 .attr("font-size", "20px")
+				 .attr("x", "31.5%")
+				 .attr("y", "68.5%")
 				 .style("font-weight", "bold")
-				 .text("1");
+				 .style("font-family", "sans-serif")
+				 .text("Pathways");
 
 
 			 // Mission
 			 svg.append("a")
-	 		 	 .attr("xlink:href", "/mission")
-	 			 .append("circle")
-	 			 .attr("class", "glow")
-	 			 .attr("cx", "50.5%")
-		         .attr("cy", "50%")
-		         .attr("r", "4%")
+		         .attr("xlink:href", "/mission")
+		         .attr("class", "glow")
+	 			 .append("rect")
+	 			 .attr("x", "44.5%")
+		         .attr("y", "25%")
+		         .attr("height", 100)
+		         .attr("width", 150)
 		         .style("fill", function(){
 		         	return (phase === "mission" ? "grey": "#86592d");
-		         });
+		     }); 
 
-		     svg.append("a")
-		     	 .attr("xlink:href", "/mission")
+		         
+		      svg.append("a")
+		      	 .attr("xlink:href", "/mission")
 		         .append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "40px")
-				 .attr("x", "49.5%")
-				 .attr("y", "66.5%")
+				 .attr("font-size", "20px")
+				 .attr("x", "47.5%")
+				 .attr("y", "68.5%")
 				 .style("font-weight", "bold")
-				 .text("2"); 
+				 .style("font-family", "sans-serif")
+				 .text("Mission");
 
 			//Capabilities
-			 svg.append("a")
-	 		 	 .attr("xlink:href", "/capabilities")
-	 			 .append("circle")
-	 			 .attr("class", "glow")
-	 			 .attr("cx", "65.5%")
-		         .attr("cy", "50%")
-		         .attr("r", "4%")
+			  svg.append("a")
+		         .attr("xlink:href", "/capabilities")
+		         .attr("class", "glow")
+	 			 .append("rect")
+	 			 .attr("x", "59.5%")
+		         .attr("y", "25%")
+		         .attr("height", 100)
+		         .attr("width", 150)
 		         .style("fill", function(){
 		         	return (phase === "capabilities" ? "grey": "#86592d");
-		         });
+		     }); 
 
-		     svg.append("a")
-		     	 .attr("xlink:href", "/capabilities")
+		         
+		      svg.append("a")
+		      	 .attr("xlink:href", "/capabilities")
 		         .append("text")
 		    	 .attr('class', 'number')
-				 .attr("font-size", "40px")
-				 .attr("x", "64.5%")
-				 .attr("y", "66.5%")
+				 .attr("font-size", "20px")
+				 .attr("x", "61.5%")
+				 .attr("y", "68.5%")
 				 .style("font-weight", "bold")
-				 .text("3"); 
+				 .style("font-family", "sans-serif")
+				 .text("Capabilities");
+
+			//Trip
+			  svg.append("a")
+		         .attr("xlink:href", "/")
+		         .attr("class", "glow")
+	 			 .append("rect")
+	 			 .attr("x", "74.5%")
+		         .attr("y", "25%")
+		         .attr("height", 100)
+		         .attr("width", 150)
+		         .style("fill", function(){
+		         	return (phase === "trip" ? "grey": "#86592d");
+		     }); 
+
+		         
+		      svg.append("a")
+		      	 .attr("xlink:href", "/")
+		         .append("text")
+		    	 .attr('class', 'number')
+				 .attr("font-size", "20px")
+				 .attr("x", "77.5%")
+				 .attr("y", "68.5%")
+				 .style("font-weight", "bold")
+				 .style("font-family", "sans-serif")
+				 .text("My Trip");
 
  }

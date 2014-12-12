@@ -218,7 +218,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#lss",
-					  		 	info: "<b><u>LARGE STORAGE STAGE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "<b><u>LARGE STORAGE STAGE</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>"
 						},
 
 						{
@@ -245,7 +245,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#cps",
-					  		 	info: "<b><u>CRYOGENIC PROPULSION SYSTEM</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
+					  		 	info: "<b><u>CRYOGENIC PROPULSION SYSTEM</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>, <span style='color:purple'>Asteroid In Native Orbit</span>"
 						}, 
 
 						{
@@ -254,7 +254,7 @@ var rectInfo = [
 					  		 	width: 40,
 					  		 	height: 100,
 					  		 	fill: "url(#lm",
-					  		 	info: "<b><u>LUNAR MODULE</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
+					  		 	info: "<b><u>LUNAR MODULE</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>"
 						},
 
 						{
@@ -263,7 +263,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#lop",
-					  		 	info: "<b><u>LUNAR ORBITAL OUTPOST</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>"
+					  		 	info: "<b><u>LUNAR ORBITAL OUTPOST</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>"
 						},
 
 						{
@@ -272,7 +272,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#hll",
-					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "<b><u>HEAVY LIFT LAUNCH VEHICLE</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -290,7 +290,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#trr",
-					  		 	info: "<b><u>TELE-ROBOTIC ROVERS</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
+					  		 	info: "<b><u>TELE-ROBOTIC ROVERS</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
@@ -299,7 +299,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#snp",
-					  		 	info: "<b><u>SURFACE NUCLEAR POWER</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
+					  		 	info: "<b><u>SURFACE NUCLEAR POWER</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{
@@ -308,7 +308,7 @@ var rectInfo = [
 					  		 	width: 40,
 					  		 	height: 100,
 					  		 	fill: "url(#av",
-					  		 	info: "<b><u>ADVANCED EVA</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "<b><u>ADVANCED EVA</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -317,7 +317,7 @@ var rectInfo = [
 					  		 	width: 50,
 					  		 	height: 100,
 					  		 	fill: "url(#psm",
-					  		 	info: "<b><u>PRESSURIZED SURFACE MOBILITY</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "<b><u>PRESSURIZED SURFACE MOBILITY</u></b><br><br> <b>Required for:</b> <span style='color:orange'>Martian Moons</span>, <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -335,7 +335,7 @@ var rectInfo = [
 					  		 	width: 50,
 					  		 	height: 100,
 					  		 	fill: "url(#ccs",
-					  		 	info: "<b><u>CREW COMMAND & SERVICE MODULE (ORION):</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#0099FF'>Lunar Sortie</span>, <span style='color:#0099FF'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
+					  		 	info: "<b><u>CREW COMMAND & SERVICE MODULE (ORION):</u></b><br><br> <b>Required for:</b> <span style='color:orange'>ARM</span>, <span style='color:orange'>Martian Moons</span>, <span style='color:#00007f'>Lunar Sortie</span>, <span style='color:#00007f'>Lunar Outpost</span>, <span style='color:purple'>Earth-Moon L2</span>, <span style='color:purple'>Asteroid in Native Orbit</span>, Mars Surface"
 						},
 
 						{
@@ -353,7 +353,7 @@ var rectInfo = [
 					  		 	width: 30,
 					  		 	height: 100,
 					  		 	fill: "url(#ldsh",
-					  		 	info: "<b><u>LONG DURATION SURFACE HABITAT:</u></b><br><br> <b>Required for:</b> <span style='color:#0099FF'>Lunar Outpost</span>, Mars Surface"
+					  		 	info: "<b><u>LONG DURATION SURFACE HABITAT:</u></b><br><br> <b>Required for:</b> <span style='color:#00007f'>Lunar Outpost</span>, Mars Surface"
 						},
 
 						{

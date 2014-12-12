@@ -1,4 +1,4 @@
-body	{ 
+#body	{ 
 	width: 100%; 
 	height: 100%; 
 	background-image: url("../images/mars_image.jpg");
@@ -22,6 +22,11 @@ text {
   font-family: sans-serif;
 }
 
-.canvas {
-	opacity: 0.75;
+
+#capa {
+    background-color: #996633;   
+}
+
+p {
+	padding: 20px;
 }

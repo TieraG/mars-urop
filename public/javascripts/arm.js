@@ -348,7 +348,7 @@ var loadDRMARM = function(){
 						.attr("y", 60)
 						.style("font-weight", "bold")
 						.style("text-decoration", "underline")
-						.text("Asteriod Redirect Mission (ARM) To Mars (Orange Pathway)");
+						.text("Asteriod Redirect Mission (ARM) To Mars");
 
 					text.append("tspan")
 						.attr("x", 35)

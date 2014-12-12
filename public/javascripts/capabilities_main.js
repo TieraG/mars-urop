@@ -3,9 +3,38 @@ loadCapabilities = function(){
 	svgCapa = d3.select("#content")
 				.append("svg")
 				.attr("height", 1100)
-				.attr("width", 1500)
+				.attr("width", 1450)
 				.attr("id", "capabilities-svg")
 				.append("g");
+
+
+	var svgText = d3.select(".capa-text")
+						.append("svg")
+						.attr("id", "capa-text")
+						.attr("height", 120)
+						.attr("width", 1450);
+
+	var dom = svgText.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 500)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(0, 20)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", "100%")
+				     .attr("height", "100%");
+
+			var htmlBody = dom.append("xhtml:body")
+							 .style("font-size", "19px")
+							 .style("font-family", "sans-serif")
+							 .style("text-align", "left")
+							 .attr("id", "capaBody")
+							 .attr("class", "cap-labels left");
+
+
+			var text = htmlBody.append("xhtml:p")
+							   .html("Requirements for completing the pathways can also be framed as capabilities. A wide range of capabilities was assessed in terms of the technical challenges, capability gap, regulatory challenges, and cost and schedule challenges that would need to be overcome to complete their development. This assessment determined that current research and development programs would need to address the 10 capabilities below as a high priority, with a particular emphasis on the first three.");
 
 	// Rectangles
 	var coodY = 60;

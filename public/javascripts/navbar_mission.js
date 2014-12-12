@@ -96,4 +96,33 @@ var loadNavBar = function(){
 					  .style('font-family', 'sans-serif')
 					  .text("ENHANCED EXPLORATION");
 
+			var svgText = d3.select(".mission-text")
+							.append("svg")
+							.attr("id", "mission-text")
+							.attr("height", 80)
+							.attr("width", 1200);
+
+
+			var dom = svgText.append("g")
+					 .attr("id", "capaDom")
+			 		 .attr("width", 700)
+			 		 .attr("height",560)
+			 		 .attr("transform", "translate(0, 20)")
+					 .append("foreignObject")
+				     .attr("x", 0)
+				     .attr("y", 0)
+				     .attr("width", "100%")
+				     .attr("height", "100%");
+
+			var htmlBody = dom.append("xhtml:body")
+							 .style("font-size", "19px")
+							 .style("font-family", "sans-serif")
+							 .style("text-align", "left")
+							 .attr("id", "capaBody")
+							 .attr("class", "cap-labels left");
+
+
+			var text = htmlBody.append("xhtml:p")
+							   .html("To achieve the horizon goal of a human mission to the Mars surface, all of the aforementioned element groups are necessary. More specifically, 11 individual mission elements required for the  Mars surface mission have been identified.");
+
 }

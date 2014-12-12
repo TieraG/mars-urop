@@ -153,7 +153,7 @@ var loadMainPage = function(){
 						  		 	fill: "url(#moon)",
 						  		 	inner: "purple",
 						  		 	middle: "#0099FF",
-						  		 	info: "<u><b>Lunar Surface Sortie</b></u><br><br><b><u>Description:</u></b> Scientific exploration. Develop required assets and techniques for martian surface exploration using nearest and most realistic celestial body with short return times.<br><br><u><b>Duration:</b></u> 28 days<br><br><u><b>Crew:</b></u> 4 <br><br><u><b>Lunar Surface Outpost</b></u><br><br><b><u>Description:</u></b> Extension of the Lunar Surface Sortie Mission, with long duration surface assets. Scientific exploration and experiment and testing of Mars-focused technologies.<br><br><u><b>Duration:</b></u> 6 months<br><br><u><b>Crew:</b></u> 4<br><br>"
+						  		 	info: "<u><b>Lunar Surface Sortie</b></u><br><br><b><u>Description:</u></b> Scientific exploration. Develop required assets and techniques for martian surface exploration using nearest and most realistic celestial body with short return times.<br><br><u><b>Duration:</b></u> 28 days<br><br><u><b>Crew:</b></u> 4 <br><hr><br><u><b>Lunar Surface Outpost</b></u><br><br><b><u>Description:</u></b> Extension of the Lunar Surface Sortie Mission, with long duration surface assets. Scientific exploration and experiment and testing of Mars-focused technologies.<br><br><u><b>Duration:</b></u> 6 months<br><br><u><b>Crew:</b></u> 4<br><br>"
 						  		 },
 
 						  		 {

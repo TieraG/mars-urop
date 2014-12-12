@@ -341,7 +341,7 @@ var loadDRMMn = function(){
 						.attr("y", 65)
 						.style("font-weight", "bold")
 						.style("text-decoration", "underline")
-						.text("Moon-To-Mars (Blue Pathway)");
+						.text("Moon-To-Mars");
 
 					text.append("tspan")
 						.attr("x", 35)

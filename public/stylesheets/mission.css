@@ -57,6 +57,8 @@
 .glow:hover{
     opacity: 0.40;
 
-};
+}
 
-
+#mission-text {
+    background-color: #996633;
+}

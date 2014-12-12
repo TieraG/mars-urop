@@ -442,7 +442,7 @@ var loadDRMEnh = function(){
 						.attr("y", 65)
 						.style("font-weight", "bold")
 						.style("text-decoration", "underline")
-						.text("Enhanced Exploration (Purple Pathway)");
+						.text("Enhanced Exploration");
 
 					text.append("tspan")
 						.attr("x", 35)
@@ -452,7 +452,7 @@ var loadDRMEnh = function(){
 					text.append("tspan")
 						.attr("x", 35)
 						.attr("y", 115)
-						.text("a longer duration pathway exploring several several destinations while slowly increasing");
+						.text("a longer duration pathway exploring several destinations while slowly increasing");
 
 					text.append("tspan")
 						.attr("x", 35)
