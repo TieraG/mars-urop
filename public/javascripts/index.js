@@ -34,7 +34,7 @@ var loadIndex = function(){
 			var dom = svg.append("g")
 			 		 .attr("width", 1100)
 			 		 .attr("height",450)
-			 		 .attr("transform", "translate(0, 230)")
+			 		 .attr("transform", "translate(0, 205)")
 					 .append("foreignObject")
 				     .attr("x", 0)
 				     .attr("y", 0)
@@ -45,6 +45,7 @@ var loadIndex = function(){
 							 .attr("id", "capa")
 							 .style("font-size", "18px")
 							 .style("font-family", "sans-serif")
+							 .style("font-weight", "bold")
 							 .style("text-align", "left")
 
 			var text = htmlBody.append("xhtml:p")
