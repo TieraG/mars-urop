@@ -31,12 +31,6 @@
 	font-size: 20px;
 }
 
-.cap-text {
-	font-family: sans-serif;
-	font-size: 16px;
-	text-align: center;
-}
-
 .main_content {
 	background-color: #996633;
 	opacity: 0.85;
@@ -68,4 +62,8 @@
 
 #capa-text {
     background-color: #996633;
+}
+
+.capa-text {
+	text-align: center;
 }
