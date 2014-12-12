@@ -329,12 +329,6 @@ $(document).ready(function(){
 				coodX+=170;
 			});
 
-			var groupExtra = svgCapa.append("g")
-						.attr("id", "capaGroupExtra")
-				 		.attr("width", 300)
-				 		.attr("height",560)
-				 		.attr("transform", "translate(1150, 0)");
-
 			groupExtra.append("text")
 							  .attr("x", 20)
 							  .attr("y", 100)
