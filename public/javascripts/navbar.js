@@ -44,20 +44,7 @@ var loadNavBar = function(){
 						loadMainPage();
 					});
 
-			group.append("a")
-		   		.attr("xlink:href", "#")
-		   		.attr('class', 'glow')
-		   		.on("mouseenter", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadARM();
-												})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-				})
-				.append("text")
+			group.append("text")
 				.attr("x", "28%")
 				.attr("y", 40)
 				.attr("font-size", "14px")
@@ -83,20 +70,7 @@ var loadNavBar = function(){
 						loadMainPage();
 					});
 
-			    group.append("a")
-			   		.attr("xlink:href", "#")
-			   		.attr('class', 'glow')
-			   		.on("mouseenter", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadMoonToMars();
-					})
-					.on("mouseleave", function(){
-						$(".canvas").html("");
-						$(".chart").html("");
-						loadMainPage();
-					})
-					.append("text")
+			    group.append("text")
 					.attr("x", "41%")
 					.attr("y", 40)
 					.attr("font-size", "14px")
@@ -122,18 +96,7 @@ var loadNavBar = function(){
 						loadMainPage();
 					});
 
-			group.append("a")
-			   		.attr("xlink:href", "#")
-			   		.attr('class', 'glow')
-			   		.on("mouseenter", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadEnhanced();
-					}).on("mouseleave", function(){
-							$(".canvas").html("");
-							$(".chart").html("");
-							loadMainPage();
-					}).append("text")
+			group.append("text")
 					  .attr("x", "61%")
 					  .attr("y", 40)
 					  .attr("font-size", "14px")

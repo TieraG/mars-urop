@@ -377,10 +377,10 @@ var loadDRMEnh = function(){
 									.attr("y", 200)
 									.style("fill", function(d,i){
 										if (i == 5){
-											return "grey"
+											return "grey";
 										} 
 
-										return "transparent";`
+										return "transparent";
 									})
 									.style("stroke", "black")
 						 			.style("stroke-width", 3);	
