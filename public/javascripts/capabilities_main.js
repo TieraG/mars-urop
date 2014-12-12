@@ -15,7 +15,6 @@ loadCapabilities = function(){
 						.attr("width", 1450);
 
 	var dom = svgText.append("g")
-					 .attr("id", "capaDom")
 			 		 .attr("width", 500)
 			 		 .attr("height",560)
 			 		 .attr("transform", "translate(0, 20)")
