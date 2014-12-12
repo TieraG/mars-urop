@@ -52,3 +52,15 @@
 .nav {
 	text-align: center;
 }
+
+.d3_tip {
+  line-height: 1;
+  padding: 5px;
+  font-size: 16px;
+  font-family: sans-serif;
+  background: grey;
+  border-radius: 2px;
+  border: 2px solid black;
+  width: 60px;
+  text-align: left;
+}

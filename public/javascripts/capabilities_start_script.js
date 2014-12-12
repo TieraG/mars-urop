@@ -3,6 +3,16 @@ $(document).ready(function(){
 	loadCapabilities();
 	loadNav("capabilities");
 
+	var tip = d3.tip()
+	 			 .attr("class", "d3_tip")
+	 			 .offset([0, -20])
+	 			 .direction("w")
+	 			 .html(function(d){
+	 			 	return "<img width='50' height='50' src=" + d.src + ">";
+	 			 });
+
+	svgCapa.call(tip);
+
 	var group = svgCapa.append("g")
 					.attr("id", "capaGroup")
 			 		.attr("width", 700)
@@ -36,14 +46,20 @@ $(document).ready(function(){
 			  .attr("y", 140)
 			  .style("font-size", 17)
 			  .style('font-family', "sans-serif")
-			  .text("Aeroassit System");
+			  .text("Aeroassit System")
+			  .on("mouseenter", function(){
+					         	tip.show({src: aas.src});
+			  }).on("mouseleave", tip.hide);
 
 	groupExtra.append("text")
 			  .attr("x", 20)
 			  .attr("y", 170)
 			  .style("font-size", 17)
 			  .style('font-family', "sans-serif")
-			  .text("Crew Command & Service Module");
+			  .text("Crew Command & Service Module")
+			  .on("mouseenter", function(){
+					         	tip.show({src: ccs.src});
+			  }).on("mouseleave", tip.hide);
 
 	groupExtra.append("text")
 			  .attr("x", 20)
@@ -51,7 +67,7 @@ $(document).ready(function(){
 			  .attr("fill", "orange")
 			  .style("font-size", 18)
 			  .style('font-family', "sans-serif")
-			  .text("Primary Mission Elements");
+			  .text("Translational Mission Elements");
 
 	groupExtra.append("line")
 	 		    .attr("x1", 10)
@@ -66,14 +82,20 @@ $(document).ready(function(){
 			  .attr("y", 260)
 			  .style("font-size", 17)
 			  .style('font-family', "sans-serif")
-			  .text("Lunar Module");
+			  .text("Lunar Module")
+			  .on("mouseenter", function(){
+					         	tip.show({src: lm.src});
+			  }).on("mouseleave", tip.hide);
 
 	groupExtra.append("text")
 			  .attr("x", 20)
 			  .attr("y", 290)
 			  .style("font-size", 17)
 			  .style('font-family', "sans-serif")
-			  .text("Lunar Orbital Outpost");
+			  .text("Lunar Orbital Outpost")
+			  .on("mouseenter", function(){
+					         	tip.show({src: lop.src});
+			  }).on("mouseleave", tip.hide);
 
 	var dom = svgCapa.append("g")
 					 .attr("id", "capaDom")
@@ -307,13 +329,19 @@ $(document).ready(function(){
 				coodX+=170;
 			});
 
+			var groupExtra = svgCapa.append("g")
+						.attr("id", "capaGroupExtra")
+				 		.attr("width", 300)
+				 		.attr("height",560)
+				 		.attr("transform", "translate(1150, 0)");
+
 			groupExtra.append("text")
-					  .attr("x", 20)
-					  .attr("y", 100)
-					  .attr("fill", "green")
-					  .style("font-size", 18)
-					  .style('font-family', "sans-serif")
-					  .text("Primary Mission Elements");
+							  .attr("x", 20)
+							  .attr("y", 100)
+							  .attr("fill", "green")
+							  .style("font-size", 18)
+							  .style('font-family', "sans-serif")
+							  .text("Primary Mission Elements");
 
 			groupExtra.append("line")
 			 		    .attr("x1", 10)
@@ -328,14 +356,20 @@ $(document).ready(function(){
 					  .attr("y", 140)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Aeroassit System");
+					  .text("Aeroassit System")
+					  .on("mouseenter", function(){
+							         	tip.show({src: aas.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 170)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Crew Command & Service Module");
+					  .text("Crew Command & Service Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
@@ -343,7 +377,7 @@ $(document).ready(function(){
 					  .attr("fill", "orange")
 					  .style("font-size", 18)
 					  .style('font-family', "sans-serif")
-					  .text("Primary Mission Elements");
+					  .text("Translational Mission Elements");
 
 			groupExtra.append("line")
 			 		    .attr("x1", 10)
@@ -358,14 +392,20 @@ $(document).ready(function(){
 					  .attr("y", 260)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Lunar Module");
+					  .text("Lunar Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 290)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Lunar Orbital Outpost");
+					  .text("Lunar Orbital Outpost")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lop.src});
+			  }).on("mouseleave", tip.hide);
 	});
 
 	$(document).on("click", "#radiation", function(event){
@@ -513,28 +553,40 @@ $(document).ready(function(){
 					  .attr("y", 150)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Pressurized Surface Mobility");
+					  .text("Pressurized Surface Mobility")
+					  .on("mouseenter", function(){
+							         	tip.show({src: psm.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 180)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Crew Command & Service Module");
+					  .text("Crew Command & Service Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 210)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Deep Space Habitation");
+					  .text("Deep Space Habitation")
+					  .on("mouseenter", function(){
+							         	tip.show({src: dsh.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 240)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Long Duration Surface Habitat");
+					  .text("Long Duration Surface Habitat")
+					  .on("mouseenter", function(){
+							         	tip.show({src: ldsh.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
@@ -557,14 +609,20 @@ $(document).ready(function(){
 					  .attr("y", 340)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Lunar Module");
+					  .text("Lunar Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 370)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Lunar Orbital Outpost");
+					  .text("Lunar Orbital Outpost")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lop.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
@@ -587,7 +645,10 @@ $(document).ready(function(){
 					  .attr("y", 470)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Multi-year Deep Space Habitat");
+					  .text("Multi-year Deep Space Habitat")
+					  .on("mouseenter", function(){
+							         	tip.show({src: myd.src});
+					  }).on("mouseleave", tip.hide);
 
 	});
 
@@ -1336,21 +1397,30 @@ $(document).ready(function(){
 					  .attr("y", 140)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Heavy Lift Launch Vehicle");
+					  .text("Heavy Lift Launch Vehicle")
+					  .on("mouseenter", function(){
+							         	tip.show({src: hll.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 170)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Crew Command & Service Module");
+					  .text("Crew Command & Service Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 200)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Aeroassit System");
+					  .text("Aeroassit System")
+					  .on("mouseenter", function(){
+							         	tip.show({src: aas.src});
+					  }).on("mouseleave", tip.hide);
 
 			groupExtra.append("text")
 					  .attr("x", 20)
@@ -1373,7 +1443,10 @@ $(document).ready(function(){
 					  .attr("y", 280)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Cyrogenic Propulsion System");
+					  .text("Cyrogenic Propulsion System")
+					  .on("mouseenter", function(){
+							         	tip.show({src: cps.src});
+					  }).on("mouseleave", tip.hide);
 
 	
 			groupExtra.append("text")
@@ -1397,7 +1470,10 @@ $(document).ready(function(){
 					  .attr("y", 370)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Large Storable Stage");
+					  .text("Large Storable Stage")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lss.src});
+					  }).on("mouseleave", tip.hide);
 
 	});
 
@@ -1545,7 +1621,10 @@ $(document).ready(function(){
 					  .attr("y", 140)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Mars Ascent Vehicle");
+					  .text("Mars Ascent Vehicle")
+					  .on("mouseenter", function(){
+							         	tip.show({src: mav.src});
+					  }).on("mouseleave", tip.hide);
 
 			
 			groupExtra.append("text")
@@ -1569,7 +1648,10 @@ $(document).ready(function(){
 					  .attr("y", 220)
 					  .style("font-size", 17)
 					  .style('font-family', "sans-serif")
-					  .text("Lunar Module");
+					  .text("Lunar Module")
+					  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 	});
 	
 	$(document).on("click", "#eclss", function(event){
@@ -1715,21 +1797,30 @@ $(document).ready(function(){
 				  .attr("y", 140)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Advanced EVA");
+				  .text("Advanced EVA")
+				  .on("mouseenter", function(){
+							         	tip.show({src: av.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 170)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Crew Command & Service Module");
+				  .text("Crew Command & Service Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 200)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Pressurized Surface Mobility");
+				  .text("Pressurized Surface Mobility")
+				  .on("mouseenter", function(){
+							         	tip.show({src: psm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -1737,14 +1828,21 @@ $(document).ready(function(){
 				  .attr("y", 230)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Deep Space Habitation");
+				  .text("Deep Space Habitation")
+				  .on("mouseenter", function(){
+							         	tip.show({src: dsh.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 260)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Long Duration Surface Habitat");
+				  .text("Long Duration Surface Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ldsh.src});
+					  }).on("mouseleave", tip.hide);
+
 
 		groupExtra.append("text")
 				  .attr("x", 20)
@@ -1767,14 +1865,20 @@ $(document).ready(function(){
 				  .attr("y", 340)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Orbital Outpost");
+				  .text("Lunar Orbital Outpost")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lop.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 370)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Module");
+				  .text("Lunar Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -1798,14 +1902,20 @@ $(document).ready(function(){
 				  .attr("y", 450)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Multi-year Deep Space Habitat");
+				  .text("Multi-year Deep Space Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: myd.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 480)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Space Exploration Vehicle");
+				  .text("Space Exploration Vehicle")
+				  .on("mouseenter", function(){
+							         	tip.show({src: sev.src});
+					  }).on("mouseleave", tip.hide);
 
 	});
 
@@ -1931,7 +2041,7 @@ $(document).ready(function(){
 				coodX+=170;
 			});
 
-		groupExtra.append("text")
+			groupExtra.append("text")
 					  .attr("x", 20)
 					  .attr("y", 100)
 					  .attr("fill", "green")
@@ -1939,110 +2049,140 @@ $(document).ready(function(){
 					  .style('font-family', "sans-serif")
 					  .text("Primary Mission Elements");
 
-		groupExtra.append("line")
-		 		    .attr("x1", 10)
-					.attr("x2", 270)
-					.attr("y1", 110)
-					.attr("y2", 110)
-					.attr("stroke", "green")
-					.attr('stroke-width', '5px');
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 110)
+						.attr("y2", 110)
+						.attr("stroke", "green")
+						.attr('stroke-width', '5px');
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 140)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Tele-robotic Rovers");
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 140)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Tele-robotic Rovers")
+					  .on("mouseenter", function(){
+								         	tip.show({src: trr.src});
+						  }).on("mouseleave", tip.hide);
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 170)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Crew Command & Service Module");
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 170)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Crew Command & Service Module")
+					  .on("mouseenter", function(){
+								         	tip.show({src: ccs.src});
+						  }).on("mouseleave", tip.hide);
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 200)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Pressurized Surface Mobility");
-
-
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 230)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Deep Space Habitation");
-
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 260)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Long Duration Surface Habitat");
-
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 300)
-				  .attr("fill", "orange")
-				  .style("font-size", 18)
-				  .style('font-family', "sans-serif")
-				  .text("Translational Mission Elements");
-
-		groupExtra.append("line")
-		 		    .attr("x1", 10)
-					.attr("x2", 220)
-					.attr("y1", 310)
-					.attr("y2", 310)
-					.attr("stroke", "orange")
-					.attr('stroke-width', '5px');
-
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 340)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Lunar Orbital Outpost");
-
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 370)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Lunar Module");
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 200)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Pressurized Surface Mobility")
+					  .on("mouseenter", function(){
+								         	tip.show({src: psm.src});
+						  }).on("mouseleave", tip.hide);
 
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 410)
-				  .attr("fill", "red")
-				  .style("font-size", 18)
-				  .style('font-family', "sans-serif")
-				  .text("Dead-end Mission Elements");
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 230)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Deep Space Habitation")
+					  .on("mouseenter", function(){
+								         	tip.show({src: dsh.src});
+						  }).on("mouseleave", tip.hide);
 
-		groupExtra.append("line")
-		 		    .attr("x1", 10)
-					.attr("x2", 270)
-					.attr("y1", 420)
-					.attr("y2", 420)
-					.attr("stroke", "red")
-					.attr('stroke-width', '5px');
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 260)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Long Duration Surface Habitat")
+					  .on("mouseenter", function(){
+								         	tip.show({src: ldsh.src});
+						  }).on("mouseleave", tip.hide);
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 450)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Multi-year Deep Space Habitat");
 
-		groupExtra.append("text")
-				  .attr("x", 20)
-				  .attr("y", 480)
-				  .style("font-size", 17)
-				  .style('font-family', "sans-serif")
-				  .text("Space Exploration Vehicle");
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 300)
+					  .attr("fill", "orange")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Translational Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 280)
+						.attr("y1", 310)
+						.attr("y2", 310)
+						.attr("stroke", "orange")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 340)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Orbital Outpost")
+					  .on("mouseenter", function(){
+								         	tip.show({src: lop.src});
+						  }).on("mouseleave", tip.hide);
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 370)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Lunar Module")
+					  .on("mouseenter", function(){
+								         	tip.show({src: lm.src});
+						  }).on("mouseleave", tip.hide);
+
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 410)
+					  .attr("fill", "red")
+					  .style("font-size", 18)
+					  .style('font-family', "sans-serif")
+					  .text("Dead-end Mission Elements");
+
+			groupExtra.append("line")
+			 		    .attr("x1", 10)
+						.attr("x2", 270)
+						.attr("y1", 420)
+						.attr("y2", 420)
+						.attr("stroke", "red")
+						.attr('stroke-width', '5px');
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 450)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Multi-year Deep Space Habitat")
+					  .on("mouseenter", function(){
+								         	tip.show({src: myd.src});
+						  }).on("mouseleave", tip.hide);
+
+			groupExtra.append("text")
+					  .attr("x", 20)
+					  .attr("y", 480)
+					  .style("font-size", 17)
+					  .style('font-family', "sans-serif")
+					  .text("Space Exploration Vehicle")
+					  .on("mouseenter", function(){
+								         	tip.show({src: sev.src});
+						  }).on("mouseleave", tip.hide);
+
+		
 	});
 	
 	$(document).on("click", "#eva-suits", function(event){
@@ -2188,21 +2328,30 @@ $(document).ready(function(){
 				  .attr("y", 140)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Advanced EVA");
+				  .text("Advanced EVA")
+				  .on("mouseenter", function(){
+							         	tip.show({src: av.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 170)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Crew Command & Service Module");
+				  .text("Crew Command & Service Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 200)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Pressurized Surface Mobility");
+				  .text("Pressurized Surface Mobility")
+				  .on("mouseenter", function(){
+							         	tip.show({src: psm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -2210,14 +2359,21 @@ $(document).ready(function(){
 				  .attr("y", 230)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Deep Space Habitation");
+				  .text("Deep Space Habitation")
+				  .on("mouseenter", function(){
+							         	tip.show({src: dsh.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 260)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Long Duration Surface Habitat");
+				  .text("Long Duration Surface Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ldsh.src});
+					  }).on("mouseleave", tip.hide);
+
 
 		groupExtra.append("text")
 				  .attr("x", 20)
@@ -2229,7 +2385,7 @@ $(document).ready(function(){
 
 		groupExtra.append("line")
 		 		    .attr("x1", 10)
-					.attr("x2", 220)
+					.attr("x2", 280)
 					.attr("y1", 310)
 					.attr("y2", 310)
 					.attr("stroke", "orange")
@@ -2240,14 +2396,20 @@ $(document).ready(function(){
 				  .attr("y", 340)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Orbital Outpost");
+				  .text("Lunar Orbital Outpost")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lop.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 370)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Module");
+				  .text("Lunar Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -2271,14 +2433,20 @@ $(document).ready(function(){
 				  .attr("y", 450)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Multi-year Deep Space Habitat");
+				  .text("Multi-year Deep Space Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: myd.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 480)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Space Exploration Vehicle");
+				  .text("Space Exploration Vehicle")
+				  .on("mouseenter", function(){
+							         	tip.show({src: sev.src});
+					  }).on("mouseleave", tip.hide);
 	});
 
 	$(document).on("click", "#crew", function(event){
@@ -2425,21 +2593,30 @@ $(document).ready(function(){
 				  .attr("y", 140)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Advanced EVA");
+				  .text("Advanced EVA")
+				  .on("mouseenter", function(){
+							         	tip.show({src: av.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 170)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Crew Command & Service Module");
+				  .text("Crew Command & Service Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ccs.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 200)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Pressurized Surface Mobility");
+				  .text("Pressurized Surface Mobility")
+				  .on("mouseenter", function(){
+							         	tip.show({src: psm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -2447,14 +2624,21 @@ $(document).ready(function(){
 				  .attr("y", 230)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Deep Space Habitation");
+				  .text("Deep Space Habitation")
+				  .on("mouseenter", function(){
+							         	tip.show({src: dsh.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 260)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Long Duration Surface Habitat");
+				  .text("Long Duration Surface Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: ldsh.src});
+					  }).on("mouseleave", tip.hide);
+
 
 		groupExtra.append("text")
 				  .attr("x", 20)
@@ -2466,7 +2650,7 @@ $(document).ready(function(){
 
 		groupExtra.append("line")
 		 		    .attr("x1", 10)
-					.attr("x2", 220)
+					.attr("x2", 280)
 					.attr("y1", 310)
 					.attr("y2", 310)
 					.attr("stroke", "orange")
@@ -2477,14 +2661,20 @@ $(document).ready(function(){
 				  .attr("y", 340)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Orbital Outpost");
+				  .text("Lunar Orbital Outpost")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lop.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 370)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Lunar Module");
+				  .text("Lunar Module")
+				  .on("mouseenter", function(){
+							         	tip.show({src: lm.src});
+					  }).on("mouseleave", tip.hide);
 
 
 		groupExtra.append("text")
@@ -2508,14 +2698,20 @@ $(document).ready(function(){
 				  .attr("y", 450)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Multi-year Deep Space Habitat");
+				  .text("Multi-year Deep Space Habitat")
+				  .on("mouseenter", function(){
+							         	tip.show({src: myd.src});
+					  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 480)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Space Exploration Vehicle");
+				  .text("Space Exploration Vehicle")
+				  .on("mouseenter", function(){
+							         	tip.show({src: sev.src});
+					  }).on("mouseleave", tip.hide);
 	});
 	
 	$(document).on("click", "#isru", function(event){
@@ -2661,21 +2857,30 @@ $(document).ready(function(){
 				  .attr("y", 140)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Tele-robotic Rovers");
+				  .text("Tele-robotic Rovers")
+				  .on("mouseenter", function(){
+							        tip.show({src: trr.src});
+				  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 170)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Surface Nuclear Power");
+				  .text("Surface Nuclear Power")
+				  .on("mouseenter", function(){
+							        tip.show({src: snp.src});
+				  }).on("mouseleave", tip.hide);
 
 		groupExtra.append("text")
 				  .attr("x", 20)
 				  .attr("y", 200)
 				  .style("font-size", 17)
 				  .style('font-family', "sans-serif")
-				  .text("Mars Ascent Vehicle");
+				  .text("Mars Ascent Vehicle")
+				  .on("mouseenter", function(){
+							        tip.show({src: mav.src});
+				  }).on("mouseleave", tip.hide);
 
 	});
 });

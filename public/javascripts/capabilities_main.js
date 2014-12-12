@@ -7,6 +7,16 @@ loadCapabilities = function(){
 				.attr("id", "capabilities-svg")
 				.append("g");
 
+	var tip = d3.tip()
+	 			 .attr("class", "d3_tip")
+	 			 .offset([-20, 40])
+	 			 .direction("sw")
+	 			 .html(function(d){
+	 			 	return "<img src=" + d.src + ">";
+	 			 });
+
+	svgCapa.call(tip);
+
 	// Rectangles
 	var coodY = 60;
 
