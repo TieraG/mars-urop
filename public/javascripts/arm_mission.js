@@ -21,59 +21,56 @@ $(document).ready(function(){
 
 		// ROW ONE
 
-		$("#mydRect1").attr("opacity", "0.2");
-		$("#lssRect1").attr("opacity", "0.2");
-		$("#motRect1").attr("opacity", "0.2");
-		$("#sevRect1").attr("opacity", "0.2");
+		$(".one").find("#mydRect1").css("opacity", "0.2");
+		$(".one").find("#lssRect1").css("opacity", "0.2");
+		$(".one").find("#motRect1").css("opacity", "0.2");
+		$(".one").find("#sevRect1").css("opacity", "0.2");
 
-		$("#cpsRect1").attr("opacity", "0.2");
-		$("#lmRect1").attr("opacity", "0.2");
-		$("#lopRect1").attr("opacity", "0.2");
+		$(".one").find("#cpsRect1").css("opacity", "0.2");
+		$(".one").find("#lmRect1").css("opacity", "0.2");
+		$(".one").find("#lopRect1").css("opacity", "0.2");
 
 
 
-		$("#apRect1").attr("opacity", "0.2");
-		$("#trrRect1").attr("opacity", "0.2");
-		$("#snpRect1").attr("opacity", "0.2");
-		$("#aasRect1").attr("opacity", "0.2");
-		$("#psmRect1").attr("opacity", "0.2");
-		$("#dshRect1").attr("opacity", "0.2");
-		$("#ldshRect1").attr("opacity", "0.2");
-		$("#mavRect1").attr("opacity", "0.2");
+		$(".one").find("#apRect1").css("opacity", "0.2");
+		$(".one").find("#trrRect1").css("opacity", "0.2");
+		$(".one").find("#snpRect1").css("opacity", "0.2");
+		$(".one").find("#aasRect1").css("opacity", "0.2");
+		$(".one").find("#psmRect1").css("opacity", "0.2");
+		$(".one").find("#dshRect1").css("opacity", "0.2");
+		$(".one").find("#ldshRect1").css("opacity", "0.2");
+		$(".one").find("#mavRect1").css("opacity", "0.2");
 
 		// ROW TWO
 
-		$("#arvRect2").attr("opacity", "0.2");
-		$("#lssRect2").attr("opacity", "0.2");
+		$(".two").find("#arvRect2").css("opacity", "0.2");
+		$(".two").find("#lssRect2").css("opacity", "0.2");
 
-		$("#cpsRect2").attr("opacity", "0.2");
-		$("#lmRect2").attr("opacity", "0.2");
-		$("#lopRect2").attr("opacity", "0.2");
+		$(".two").find("#cpsRect2").css("opacity", "0.2");
+		$(".two").find("#lmRect2").css("opacity", "0.2");
+		$(".two").find("#lopRect2").css("opacity", "0.2");
 
-		$("#trrRect2").attr("opacity", "0.2");
-		$("#snpRect2").attr("opacity", "0.2");
-		$("#psmRect2").attr("opacity", "0.2");
-		$("#aasRect2").attr("opacity", "0.2");
-		$("#dshRect2").attr("opacity", "0.2");
-		$("#ldshRect2").attr("opacity", "0.2");
-		$("#mavRect2").attr("opacity", "0.2");
+		$(".two").find("#trrRect2").css("opacity", "0.2");
+		$(".two").find("#snpRect2").css("opacity", "0.2");
+		$(".two").find("#psmRect2").css("opacity", "0.2");
+		$(".two").find("#aasRect2").css("opacity", "0.2");
+		$(".two").find("#dshRect2").css("opacity", "0.2");
+		$(".two").find("#ldshRect2").css("opacity", "0.2");
+		$(".two").find("#mavRect2").css("opacity", "0.2");
 
 
 
 		// ROW THREE
 
-		$("#arvRect3").attr("opacity", "0.2");
-		$("#mydRect3").attr("opacity", "0.2");
-		$("#lssRect3").attr("opacity", "0.2");
-		$("#motRect3").attr("opacity", "0.2");
-		$("#sevRect3").attr("opacity", "0.2");
+		$(".three").find("#arvRect3").css("opacity", "0.2");
+		$(".three").find("#mydRect3").css("opacity", "0.2");
+		$(".three").find("#lssRect3").css("opacity", "0.2");
+		$(".three").find("#motRect3").css("opacity", "0.2");
+		$(".three").find("#sevRect3").css("opacity", "0.2");
 
-		$("#cpsRect3").attr("opacity", "0.2");
-		$("#lmRect3").attr("opacity", "0.2");
-		$("#lopRect3").attr("opacity", "0.2");
-
-
-
+		$(".three").find("#cpsRect3").css("opacity", "0.2");
+		$(".three").find("#lmRect3").css("opacity", "0.2");
+		$(".three").find("#lopRect3").css("opacity", "0.2");
 
 
 

@@ -78,7 +78,8 @@
 }
 
 .image-mission-first {
-  padding: 5px 5px 5px 50px;
+  margin-left: 40px;
+  padding: 5px 5px 5px 5px;
   height: 42px;
 }
 
@@ -89,7 +90,7 @@
 .image-header {
   font-size: 19px;
   font-family: sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .image-text {
