@@ -16,8 +16,8 @@
   text-align: center;
   background-color: #996633;
   opacity: 0.9;
-
-
+  margin: 0 auto;
+  width: 1200px;
 }
 
 #arm_mission {
@@ -121,4 +121,9 @@
 .plus {
   padding-bottom: 10px;
   font-size: 19px;
+}
+
+.tooltip {
+  background: grey;
+  font-size: 15px;
 }

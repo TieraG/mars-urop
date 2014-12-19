@@ -1,13 +1,15 @@
 $(document).ready(function(){
 
-	var svg = d3.select(".canvas")
-					.append("svg")
-					.attr("height", 400)
-					.attr("width", 1200)
-					.attr("id", "arm_mission");
+		$('.canvas').empty();
 
+		var svg = d3.select(".canvas")
+						.append("svg")
+						.attr("height", 400)
+						.attr("width", 1200)
+						.attr("id", "arm_mission");
 
-		// SETTING OPACITY TO 0.3
+		
+
 
 		// ROW ONE
 
@@ -19,7 +21,6 @@ $(document).ready(function(){
 		$(".one").find("#cpsRect1").css("opacity", "0.2");
 		$(".one").find("#lmRect1").css("opacity", "0.2");
 		$(".one").find("#lopRect1").css("opacity", "0.2");
-
 
 
 		$(".one").find("#apRect1").css("opacity", "0.2");
@@ -62,6 +63,16 @@ $(document).ready(function(){
 		$(".three").find("#lmRect3").css("opacity", "0.2");
 		$(".three").find("#lopRect3").css("opacity", "0.2");
 
+
+		// Add tool tips
+		var count = 1;
+		for (var i=0; i<3; i++){
+			rectInfo.forEach(function(rect){
+				var attr = $("#"+rect.id+count).attr('style');
+				$("#"+ rect.id+count).attr("title", rect.info);
+			});
+			count+=1;
+		}
 
 
 		// BOTTOM TEXT
@@ -202,19 +213,13 @@ $(document).ready(function(){
 			.attr("transform", "rotate(90 215,600)")
 			.text("MARS ASCENT VEHICLE");
 
-		////// Listener for tool tip
-		var count = 1
+		$(document).tooltip({
 
-		rectInfo.forEach(function(rect){
+  			content: function () {
+              return $(this).prop('title');
+          	}, 
 
-				var i = $(rect.id + count);
-
-
-				i.on("mouseenter", function(){
-						i.tool			   
-				});
-
-				i.on("mouseleave", tip.hide);
+          	tooltipClass: "tooltip"
 		});
 });
 

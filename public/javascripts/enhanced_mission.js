@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
+	$(".canvas").empty();
+
 	var svg = d3.select(".canvas")
 					.append("svg")
 					.attr("height", 400)
 					.attr("width", 1200)
-					.attr("id", "arm_mission");
+					.attr("id", "enhanced_mission");
 
 
 		// SETTING OPACITY TO 0.3
@@ -111,7 +113,15 @@ $(document).ready(function(){
 		$("#lmRect6").css("opacity", "0.2");
 		$("#lopRect6").css("opacity", "0.2");
 
-
+		// Add tool tips
+		var count = 1;
+		for (var i=0; i<6; i++){
+			rectInfo.forEach(function(rect){
+				var attr = $("#"+rect.id+count).attr('style');
+				$("#"+ rect.id+count).attr("title", rect.info);
+			});
+			count+=1;
+		}
 
 		// BOTTOM TEXT
 		svg.append("text")
@@ -251,20 +261,15 @@ $(document).ready(function(){
 			.attr("transform", "rotate(90 215,600)")
 			.text("MARS ASCENT VEHICLE");
 
-		////// Listener for tool tip
-		var count = 1
+		$(document).tooltip({
 
-		rectInfo.forEach(function(rect){
+  			content: function () {
+              return $(this).prop('title');
+          	}, 
 
-				var i = $(rect.id + count);
-
-
-				i.on("mouseenter", function(){
-						i.tool			   
-				});
-
-				i.on("mouseleave", tip.hide);
+          	tooltipClass: "tooltip"
 		});
+		
 });
 
 

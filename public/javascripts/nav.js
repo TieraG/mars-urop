@@ -58,7 +58,7 @@ var loadNav = function(phase){
 
 			 // Mission
 			 svg.append("a")
-		         .attr("xlink:href", "/mission")
+		         .attr("xlink:href", "/mission-arm")
 		         .attr("class", "glow")
 	 			 .append("rect")
 	 			 .attr("x", "44.5%")
@@ -71,7 +71,7 @@ var loadNav = function(phase){
 
 		         
 		      svg.append("a")
-		      	 .attr("xlink:href", "/mission")
+		      	 .attr("xlink:href", "/mission-arm")
 		         .append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "20px")
