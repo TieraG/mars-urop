@@ -21,4 +21,8 @@ router.get('/capabilities', function(req, res) {
   res.render('capabilities');
 });
 
+router.get('/test', function(req, res) {
+  res.render('test');
+});
+
 module.exports = router;
