@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mission Elements</title>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="/javascripts/load_images.js"></script>
+		<script src="/javascripts/lists.js"></script>
+		<script src="/javascripts/navbar_mission.js"></script>
+		<script src="/javascripts/nav.js"></script>
+		<script src="/javascripts/enhanced_mission.js"></script>
+		<link rel="stylesheet" href="/stylesheets/mission.css" />
+	</head>	
+	<body>
+		<div id='mission-content'>
+			<div id='animate-area' class='container'>
+				<div class='row'>
+					<div class='col-md-12 nav'></div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12 headnav'></div>
+				</div>
+				<div class='row'>
+					<div class='col-md-12' style='width:1200px; padding-left: 200px'>
+						<p class='image-header' style='text-align: left;'>To achieve the horizon goal of a human mission to the Mars surface, all of the aforementioned element groups are necessary. More specifically, 11 individual mission elements required for the Mars surface mission have been identified.</p>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-2' style='font-weight: bold'>
+						<p class='image-header'>ENHANCED EXPLORATION</p>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-4' style='width:1200px; padding-left: 140px; padding-top:30px'>
+						<text class='image-text move' style='text-align: left; color:red;'>DEAD-END MISSION ELEMENTS</text><text class='image-text move' style='text-align: left; color: orange'>TRANSLATIONAL MISSION ELEMENTS</text><text class='image-text move' style='text-align: left; color: green'>PRIMARY MISSION ELEMENTS</text>
+					</div>
+				</div>
+				<br>
+				<div class='row'>
+					<div class='col-md-2'>
+						<p class='image-header'>EARTH-MOON L2</p>
+					</div>
+					<div class='col-md-10 one'>
+						<img id ='arvRect1' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img id='mydRect1' class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img id='lssRect1' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img id='motRect1' class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img id='sevRect1' class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img id='cpsRect1' class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img id='lmRect1' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img id='lopRect1' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img id ='hllRect1' class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img id='apRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id='trrRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id='snpRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img id ='avRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id='psmRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id='aasRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img id ='cssRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id='dshRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id='ldshRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id='mavRect1' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-2'>
+						<p class='plus'>+</p>
+						<p class='image-header'>ASTERIOD IN NATIVE ORBIT</p>
+					</div>
+					<div class='col-md-10 one'>
+						<img id ='arvRect2' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img id='mydRect2' class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img id='lssRect2' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img id='motRect2' class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img id='sevRect2' class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img id='cpsRect2' class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img id='lmRect2' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img id='lopRect2' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img id ='hllRect2' class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img id='apRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id='trrRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id='snpRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img id ='avRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id='psmRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id='aasRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img id ='cssRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id='dshRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id='ldshRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id='mavRect2' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col-md-2'>
+						<p class='plus'>+</p>
+						<p class='image-header'>LUNAR SORTIE</p>
+					</div>
+					<div class='col-md-10 one'>
+						<img id ='arvRect3' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img id='mydRect3' class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img id='lssRect3' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img id='motRect3' class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img id='sevRect3' class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img id='cpsRect3' class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img id='lmRect3' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img id='lopRect3' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img id ='hllRect3' class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img id='apRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id='trrRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id='snpRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img id ='avRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id='psmRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id='aasRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img id ='cssRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id='dshRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id='ldshRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id='mavRect3' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+				</div>
+				<div class='row move'>
+					<div class='col-md-2'>
+						<p class='plus'>+</p>
+						<p class='image-header'>LUNAR OUTPOST</p>
+					</div>
+					<div class='col-md-12 two'>
+						<img id='arvRect4' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img id ='mydRect4' class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img id='lssRect4' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img id ='motRect4' class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img id ='sevRect4' class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img  id='cpsRect4'class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img id='lmRect4' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img id='lopRect4' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img id ='hllRect4' class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img id ='apRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id='trrRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id='snpRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img id ='avRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id='psmRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id='aasRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img id ='ccsRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id='dshRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id='ldshRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id='mavRect4' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+				</div>
+				<div class='row move'>
+					<div class='col-md-2'>
+						<p class='plus'>+</p>
+						<p class='image-header'>MARTIAN MOONS</p>
+					</div>
+					<div class='col-md-12 two'>
+						<img id='arvRect5' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img id='lssRect5' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img  id='cpsRect5'class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img id='lmRect5' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img id='lopRect5' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id='trrRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id='snpRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id='psmRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id='aasRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id='dshRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id='ldshRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id='mavRect5' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+				</div>
+				<div class='row move'>
+					<div class='col-md-2'>
+						<p class='plus'>+</p>
+						<p class='image-header'>MARS SURSFACE</p>
+					</div>
+					<div class='col-md-12 three'>
+						<img id='arvRect6' class='image-mission-1 red-back' width='30' height='40' src="/images/ARV.png"><img  id='mydRect6' class='image-mission-1 red-back' width='30' height='40' src="/images/MYD.png"><img  id='lssRect6' class='image-mission-1 red-back' width='30' height='40' src="/images/LSS.png"><img  id='motRect6' class='image-mission-1 red-back' width='30' height='40' src="/images/MOT.png"><img  id='sevRect6' class='image-mission-1 red-back' width='30' height='40' src="/images/SEV.png">
+
+						<img  id='cpsRect6' class='image-mission-first orange-back' width='30' height='40' src="/images/CPS.png"><img  id='lmRect6' class='image-mission-1 orange-back' width='30' height='40' src="/images/LM.png"><img  id='lopRect6' class='image-mission-1 orange-back' width='30' height='40' src="/images/LOP.png">
+
+						<img id ='hllRect6' class='image-mission-first green-back' width='30' height='40' src="/images/HLL.png"><img id ='apRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/AP.png"><img id ='trrRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/TRR.png"><img id ='snpRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/SNP.png"><img id ='avRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/AV.png"><img id ='psmRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/PSM.png"><img id ='aasRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/AAS.png"><img id ='ccsRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/CCS.png"><img id ='dshRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/DSH.png"><img id ='ldshRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/LDSH.png"><img id ='mavRect6' class='image-mission-1 green-back' width='30' height='40' src="/images/MAV.png">
+					</div>
+			</div>
+			<div class='row canvas'></div>
+			<script> 
+				loadNavBar();
+				loadNav("mission");
+			</script>
+		</div>
+	</body>
+</html>

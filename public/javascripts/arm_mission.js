@@ -7,16 +7,6 @@ $(document).ready(function(){
 					.attr("id", "arm_mission");
 
 
-	var tip = d3.tip()
-	 			 .attr("class", "d3_tip")
-	 			 .offset([-20, 40])
-	 			 .direction("sw")
-	 			 .html(function(d){
-	 			 	return "<p>" + d.info + "<p>";
-	 			 });
-
-	svg.call(tip);
-
 		// SETTING OPACITY TO 0.3
 
 		// ROW ONE
@@ -211,7 +201,24 @@ $(document).ready(function(){
 			.attr("y", -210)
 			.attr("transform", "rotate(90 215,600)")
 			.text("MARS ASCENT VEHICLE");
+
+		////// Listener for tool tip
+		var count = 1
+
+		rectInfo.forEach(function(rect){
+
+				var i = $(rect.id + count);
+
+
+				i.on("mouseenter", function(){
+						i.tool			   
+				});
+
+				i.on("mouseleave", tip.hide);
+		});
 });
+
+
 
 
 		

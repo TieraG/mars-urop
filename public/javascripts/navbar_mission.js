@@ -26,7 +26,7 @@ var loadNavBar = function(){
 					.attr("stroke-width", 3);
 
 			var armBox = group.append("a")
-					.attr("xlink:href", "#")
+					.attr("xlink:href", "/mission-arm")
 					.append("rect")
 					.attr("id", "armBox")
 					.attr("class", "glow")
@@ -36,12 +36,7 @@ var loadNavBar = function(){
 					.attr("y", 22)
 					.attr("fill", "#E65C00")
 					.attr("stroke-width", "5")
-					.on("click", function(){
-							$(".canvas").html("");
-							loadARM();
-					});
 					
-
 			group.append("text")
 					.attr("x", "25%")
 					.attr("y", 45)
@@ -50,7 +45,7 @@ var loadNavBar = function(){
 					.text("ARM TO MARS");
 
 			var moonBox = group.append("a")
-					.attr("xlink:href", "#")
+					.attr("xlink:href", "/mission-moon")
 					.append("rect")
 					.attr("id", "moonBox")
 					.attr("class", "glow")
@@ -59,12 +54,7 @@ var loadNavBar = function(){
 					.attr("x", "37%")
 					.attr("y", 22)
 					.attr("fill", "#0099FF")
-					.attr("stroke-width", "5")
-					.on("click", function(){
-							$(".canvas").html("");
-							loadMoonToMars();
-					});
-					
+					.attr("stroke-width", "5");
 
 			group.append("text")
 					.attr("x", "41%")
@@ -74,7 +64,7 @@ var loadNavBar = function(){
 					.text("MOON TO MARS");
 
 			var enhancedBox = group.append("a")
-					.attr("xlink:href", "#")
+					.attr("xlink:href", "/mission-enhanced")
 					.append("rect")
 					.attr("id", "enhancedBox")
 					.attr("class", "glow")

@@ -126,7 +126,7 @@ var loadIndex = function(){
 	 			.attr("fill", "#996633");
 
 	 		  svg.append("a")
-		         .attr("xlink:href", "/mission")
+		         .attr("xlink:href", "/mission-arm")
 	 			 .append("circle")
 	 			 .attr("cx", "36%")
 		         .attr("cy", "65%")
@@ -135,7 +135,7 @@ var loadIndex = function(){
 
 		         
 		      svg.append("a")
-		      	 .attr("xlink:href", "/mission")
+		      	 .attr("xlink:href", "/mission-arm")
 		         .append("text")
 		    	 .attr('class', 'number')
 				 .attr("font-size", "50px")

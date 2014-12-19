@@ -1,28 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/pathways', function(req, res) {
   res.render('pathways');
 });
 
-/* GET home page. */
 router.get('/', function(req, res) {
   res.render('index');
 });
 
-/* GET home page. */
-router.get('/mission', function(req, res) {
-  res.render('mission_elements');
+router.get('/mission-arm', function(req, res) {
+  res.render('mission_arm');
 });
 
-/* GET home page. */
+router.get('/mission-moon', function(req, res) {
+  res.render('mission_moon');
+});
+
+router.get('/mission-enhanced', function(req, res) {
+  res.render('mission_enhanced');
+});
+
 router.get('/capabilities', function(req, res) {
   res.render('capabilities');
 });
 
-router.get('/test', function(req, res) {
-  res.render('test');
-});
 
 module.exports = router;
