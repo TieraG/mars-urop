@@ -1,5 +1,5 @@
 
-#animate-area {
+#path-content {
   text-align: center;
   width: 100%; 
   height: 100%; 
@@ -14,6 +14,14 @@
   overflow: scroll;
 }
 
+#animate-area {
+  text-align: center;
+  background-color: #996633;
+  opacity: 0.9;
+  margin: 0 auto;
+  width: 1200px;
+}
+
 
 .canvas {
 	opacity: 0.85;
@@ -21,6 +29,7 @@
 
 #pathways {
   background-color: #996633;
+  border: 2px solid grey;
   margin-right: 1px;
 }
 
@@ -37,12 +46,14 @@
 
 #drm {
 	background-color: #996633;
+  border: 2px solid grey;
 	margin-left: 1px;
 
 }
 
 #chart {
 	background-color: #996633;
+  border: 2px solid grey;
 	opacity: 0.8;
 }
 
